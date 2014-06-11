@@ -1,0 +1,11 @@
+{
+	"__metaData": {
+		"service_invalid_CreateShipmentDDRequest": false, 
+		"service_invalid_IntrashipService": false, 
+		"service_invalid_Intraship": false, 
+		"service_invalid_DHLWebservice": false, 
+		"service_invalid_RequestBuilder": false, 
+		"service_invalid_Test123": false, 
+		"service_invalid_CISBase": false
+	}
+}

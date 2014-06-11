@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jaxb:bindings
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    version="2.0">
+    <jaxb:bindings schemaLocation="file:/C:/Users/Alfred/AppData/Local/Temp/wsdl_directory5629845155156942874.tmp/ISService_1_0_de.wsdl#types?schema1" node="//xsd:schema[1]"/>
+</jaxb:bindings>

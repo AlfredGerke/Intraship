@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="ISService_1_0_de" class="intrashipservice.ws.de.isservice_1_0_de.ISService10De" CRUDService="false" type="WebService" springFile="ISService_1_0_de.spring.xml">
+    <operation name="bookPickup">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.BookPickupRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.BookPickupResponse" isList="false"/>
+    </operation>
+    <operation name="cancelPickup">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.CancelPickupRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.CancelPickupResponse" isList="false"/>
+    </operation>
+    <operation name="createShipmentDD">
+        <parameter name="part1" typeRef="intraship.ws.de.CreateShipmentDDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse" isList="false"/>
+    </operation>
+    <operation name="createShipmentTD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentTDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse" isList="false"/>
+    </operation>
+    <operation name="deleteShipmentDD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentDDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse" isList="false"/>
+    </operation>
+    <operation name="deleteShipmentTD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentTDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse" isList="false"/>
+    </operation>
+    <operation name="doManifestDD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.DoManifestDDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse" isList="false"/>
+    </operation>
+    <operation name="doManifestTD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.DoManifestTDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse" isList="false"/>
+    </operation>
+    <operation name="getExportDocDD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetExportDocDDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse" isList="false"/>
+    </operation>
+    <operation name="getExportDocTD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetExportDocTDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse" isList="false"/>
+    </operation>
+    <operation name="getLabelDD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetLabelDDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse" isList="false"/>
+    </operation>
+    <operation name="getLabelTD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetLabelTDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse" isList="false"/>
+    </operation>
+    <operation name="getManifestDD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDResponse" isList="false"/>
+    </operation>
+    <operation name="getVersion">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetVersionResponse" isList="false"/>
+    </operation>
+    <operation name="updateShipmentDD">
+        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentDDRequest" isList="false"/>
+        <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
+        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Authentification" name="Authentification" supportsQuickData="false">
+            <element name="user" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="signature" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="accountNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="type" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Dimension" name="Dimension" supportsQuickData="false">
+            <element name="length" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="width" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="height" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="unit" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Origin" name="Origin" supportsQuickData="false">
+            <element name="country" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="countryISOCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="state" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.TimeFrame" name="TimeFrame" supportsQuickData="false">
+            <element name="from" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="until" typeRef="java.util.Date" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Status" name="Status" supportsQuickData="false">
+            <element name="statuscode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="statusDescription" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Zip" name="Zip" supportsQuickData="false">
+            <element name="other" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="england" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="germany" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Version" name="Version" supportsQuickData="false">
+            <element name="majorRelease" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="minorRelease" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="build" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ErrorTypeType" name="ErrorTypeType" supportsQuickData="false">
+            <element name="priority" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="code" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="descriptionLong" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="solution" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="application" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="module" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.BankTypeType" name="BankTypeType" supportsQuickData="false">
+            <element name="accountOwner" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="accountNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="bankCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="bankName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="iban" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="note" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="bic" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CustomerTypeType" name="CustomerTypeType" supportsQuickData="false">
+            <element name="name" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="vatID" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="EKP" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="contact" typeRef="intrashipservice.ws.de.isservice_1_0_de.ContactTypeType" isList="false" allowNull="false"/>
+            <element name="bank" typeRef="intrashipservice.ws.de.isservice_1_0_de.BankTypeType" isList="false" allowNull="false"/>
+            <element name="note" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" name="NameTypeType" supportsQuickData="false">
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType.Company" isList="false" allowNull="false"/>
+            <element name="person" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType.Person" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" name="CommunicationTypeType" supportsQuickData="false">
+            <element name="phone" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="email" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="fax" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mobile" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="internet" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="contactPerson" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeliveryAddressTypeType" name="DeliveryAddressTypeType" supportsQuickData="false">
+            <element name="packStation" typeRef="intrashipservice.ws.de.isservice_1_0_de.PackStationTypeType" isList="false" allowNull="false"/>
+            <element name="postOffice" typeRef="intrashipservice.ws.de.isservice_1_0_de.PostOfficeTypeType" isList="false" allowNull="false"/>
+            <element name="nativeAddress" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="streetNameCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="streetNumberCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PostOfficeTypeType" name="PostOfficeTypeType" supportsQuickData="false">
+            <element name="number" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="zip" typeRef="intrashipservice.ws.de.isservice_1_0_de.Zip" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="origin" typeRef="intrashipservice.ws.de.isservice_1_0_de.Origin" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" name="ShipmentNumberTypeType" supportsQuickData="false">
+            <element name="shipmentNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="airwayBill" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="licensePlate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="identCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PackStationTypeType" name="PackStationTypeType" supportsQuickData="false">
+            <element name="number" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="stationID" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="zip" typeRef="intrashipservice.ws.de.isservice_1_0_de.Zip" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="origin" typeRef="intrashipservice.ws.de.isservice_1_0_de.Origin" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PickupAddressTypeType" name="PickupAddressTypeType" supportsQuickData="false">
+            <element name="packStation" typeRef="intrashipservice.ws.de.isservice_1_0_de.PackStationTypeType" isList="false" allowNull="false"/>
+            <element name="nativeAddress" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="streetNameCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="streetNumberCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ContactTypeType" name="ContactTypeType" supportsQuickData="false">
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="name" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" name="NativeAddressTypeType" supportsQuickData="false">
+            <element name="streetName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="streetNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="careOfName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="zip" typeRef="intrashipservice.ws.de.isservice_1_0_de.Zip" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="district" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="origin" typeRef="intrashipservice.ws.de.isservice_1_0_de.Origin" isList="false" allowNull="false"/>
+            <element name="floorNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="roomNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="languageCodeISO" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="note" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeveloperAuthentification" name="DeveloperAuthentification" supportsQuickData="false">
+            <element name="DEVID" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="APPID" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="CERTID" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DoManifestTDRequest" name="DoManifestTDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse" name="CreateShipmentResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="creationStates" typeRef="intrashipservice.ws.de.isservice_1_0_de.CreationState" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" name="Statusinformation" supportsQuickData="false">
+            <element name="statusCode" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="statusMessage" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CreationState" name="CreationState" supportsQuickData="false">
+            <element name="statusCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="statusMessages" typeRef="java.lang.String" isList="true" allowNull="false"/>
+            <element name="sequenceNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
+            <element name="pieceInformations" typeRef="intrashipservice.ws.de.isservice_1_0_de.PieceInformation" isList="true" allowNull="false"/>
+            <element name="labelurl" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="XMLLabel" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pickupConfirmationNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse" name="DoManifestResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="manifestStates" typeRef="intrashipservice.ws.de.isservice_1_0_de.ManifestState" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ManifestState" name="ManifestState" supportsQuickData="false">
+            <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentDDRequest" name="UpdateShipmentDDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
+            <element name="shipmentOrder" typeRef="intraship.ws.de.ShipmentOrderDDType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intraship.ws.de.ShipmentOrderDDType" name="ShipmentOrderDDType" supportsQuickData="false">
+            <element name="sequenceNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipment" typeRef="intraship.ws.de.ShipmentOrderDDType.Shipment" isList="false" allowNull="false"/>
+            <element name="pickup" typeRef="intraship.ws.de.ShipmentOrderDDType.Pickup" isList="false" allowNull="false"/>
+            <element name="labelResponseType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="PRINTONLYIFCODEABLE" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.BookPickupRequest" name="BookPickupRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="bookingInformation" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupBookingInformationType" isList="false" allowNull="false"/>
+            <element name="pickupAddress" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupAddressType" isList="false" allowNull="false"/>
+            <element name="contactOrderer" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupOrdererType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PickupBookingInformationType" name="PickupBookingInformationType" supportsQuickData="false">
+            <element name="productID" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="account" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attendance" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pickupDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="readyByTime" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="closingTime" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="remark" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pickupLocation" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="amountOfPieces" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="amountOfPallets" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="weightInKG" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="countOfShipments" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="totalVolumeWeight" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="maxLengthInCM" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="maxWidthInCM" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="maxHeightInCM" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PickupAddressType" name="PickupAddressType" supportsQuickData="false">
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PickupOrdererType" name="PickupOrdererType" supportsQuickData="false">
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="name3" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetLabelTDRequest" name="GetLabelTDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetExportDocDDRequest" name="GetExportDocDDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
+            <element name="docType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DoManifestDDRequest" name="DoManifestDDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.BookPickupResponse" name="BookPickupResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="confirmationNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipmentNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentResponse" name="UpdateShipmentResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="creationState" typeRef="intrashipservice.ws.de.isservice_1_0_de.CreationState" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest" name="GetManifestDDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="manifestDateRange" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest.ManifestDateRange" isList="false" allowNull="false"/>
+            <element name="manifestDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest.ManifestDateRange" name="ManifestDateRange" supportsQuickData="false">
+            <element name="fromDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="toDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentTDRequest" name="CreateShipmentTDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentOrders" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType" name="ShipmentOrderTDType" supportsQuickData="false">
+            <element name="sequenceNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipment" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Shipment" isList="false" allowNull="false"/>
+            <element name="pickup" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Pickup" isList="false" allowNull="false"/>
+            <element name="labelResponseType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetLabelDDRequest" name="GetLabelDDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CancelPickupRequest" name="CancelPickupRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="bookingConfirmationNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse" name="DeleteShipmentResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="deletionStates" typeRef="intrashipservice.ws.de.isservice_1_0_de.DeletionState" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeletionState" name="DeletionState" supportsQuickData="false">
+            <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intraship.ws.de.CreateShipmentDDRequest" name="CreateShipmentDDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentOrders" typeRef="intraship.ws.de.ShipmentOrderDDType" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDResponse" name="GetManifestDDResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="manifestPDFData" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CancelPickupResponse" name="CancelPickupResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentDDRequest" name="DeleteShipmentDDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse" name="GetExportDocResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="exportDocDatas" typeRef="intrashipservice.ws.de.isservice_1_0_de.ExportDocData" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ExportDocData" name="ExportDocData" supportsQuickData="false">
+            <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="exportDocURL" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="exportDocPDFData" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentTDRequest" name="DeleteShipmentTDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetVersionResponse" name="GetVersionResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetExportDocTDRequest" name="GetExportDocTDRequest" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
+            <element name="docType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse" name="GetLabelResponse" supportsQuickData="false">
+            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="labelDatas" typeRef="intrashipservice.ws.de.isservice_1_0_de.LabelData" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.LabelData" name="LabelData" supportsQuickData="false">
+            <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="labelurl" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="XMLLabel" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType" name="DDShipmentServiceGroupIdentType" supportsQuickData="false">
+            <element name="checkMinimumAge" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.CheckMinimumAge" isList="false" allowNull="false"/>
+            <element name="SMSAviso" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.SMSAviso" isList="false" allowNull="false"/>
+            <element name="contractSubmission" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.ContractSubmission" isList="false" allowNull="false"/>
+            <element name="proofOfDelivery" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="returnReceipt" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="personally" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="identPremium" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentPremium" isList="false" allowNull="false"/>
+            <element name="identExtra" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentExtra" isList="false" allowNull="false"/>
+            <element name="ident" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.Ident" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceDD" name="ShipmentServiceDD" supportsQuickData="false">
+            <element name="serviceGroupOther" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType" isList="false" allowNull="false"/>
+            <element name="serviceGroupDHLPaket" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType" isList="false" allowNull="false"/>
+            <element name="serviceGroupBusinessPackInternational" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType" isList="false" allowNull="false"/>
+            <element name="shipmentServiceGroupPickup" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupPickupType" isList="false" allowNull="false"/>
+            <element name="shipmentServiceGroupIdent" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType" isList="false" allowNull="false"/>
+            <element name="serviceGroupDateTimeOption" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfigurationTeZu" name="EndorsementServiceconfigurationTeZu" supportsQuickData="false">
+            <element name="active" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="tezuDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipperDDType" name="ShipperDDType" supportsQuickData="false">
+            <element name="remark" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+            <element name="VAT" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ReceiverTDType" name="ReceiverTDType" supportsQuickData="false">
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="postfiliale" typeRef="intrashipservice.ws.de.isservice_1_0_de.PostfilialeType" isList="false" allowNull="false"/>
+            <element name="packstation" typeRef="intrashipservice.ws.de.isservice_1_0_de.PackstationType" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+            <element name="VAT" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType" name="DDServiceGroupBusinessPackInternationalType" supportsQuickData="false">
+            <element name="amountInternational" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="endorsement" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType.Endorsement" isList="false" allowNull="false"/>
+            <element name="coilWithoutHelp" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="seapacket" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="premium" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="economy" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ReceiverDDType" name="ReceiverDDType" supportsQuickData="false">
+            <element name="companyName3" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="postfiliale" typeRef="intrashipservice.ws.de.isservice_1_0_de.PostfilialeType" isList="false" allowNull="false"/>
+            <element name="packstation" typeRef="intrashipservice.ws.de.isservice_1_0_de.PackstationType" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+            <element name="VAT" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType" name="DDServiceGroupOtherType" supportsQuickData="false">
+            <element name="bypass" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="directInjection" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="bulkfreight" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Bulkfreight" isList="false" allowNull="false"/>
+            <element name="dangerousGoods" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.DangerousGoods" isList="false" allowNull="false"/>
+            <element name="unfree" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Unfree" isList="false" allowNull="false"/>
+            <element name="COD" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.COD" isList="false" allowNull="false"/>
+            <element name="higherInsurance" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.HigherInsurance" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsType" name="ShipmentDetailsType" supportsQuickData="false">
+            <element name="productCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipmentDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="declaredValueOfGoods" typeRef="java.lang.Float" isList="false" allowNull="false"/>
+            <element name="declaredValueOfGoodsCurrency" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType" name="ShipmentDetailsDDType" supportsQuickData="false">
+            <element name="EKP" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attendance" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType.Attendance" isList="false" allowNull="false"/>
+            <element name="customerReference" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deliveryRemarks" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipmentItems" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentItemDDType" isList="true" allowNull="false"/>
+            <element name="services" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceDD" isList="true" allowNull="false"/>
+            <element name="notifications" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNotificationType" isList="true" allowNull="false"/>
+            <element name="notificationEmailText" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="bankData" typeRef="intrashipservice.ws.de.isservice_1_0_de.BankTypeType" isList="false" allowNull="false"/>
+            <element name="productCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipmentDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="declaredValueOfGoods" typeRef="java.lang.Float" isList="false" allowNull="false"/>
+            <element name="declaredValueOfGoodsCurrency" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType" name="DDServiceGroupDHLPaketType" supportsQuickData="false">
+            <element name="endorsement" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.Endorsement" isList="false" allowNull="false"/>
+            <element name="shipmentAdvisory" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory" isList="false" allowNull="false"/>
+            <element name="particularDelivery" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="regioPacket" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="multipack" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PackstationType" name="PackstationType" supportsQuickData="false">
+            <element name="packstationNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="postNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="zip" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType" name="TDServiceGroupOtherType" supportsQuickData="false">
+            <element name="goGreen" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="insurance" typeRef="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType.Insurance" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentItemTDType" name="ShipmentItemTDType" supportsQuickData="false">
+            <element name="weightInKG" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="lengthInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="widthInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="heightInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ReceiverType" name="ReceiverType" supportsQuickData="false">
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="postfiliale" typeRef="intrashipservice.ws.de.isservice_1_0_de.PostfilialeType" isList="false" allowNull="false"/>
+            <element name="packstation" typeRef="intrashipservice.ws.de.isservice_1_0_de.PackstationType" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+            <element name="VAT" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipperType" name="ShipperType" supportsQuickData="false">
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+            <element name="VAT" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipperTDType" name="ShipperTDType" supportsQuickData="false">
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+            <element name="VAT" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType" name="ExportDocumentDDType" supportsQuickData="false">
+            <element name="invoiceType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="invoiceDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="invoiceNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="exportType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="exportTypeDescription" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="commodityCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="termsOfTrade" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="amount" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="countryCodeOrigin" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="additionalFee" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="customsValue" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="customsCurrency" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="permitNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="attestationNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="withElectronicExportNtfctn" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="exportDocPositions" typeRef="intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType.ExportDocPosition" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.IdentityType" name="IdentityType" supportsQuickData="false">
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="street" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="houseNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="postcode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dateOfBirth" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="nationality" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentItemType" name="ShipmentItemType" supportsQuickData="false">
+            <element name="weightInKG" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="lengthInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="widthInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="heightInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration" name="EndorsementServiceconfiguration" supportsQuickData="false">
+            <element name="active" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupPickupType" name="DDShipmentServiceGroupPickupType" supportsQuickData="false">
+            <element name="pickupLate" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="pickupSaturday" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PostfilialeType" name="PostfilialeType" supportsQuickData="false">
+            <element name="postfilialNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="postNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="zip" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.IdentityData" name="IdentityData" supportsQuickData="false">
+            <element name="bankCard" typeRef="intrashipservice.ws.de.isservice_1_0_de.IdentityData.BankCard" isList="false" allowNull="false"/>
+            <element name="identityCard" typeRef="intrashipservice.ws.de.isservice_1_0_de.IdentityData.IdentityCard" isList="false" allowNull="false"/>
+            <element name="drivingLicense" typeRef="intrashipservice.ws.de.isservice_1_0_de.IdentityData.DrivingLicense" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PickupDetailsType" name="PickupDetailsType" supportsQuickData="false">
+            <element name="pickupDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="readyByTime" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="closingTime" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="remark" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pickupLocation" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentNotificationType" name="ShipmentNotificationType" supportsQuickData="false">
+            <element name="recipientName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="recipientEmailAddress" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceTD" name="ShipmentServiceTD" supportsQuickData="false">
+            <element name="serviceGroupOther" typeRef="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType" isList="false" allowNull="false"/>
+            <element name="serviceGroupDateTimeOption" typeRef="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType" name="DDServiceGroupDateTimeOptionType" supportsQuickData="false">
+            <element name="expressSunday" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="expressSaturday" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="deliveryEvening" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="deliveryAfternoon" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="express1200" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="express1000" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="express0900" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="deliveryEarly" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="deliveryOnTime" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType.DeliveryOnTime" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType" name="ExportDocumentTDType" supportsQuickData="false">
+            <element name="invoiceType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="invoiceDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="invoiceNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="exportType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="signerTitle" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="remark" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="commodityCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="exportReason" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="exportDocPositions" typeRef="intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType.ExportDocPosition" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType" name="TDServiceGroupDateTimeOptionType" supportsQuickData="false">
+            <element name="expressSaturday" typeRef="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType.ExpressSaturday" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PieceInformation" name="PieceInformation" supportsQuickData="false">
+            <element name="pieceNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType" name="FurtherAddressesDDType" supportsQuickData="false">
+            <element name="deliveryAdress" typeRef="intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType.DeliveryAdress" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType" name="ShipmentDetailsTDType" supportsQuickData="false">
+            <element name="account" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.Account" isList="false" allowNull="false"/>
+            <element name="dutiable" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="descriptionOfContent" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="accountPaidBy" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.AccountPaidBy" isList="false" allowNull="false"/>
+            <element name="shipmentReference" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="termsOfTrade" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipmentItems" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentItemTDType" isList="true" allowNull="false"/>
+            <element name="services" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceTD" isList="true" allowNull="false"/>
+            <element name="notifications" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNotificationType" isList="true" allowNull="false"/>
+            <element name="notificationEmailText" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="productCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="shipmentDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="declaredValueOfGoods" typeRef="java.lang.Float" isList="false" allowNull="false"/>
+            <element name="declaredValueOfGoodsCurrency" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentItemDDType" name="ShipmentItemDDType" supportsQuickData="false">
+            <element name="packageType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="weightInKG" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="lengthInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="widthInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="heightInCM" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.Account" name="Account" supportsQuickData="false">
+            <element name="accountNumberExpress" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.AccountPaidBy" name="AccountPaidBy" supportsQuickData="false">
+            <element name="accountNumberExpress" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType.DeliveryAdress" name="DeliveryAdress" supportsQuickData="false">
+            <element name="company" typeRef="intrashipservice.ws.de.isservice_1_0_de.NameTypeType" isList="false" allowNull="false"/>
+            <element name="name3" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
+            <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType.ExpressSaturday" name="ExpressSaturday" supportsQuickData="false">
+            <element name="shippingDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType.ExportDocPosition" name="ExportDocPosition" supportsQuickData="false">
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="amount" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="valuePerPiece" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="netWeightInKG" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="grossWeightInKG" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="ISOCountryCodeOfOrigin" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="commodityCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType.DeliveryOnTime" name="DeliveryOnTime" supportsQuickData="false">
+            <element name="time" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.IdentityData.BankCard" name="BankCard" supportsQuickData="false">
+            <element name="cardType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="cardNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="bankName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="bankCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.IdentityData.IdentityCard" name="IdentityCard" supportsQuickData="false">
+            <element name="cardNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="cardAuthority" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.IdentityData.DrivingLicense" name="DrivingLicense" supportsQuickData="false">
+            <element name="licenseNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="authority" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType.ExportDocPosition" name="ExportDocPosition" supportsQuickData="false">
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="countryCodeOrigin" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="commodityCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="amount" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="netWeightInKG" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="grossWeightInKG" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="customsValue" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="customsCurrency" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType.Insurance" name="Insurance" supportsQuickData="false">
+            <element name="insuranceAmount" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="insuranceCurrency" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.Endorsement" name="Endorsement" supportsQuickData="false">
+            <element name="UZN" typeRef="intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration" isList="false" allowNull="false"/>
+            <element name="keNa" typeRef="intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration" isList="false" allowNull="false"/>
+            <element name="NSI" typeRef="intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration" isList="false" allowNull="false"/>
+            <element name="teZu" typeRef="intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfigurationTeZu" isList="false" allowNull="false"/>
+            <element name="soZue" typeRef="intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory" name="ShipmentAdvisory" supportsQuickData="false">
+            <element name="advisoryDatas" typeRef="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory.AdvisoryData" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory.AdvisoryData" name="AdvisoryData" supportsQuickData="false">
+            <element name="moduleType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mobilePhoneNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="emailAddress" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="reference" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="language" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType.Attendance" name="Attendance" supportsQuickData="false">
+            <element name="partnerID" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Bulkfreight" name="Bulkfreight" supportsQuickData="false">
+            <element name="bulkfreightType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.DangerousGoods" name="DangerousGoods" supportsQuickData="false">
+            <element name="dangerousGoodsClass" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dangerousGoodsPackagingType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dangerousGoodsUNCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Unfree" name="Unfree" supportsQuickData="false">
+            <element name="paymentType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="customerNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.COD" name="COD" supportsQuickData="false">
+            <element name="CODAmount" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="CODCurrency" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.HigherInsurance" name="HigherInsurance" supportsQuickData="false">
+            <element name="insuranceAmount" typeRef="java.math.BigDecimal" isList="false" allowNull="false"/>
+            <element name="insuranceCurrency" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType.Endorsement" name="Endorsement" supportsQuickData="false">
+            <element name="ident" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="days" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.CheckMinimumAge" name="CheckMinimumAge" supportsQuickData="false">
+            <element name="minimumAge" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.SMSAviso" name="SMSAviso" supportsQuickData="false">
+            <element name="mobilePhoneNumberSender" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mobilePhoneNumberReceiver" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="avisoIdent" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.ContractSubmission" name="ContractSubmission" supportsQuickData="false">
+            <element name="totalPages" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="totalSignatures" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="totalDocsSender" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+            <element name="totalDocsReceiver" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentPremium" name="IdentPremium" supportsQuickData="false">
+            <element name="firstname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="identityCardType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="identityCardNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="minimumAge" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dateOfBirth" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="streetAndHouseNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="postcodeAndCity" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="district" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="withIDPContract" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="contractID" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="nationality" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="freeText1" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="freeText2" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="corrOfNameAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfFirstNameAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfDayOfBirthAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfMinimumAgeAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfIdentityCardTypeAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfIdentityCardNumberAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfAddressAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfContractAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfContractIdAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfNationalityAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="corrOfFreetextsAllowed" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentExtra" name="IdentExtra" supportsQuickData="false">
+            <element name="group1" typeRef="intrashipservice.ws.de.isservice_1_0_de.IdentityData" isList="false" allowNull="false"/>
+            <element name="group2" typeRef="intrashipservice.ws.de.isservice_1_0_de.IdentityData" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.Ident" name="Ident" supportsQuickData="false">
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dateOfBirth" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="identityCardType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="identityCardNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Shipment" name="Shipment" supportsQuickData="false">
+            <element name="shipmentDetails" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType" isList="false" allowNull="false"/>
+            <element name="shipper" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipperTDType" isList="false" allowNull="false"/>
+            <element name="receiver" typeRef="intrashipservice.ws.de.isservice_1_0_de.ReceiverTDType" isList="false" allowNull="false"/>
+            <element name="exportDocument" typeRef="intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Pickup" name="Pickup" supportsQuickData="false">
+            <element name="pickupDetails" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupDetailsType" isList="false" allowNull="false"/>
+            <element name="pickupAddress" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupAddressType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intraship.ws.de.ShipmentOrderDDType.Shipment" name="Shipment" supportsQuickData="false">
+            <element name="shipmentDetails" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType" isList="false" allowNull="false"/>
+            <element name="shipper" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipperDDType" isList="false" allowNull="false"/>
+            <element name="receiver" typeRef="intrashipservice.ws.de.isservice_1_0_de.ReceiverDDType" isList="false" allowNull="false"/>
+            <element name="exportDocument" typeRef="intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType" isList="false" allowNull="false"/>
+            <element name="identity" typeRef="intrashipservice.ws.de.isservice_1_0_de.IdentityType" isList="false" allowNull="false"/>
+            <element name="furtherAddresses" typeRef="intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intraship.ws.de.ShipmentOrderDDType.Pickup" name="Pickup" supportsQuickData="false">
+            <element name="pickupDetails" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupDetailsType" isList="false" allowNull="false"/>
+            <element name="pickupAddress" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupAddressType" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.NameTypeType.Company" name="Company" supportsQuickData="false">
+            <element name="name1" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name2" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.NameTypeType.Person" name="Person" supportsQuickData="false">
+            <element name="salutation" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="firstname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="middlename" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

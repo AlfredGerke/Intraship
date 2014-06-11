@@ -1,0 +1,13 @@
+{
+	"methods": [{
+		"name": "getShipmentDDRequest",
+		"operationType": null,
+		"parameters": [{
+			"name": "isXMLLabel",
+			"type": "java.lang.Boolean"
+		}],
+		"returnType": "intraship.ws.de.CreateShipmentDDRequest"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "RequestBuilder.json"
+}

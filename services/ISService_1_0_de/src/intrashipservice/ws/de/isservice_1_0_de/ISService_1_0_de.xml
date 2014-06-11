@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jaxws:bindings
+    xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+    xmlns:jws="http://java.sun.com/xml/ns/javaee"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    wsdlLocation="file:/C:/Users/Alfred/AppData/Local/Temp/wsdl_directory5629845155156942874.tmp/ISService_1_0_de.wsdl">
+    <jaxws:package name="intrashipservice.ws.de.isservice_1_0_de"/>
+    <jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+    <jaxws:bindings node="wsdl:definitions/wsdl:service[@name='ISService_1_0_de']">
+        <jaxws:class name="ISService10DeClient"/>
+    </jaxws:bindings>
+</jaxws:bindings>

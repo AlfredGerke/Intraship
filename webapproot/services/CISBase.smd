@@ -1,0 +1,10 @@
+{
+	"methods": [{
+		"name": "getAuthentification",
+		"operationType": null,
+		"parameters": null,
+		"returnType": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "CISBase.json"
+}
