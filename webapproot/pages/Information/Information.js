@@ -1,8 +1,7 @@
 dojo.declare("Information", wm.Page, {
-	start: function() {
-	  this.iFrame1.setSource("resources/htmlcontent/info.html")	;
-	},
-	"preferredDevice": "desktop",
-
-	_end: 0
+    "preferredDevice": "desktop",
+    start: function() {
+        this.ifrmInfo.setSource("resources/htmlcontent/info.html");
+    },
+    _end: 0
 });
