@@ -160,12 +160,12 @@ Fehler nach Aufbau der Schnittstelle
 Der gleichnamige Webservice wurde durch den WSDL-Import angelegt und stellt alle 
 notwendigen Methoden für die Arbeit mit der Geschäftskundenversand API zur Verfügung.
  
-Allerdings haben sich in der Datei *ISService10De.java* Fehler vorgefunden. Ob diese 
+Allerdings haben sich in der Datei *ISService10De.java* Fehler eingeschlichen. Ob diese 
 Fehler durch einen unsachgemäßen Umgang mit dem Importer oder aber durch fehlerhafte Interpretation durch den Importer
 zustande kamen, wurde nicht näher untersucht.
 
-Diese Fehler fanden ebenfalls Einzug die die zugehörige *servicedef.xml* des Webservice und 
-somit auch in die *types.js* der Testanwendung.
+Diese Fehler fanden ebenfalls Einzug in die zugehörige `servicedef.xml` des Webservice und 
+somit auch in die `types.js` der Testanwendung.
 
 Sämtliche Request-Klassen und einige Proxy-Klassen wurden einem falschen Package zugeordnet.   
 Es wurden zwei Packages angelegt:
@@ -213,8 +213,8 @@ Nachher:
 -------------------------------
 
 ### Zugangsdaten     
-Um von Server aus Zugriff auf die Zugansdaten der Datei `settings.ini` zu erlangen
-habe ich die Schnittstelle des Service `ISService_1_0_de` angepasst.
+Um vom Server aus Zugriff auf die Zugansdaten der Datei `settings.ini` zu erlangen,
+wurde die Schnittstelle des Service `ISService_1_0_de` angepasst.
 
         public CreateShipmentResponse createShipmentDD(CreateShipmentDDRequest part1, Authentification header) {
           CreateShipmentResponse response;
@@ -235,11 +235,11 @@ habe ich die Schnittstelle des Service `ISService_1_0_de` angepasst.
 Über einen SOAPLoggingHandler kann ein Request und ein Response zur Analyse von Fehler komplett geloggt werden.
 Im Constructor des Webservice wurde zu diesem Zweck dessen Context ein SOAPLoggingHandler zugeführt. 
 
-Allerdings hat es Problem beim Einsatz des dafür vorgesehen SOAPHandlers gegeben:
+Allerdings hat es Probleme beim Einsatz des dafür vorgesehen SOAPHandlers gegeben:
 
 * com.wavemaker.runtime.ws.jaxws.SOAPLoggingHandler
 
-Ob dies von einem falschen Verständnis des Handlers oder einem Bug herrührte, wurde nicht näher untersucht.
+Ob diese Probleme von einem falschen Verständnis des Handlers oder einem Bug herrührte, wurde nicht näher untersucht.
 Stattdessen wurde ein anderer LoggingHandler zum Einsatz gebracht:
 
         public ISService10De() {
