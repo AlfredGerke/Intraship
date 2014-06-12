@@ -11,6 +11,7 @@ Dieses Testprogramm demonstriert eine mögliche Einbindung von DHL Intraship in 
 - Voraussetzungen
 - Versionen
 - Zielvorgabe und Realisierung
+- WSDL: `ISService_1_0_de.wsdl`
 - wsdl4j.jar
 - Fehler nach Aufbau der Schnittstelle
 - Änderungen an der Schnittstelle
@@ -126,6 +127,19 @@ aus dem Java-Testprogramm, welches auf dem Entwicklerportal der DHL bezogen werd
 
 Wenn keine HTTP Basis Authentication und/oder Credentials vorhanden sind, werden 
 diese mit den Zugangsdaten aus der Datei *settings.ini* ergänzt.
+
+
+WSDL: `ISService_1_0_de.wsdl`
+-----------------------------
+
+Die WSDL-Datei ist nicht Teil des Repositories. Um die Testanwendung starten zu können, 
+empfiehlt es sich den WSDL-Import für einen Clone auszuführen.
+
+Die nachfolgenden Punkte erläutern worauf besonders geachtet werden muss:
+ 
+* wsdl4j.jar
+* Änderungen an der Schnittstelle
+* Fehler nach Aufbau der Schnittstelle
 
 
 wsdl4j.jar

@@ -10,7 +10,7 @@ dojo.declare("Intraship", wm.Application, {
 	"name": "", 
 	"phoneGapLoginPage": "Login", 
 	"phoneMain": "", 
-	"projectSubVersion": "Alpha5", 
+	"projectSubVersion": "Alpha6", 
 	"projectVersion": 1, 
 	"sessionExpirationHandler": "navigateToLogin", 
 	"studioVersion": "6.7.0.RELEASE", 
