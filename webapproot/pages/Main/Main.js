@@ -3,6 +3,22 @@ dojo.declare("Main", wm.Page, {
 
     },
     "preferredDevice": "desktop",
+    getShipmentNrHandler: function() {
+        var scope = this;
+        
+        return function() {
+            var snr = scope.edtShipmentNr.dataValue;
+            
+            return snr;
+        };
+    },
+    setShipmentNrByResponseHandler: function() {
+        var scope = this;
+        
+        return function(snr) {
+            scope.edtShipmentNr.setValue("dataValue", snr);
+        };            
+    },
     setCredentialsHandler: function() {
         var scope = this;
 
@@ -18,6 +34,8 @@ dojo.declare("Main", wm.Page, {
     },
     onStart: function(inPage) {
         app.addSetCredentialsHandler(this.setCredentialsHandler());
+        app.addSetShipmentNrHandler(this.setShipmentNrByResponseHandler());
+        app.addGetShipmentNrHandler(this.getShipmentNrHandler());
     },
     _end: 0
 });

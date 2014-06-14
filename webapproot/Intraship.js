@@ -35,6 +35,12 @@ dojo.declare("Intraship", wm.Application, {
 });
 
 Intraship.extend({
+    addGetShipmentNrHandler: function(gsnr) {
+        this.onGetShipmentNr = gsnr;
+    },
+    addSetShipmentNrHandler: function(gsbr) {
+        this.onSetShipmentNrByResponse = gsbr;
+    },
     addSetCredentialsHandler: function(osc) {
         this.onSetCredentials = osc;
     },
@@ -60,6 +66,9 @@ Intraship.extend({
         this.onSetCredentials();
 
         this.onGetShipmentDDRequest();
+    },
+    setShipmentNrByResponse: function(shipNr) {
+        this.onSetShipmentNrByResponse(shipNr);
     },
     _end: 0
 });

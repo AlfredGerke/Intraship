@@ -16,9 +16,14 @@ Main.widgets = {
 		}]
 	}],
 	lbxMain: ["wm.Layout", {"horizontalAlign":"left","styles":{},"verticalAlign":"top"}, {}, {
-		pnlCredentials: ["wm.FancyPanel", {"height":"104px","margin":"5,5,5,5","styles":{},"title":"Credentials"}, {}, {
-			edtDevID: ["wm.Text", {"caption":"Developer ID","captionSize":"110px","dataValue":"","displayValue":"","emptyValue":"emptyString","helpText":"Wenn kein Eintrag vorhanden, dann wird aus settings.ini ein Eintrag entnommen","placeHolder":"Developer ID","required":true,"styles":{},"width":"350px"}, {}],
-			edtPass: ["wm.Text", {"caption":"Password","captionSize":"110px","dataValue":"","displayValue":"","emptyValue":"emptyString","helpText":"Wenn kein Eintrag vorhanden, dann wird aus settings.ini ein Eintrag entnommen","password":true,"placeHolder":"Password","required":true,"width":"350px"}, {}]
+		pnlCredentialsPanel: ["wm.Panel", {"height":"104px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+			pnlCredentials: ["wm.FancyPanel", {"margin":"5,5,5,5","styles":{},"title":"Credentials","width":"50%"}, {}, {
+				edtDevID: ["wm.Text", {"caption":"Developer ID","captionSize":"110px","dataValue":"","displayValue":"","emptyValue":"emptyString","helpText":"Wenn kein Eintrag vorhanden, dann wird aus settings.ini ein Eintrag entnommen","placeHolder":"Developer ID","required":true,"styles":{},"width":"350px"}, {}],
+				edtPass: ["wm.Text", {"caption":"Password","captionSize":"110px","dataValue":"","displayValue":"","emptyValue":"emptyString","helpText":"Wenn kein Eintrag vorhanden, dann wird aus settings.ini ein Eintrag entnommen","password":true,"placeHolder":"Password","required":true,"width":"350px"}, {}]
+			}],
+			pnlInputOutput: ["wm.FancyPanel", {"height":"100px","margin":"5,5,5,5","styles":{},"title":"In / Out","width":"50%"}, {}, {
+				edtShipmentNr: ["wm.Text", {"caption":"ShipmentNr","dataValue":undefined,"displayValue":"","width":"343px"}, {}]
+			}]
 		}],
 		pnlDesktop: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","styles":{},"verticalAlign":"top","width":"100%"}, {}, {
 			pnlLeft: ["wm.Panel", {"height":"100%","horizontalAlign":"left","margin":"5,5,5,5","styles":{},"verticalAlign":"top","width":"297px"}, {}, {
