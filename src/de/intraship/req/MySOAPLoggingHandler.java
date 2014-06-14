@@ -22,7 +22,17 @@ import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
 public class MySOAPLoggingHandler implements SOAPHandler<SOAPMessageContext> {
+
+  private static Logger logger = Logger.getLogger("MySOAPLoggingHandler");
+
+  public MySOAPLoggingHandler() {
+
+    logger.setLevel(Level.INFO);
+  }
 
   @Override
   public boolean handleMessage(SOAPMessageContext context) {
@@ -43,18 +53,22 @@ public class MySOAPLoggingHandler implements SOAPHandler<SOAPMessageContext> {
     Boolean outboundProperty = (Boolean) smc.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
 
     if (outboundProperty.booleanValue()) {
-      System.out.println("\nOutbound message:");
+      logger.info("\nOutbound message:");
+      // System.out.println("\nOutbound message:");
     } else {
-      System.out.println("\nInbound message:");
+      logger.info("\nInbound message:");
+      // System.out.println("\nInbound message:");
     }
 
     SOAPMessage message = smc.getMessage();
     try {
       ByteArrayOutputStream baos = new ByteArrayOutputStream();
       message.writeTo(baos);
-      System.out.println(baos.toString());
+      // System.out.println(baos.toString());
+      logger.info(baos.toString());
     } catch (Exception e) {
-      System.out.println("Exception in handler: " + e);
+      logger.warn("Exception in handler: " + e.getMessage());
+      // System.out.println("Exception in handler: " + e);
     }
   }
 
