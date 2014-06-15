@@ -51,6 +51,33 @@ wm.types = {
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
+		"intraship.ws.de.CreateShipmentTDRequest": {
+			"fields": {
+				"shipmentOrders": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentOrderTDType"
+				},
+				"version": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Version"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "RequestBuilder"
+		},
 		"intraship.ws.de.ShipmentOrderDDType": {
 			"fields": {
 				"PRINTONLYIFCODEABLE": {

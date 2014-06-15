@@ -7,6 +7,14 @@
 			"type": "java.lang.Boolean"
 		}],
 		"returnType": "intraship.ws.de.CreateShipmentDDRequest"
+	}, {
+		"name": "getShipmentTDRequest",
+		"operationType": null,
+		"parameters": [{
+			"name": "isXMLLabel",
+			"type": "java.lang.Boolean"
+		}],
+		"returnType": "intraship.ws.de.CreateShipmentTDRequest"
 	}],
 	"serviceType": "JSON-RPC",
 	"serviceURL": "RequestBuilder.json"

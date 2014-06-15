@@ -134,7 +134,9 @@
                     </list>
                 </entry>
                 <entry key="RequestBuilder">
-                    <list/>
+                    <list>
+                        <value>intraship.ws.de.CreateShipmentTDRequest</value>
+                    </list>
                 </entry>
             </map>
         </property>

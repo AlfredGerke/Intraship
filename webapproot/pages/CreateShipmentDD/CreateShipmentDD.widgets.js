@@ -50,15 +50,17 @@ CreateShipmentDD.widgets = {
 							}]
 						}]
 					}],
-					pnlStatusResponse: ["wm.Panel", {"height":"25px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-						edtStatusCpde: ["wm.Text", {"caption":"StatusCode","displayValue":"","emptyValue":"emptyString","placeHolder":"Code","width":"165px"}, {}, {
-							binding: ["wm.Binding", {}, {}, {
-								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.status.statusCode","targetProperty":"dataValue"}, {}]
-							}]
-						}],
-						edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"130px","displayValue":"","emptyValue":"emptyString","placeHolder":"Message","width":"100%"}, {}, {
-							binding: ["wm.Binding", {}, {}, {
-								wire: ["wm.Wire", {"expression":undefined,"source":"srvCreateShipmentDD.status.statusMessage","targetProperty":"dataValue"}, {}]
+					pnlStatusResponse: ["wm.Panel", {"height":"28px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
+						pnlStatusResponse1: ["wm.Panel", {"height":"25px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+							edtStatusCpde: ["wm.Text", {"caption":"StatusCode","displayValue":"","emptyValue":"emptyString","placeHolder":"Code","width":"165px"}, {}, {
+								binding: ["wm.Binding", {}, {}, {
+									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.status.statusCode","targetProperty":"dataValue"}, {}]
+								}]
+							}],
+							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"130px","displayValue":"","emptyValue":"emptyString","placeHolder":"Message","width":"100%"}, {}, {
+								binding: ["wm.Binding", {}, {}, {
+									wire: ["wm.Wire", {"expression":undefined,"source":"srvCreateShipmentDD.status.statusMessage","targetProperty":"dataValue"}, {}]
+								}]
 							}]
 						}]
 					}]
