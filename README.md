@@ -234,7 +234,7 @@ wurde die Schnittstelle des Service `ISService_1_0_de` angepasst.
           CreateShipmentResponse response;
           
           /** 
-           * Anpassung durch den Entwickler, wird nicht vom Importer ersetllt
+           * Anpassung durch den Entwickler, wird nicht vom Importer erstellt
            */            
           bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
           header = Credentials.getInstance().setAuthentificationIfNeeded(header);
@@ -267,7 +267,7 @@ Stattdessen wurde ein anderer LoggingHandler zum Einsatz gebracht:
           iswsServicePortTypeService = isService10DeClient.getShipmentServiceSOAP11Port0();
 
           /** 
-           * Anpassung durch den Entwickler, wird nicht vom Importer ersetllt
+           * Anpassung durch den Entwickler, wird nicht vom Importer erstellt
            */            
           MySOAPLoggingHandler.addToPort(((BindingProvider) iswsServicePortTypeService).getBinding()); 
         }         
