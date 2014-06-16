@@ -27,42 +27,42 @@
                         <value>intrashipservice.ws.de.isservice_1_0_de.PickupAddressTypeType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ContactTypeType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DeveloperAuthentification</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DoManifestTDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.Statusinformation</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.CreationState</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse</value>
+                        <value>intraship.ws.de.DeveloperAuthentification</value>
+                        <value>intraship.ws.de.DoManifestTDRequest</value>
+                        <value>intraship.ws.de.CreateShipmentResponse</value>
+                        <value>intraship.ws.de.Statusinformation</value>
+                        <value>intraship.ws.de.CreationState</value>
+                        <value>intraship.ws.de.DoManifestResponse</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ManifestState</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentDDRequest</value>
+                        <value>intraship.ws.de.UpdateShipmentDDRequest</value>
                         <value>intraship.ws.de.ShipmentOrderDDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.BookPickupRequest</value>
+                        <value>intraship.ws.de.BookPickupRequest</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.PickupBookingInformationType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.PickupAddressType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.PickupOrdererType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetLabelTDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetExportDocDDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DoManifestDDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.BookPickupResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest.ManifestDateRange</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.CreateShipmentTDRequest</value>
+                        <value>intraship.ws.de.GetLabelTDRequest</value>
+                        <value>intraship.ws.de.GetExportDocDDRequest</value>
+                        <value>intraship.ws.de.DoManifestDDRequest</value>
+                        <value>intraship.ws.de.BookPickupResponse</value>
+                        <value>intraship.ws.de.UpdateShipmentResponse</value>
+                        <value>intraship.ws.de.GetManifestDDRequest</value>
+                        <value>intraship.ws.de.GetManifestDDRequest.ManifestDateRange</value>
+                        <value>intraship.ws.de.CreateShipmentTDRequest</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetLabelDDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.CancelPickupRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse</value>
+                        <value>intraship.ws.de.GetLabelDDRequest</value>
+                        <value>intraship.ws.de.CancelPickupRequest</value>
+                        <value>intraship.ws.de.DeleteShipmentResponse</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.DeletionState</value>
                         <value>intraship.ws.de.CreateShipmentDDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetManifestDDResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.CancelPickupResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentDDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse</value>
+                        <value>intraship.ws.de.GetManifestDDResponse</value>
+                        <value>intraship.ws.de.CancelPickupResponse</value>
+                        <value>intraship.ws.de.DeleteShipmentDDRequest</value>
+                        <value>intraship.ws.de.GetExportDocResponse</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ExportDocData</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentTDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetVersionResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetExportDocTDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse</value>
+                        <value>intraship.ws.de.DeleteShipmentTDRequest</value>
+                        <value>intraship.ws.de.GetVersionResponse</value>
+                        <value>intraship.ws.de.GetExportDocTDRequest</value>
+                        <value>intraship.ws.de.GetLabelResponse</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.LabelData</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceDD</value>
@@ -94,7 +94,7 @@
                         <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.PieceInformation</value>
+                        <value>intraship.ws.de.PieceInformation</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentItemDDType</value>
@@ -134,9 +134,7 @@
                     </list>
                 </entry>
                 <entry key="RequestBuilder">
-                    <list>
-                        <value>intraship.ws.de.CreateShipmentTDRequest</value>
-                    </list>
+                    <list/>
                 </entry>
             </map>
         </property>

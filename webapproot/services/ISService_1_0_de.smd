@@ -4,23 +4,23 @@
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.BookPickupRequest"
+			"type": "intraship.ws.de.BookPickupRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.BookPickupResponse"
+		"returnType": "intraship.ws.de.BookPickupResponse"
 	}, {
 		"name": "cancelPickup",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.CancelPickupRequest"
+			"type": "intraship.ws.de.CancelPickupRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.CancelPickupResponse"
+		"returnType": "intraship.ws.de.CancelPickupResponse"
 	}, {
 		"name": "createShipmentDD",
 		"operationType": null,
@@ -31,117 +31,117 @@
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse"
+		"returnType": "intraship.ws.de.CreateShipmentResponse"
 	}, {
 		"name": "createShipmentTD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.CreateShipmentTDRequest"
+			"type": "intraship.ws.de.CreateShipmentTDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse"
+		"returnType": "intraship.ws.de.CreateShipmentResponse"
 	}, {
 		"name": "deleteShipmentDD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentDDRequest"
+			"type": "intraship.ws.de.DeleteShipmentDDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse"
+		"returnType": "intraship.ws.de.DeleteShipmentResponse"
 	}, {
 		"name": "deleteShipmentTD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentTDRequest"
+			"type": "intraship.ws.de.DeleteShipmentTDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse"
+		"returnType": "intraship.ws.de.DeleteShipmentResponse"
 	}, {
 		"name": "doManifestDD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.DoManifestDDRequest"
+			"type": "intraship.ws.de.DoManifestDDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse"
+		"returnType": "intraship.ws.de.DoManifestResponse"
 	}, {
 		"name": "doManifestTD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.DoManifestTDRequest"
+			"type": "intraship.ws.de.DoManifestTDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse"
+		"returnType": "intraship.ws.de.DoManifestResponse"
 	}, {
 		"name": "getExportDocDD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.GetExportDocDDRequest"
+			"type": "intraship.ws.de.GetExportDocDDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse"
+		"returnType": "intraship.ws.de.GetExportDocResponse"
 	}, {
 		"name": "getExportDocTD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.GetExportDocTDRequest"
+			"type": "intraship.ws.de.GetExportDocTDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse"
+		"returnType": "intraship.ws.de.GetExportDocResponse"
 	}, {
 		"name": "getLabelDD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.GetLabelDDRequest"
+			"type": "intraship.ws.de.GetLabelDDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse"
+		"returnType": "intraship.ws.de.GetLabelResponse"
 	}, {
 		"name": "getLabelTD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.GetLabelTDRequest"
+			"type": "intraship.ws.de.GetLabelTDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse"
+		"returnType": "intraship.ws.de.GetLabelResponse"
 	}, {
 		"name": "getManifestDD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest"
+			"type": "intraship.ws.de.GetManifestDDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.GetManifestDDResponse"
+		"returnType": "intraship.ws.de.GetManifestDDResponse"
 	}, {
 		"name": "getVersion",
 		"operationType": null,
@@ -149,18 +149,18 @@
 			"name": "part1",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Version"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.GetVersionResponse"
+		"returnType": "intraship.ws.de.GetVersionResponse"
 	}, {
 		"name": "updateShipmentDD",
 		"operationType": null,
 		"parameters": [{
 			"name": "part1",
-			"type": "intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentDDRequest"
+			"type": "intraship.ws.de.UpdateShipmentDDRequest"
 		}, {
 			"name": "header",
 			"type": "intrashipservice.ws.de.isservice_1_0_de.Authentification"
 		}],
-		"returnType": "intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentResponse"
+		"returnType": "intraship.ws.de.UpdateShipmentResponse"
 	}],
 	"serviceType": "JSON-RPC",
 	"serviceURL": "ISService_1_0_de.json"

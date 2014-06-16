@@ -8,10 +8,5 @@
         <parameter name="isXMLLabel" typeRef="java.lang.Boolean" isList="false"/>
         <return typeRef="intraship.ws.de.CreateShipmentTDRequest" isList="false"/>
     </operation>
-    <dataobjects>
-        <dataobject javaType="intraship.ws.de.CreateShipmentTDRequest" name="CreateShipmentTDRequest" supportsQuickData="false">
-            <element name="shipmentOrders" typeRef="intraship.ws.de.ShipmentOrderTDType" isList="true" allowNull="false"/>
-            <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-        </dataobject>
-    </dataobjects>
+    <dataobjects/>
 </service>

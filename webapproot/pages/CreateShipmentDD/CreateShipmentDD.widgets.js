@@ -20,7 +20,7 @@ CreateShipmentDD.widgets = {
 			wire: ["wm.Wire", {"expression":undefined,"source":"pnlLabelResponse","targetProperty":"loadingDialog"}, {}]
 		}]
 	}],
-	varResultByCreateShipmentDD: ["wm.Variable", {"type":"intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse"}, {}, {
+	varResultByCreateShipmentDD: ["wm.Variable", {"type":"intraship.ws.de.CreateShipmentResponse"}, {}, {
 		binding: ["wm.Binding", {}, {}, {
 			wire: ["wm.Wire", {"expression":undefined,"source":"srvCreateShipmentDD","targetProperty":"dataSet"}, {}]
 		}]
@@ -39,7 +39,7 @@ CreateShipmentDD.widgets = {
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by CreateShipmentDD"}, {}, {
 					pnlLabelResponse: ["wm.Panel", {"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-						edtLabelURL: ["wm.Text", {"caption":undefined,"displayValue":"","emptyValue":"emptyString","helpText":"URL kann über einen PDF-Reader direkt im Browser verarbeitet werden","placeHolder":"Label URL","styles":{},"width":"100%"}, {}, {
+						edtLabelURL: ["wm.Text", {"caption":undefined,"displayValue":"","emptyValue":"emptyString","helpText":"URL kann über einen PDF-Reader direkt im Browser verarbeitet werden","placeHolder":"Label URL","singleLine":false,"styles":{},"width":"100%"}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates.labelurl","targetProperty":"dataValue"}, {}]
 							}]
@@ -57,9 +57,9 @@ CreateShipmentDD.widgets = {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.status.statusCode","targetProperty":"dataValue"}, {}]
 								}]
 							}],
-							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"130px","displayValue":"","emptyValue":"emptyString","placeHolder":"Message","width":"100%"}, {}, {
+							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"150px","displayValue":"","emptyValue":"emptyString","width":"100%"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
-									wire: ["wm.Wire", {"expression":undefined,"source":"srvCreateShipmentDD.status.statusMessage","targetProperty":"dataValue"}, {}]
+									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.status.statusMessage","targetProperty":"dataValue"}, {}]
 								}]
 							}]
 						}]

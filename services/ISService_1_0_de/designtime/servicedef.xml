@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="ISService_1_0_de" class="intrashipservice.ws.de.isservice_1_0_de.ISService10De" CRUDService="false" type="WebService" springFile="ISService_1_0_de.spring.xml">
     <operation name="bookPickup">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.BookPickupRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.BookPickupRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.BookPickupResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.BookPickupResponse" isList="false"/>
     </operation>
     <operation name="cancelPickup">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.CancelPickupRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.CancelPickupRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.CancelPickupResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.CancelPickupResponse" isList="false"/>
     </operation>
     <operation name="createShipmentDD">
         <parameter name="part1" typeRef="intraship.ws.de.CreateShipmentDDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.CreateShipmentResponse" isList="false"/>
     </operation>
     <operation name="createShipmentTD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentTDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.CreateShipmentTDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.CreateShipmentResponse" isList="false"/>
     </operation>
     <operation name="deleteShipmentDD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentDDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.DeleteShipmentDDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.DeleteShipmentResponse" isList="false"/>
     </operation>
     <operation name="deleteShipmentTD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentTDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.DeleteShipmentTDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.DeleteShipmentResponse" isList="false"/>
     </operation>
     <operation name="doManifestDD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.DoManifestDDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.DoManifestDDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.DoManifestResponse" isList="false"/>
     </operation>
     <operation name="doManifestTD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.DoManifestTDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.DoManifestTDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.DoManifestResponse" isList="false"/>
     </operation>
     <operation name="getExportDocDD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetExportDocDDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.GetExportDocDDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.GetExportDocResponse" isList="false"/>
     </operation>
     <operation name="getExportDocTD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetExportDocTDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.GetExportDocTDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.GetExportDocResponse" isList="false"/>
     </operation>
     <operation name="getLabelDD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetLabelDDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.GetLabelDDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.GetLabelResponse" isList="false"/>
     </operation>
     <operation name="getLabelTD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetLabelTDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.GetLabelTDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.GetLabelResponse" isList="false"/>
     </operation>
     <operation name="getManifestDD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.GetManifestDDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.GetManifestDDResponse" isList="false"/>
     </operation>
     <operation name="getVersion">
         <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.GetVersionResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.GetVersionResponse" isList="false"/>
     </operation>
     <operation name="updateShipmentDD">
-        <parameter name="part1" typeRef="intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentDDRequest" isList="false"/>
+        <parameter name="part1" typeRef="intraship.ws.de.UpdateShipmentDDRequest" isList="false"/>
         <parameter name="header" typeRef="intrashipservice.ws.de.isservice_1_0_de.Authentification" isList="false"/>
-        <return typeRef="intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentResponse" isList="false"/>
+        <return typeRef="intraship.ws.de.UpdateShipmentResponse" isList="false"/>
     </operation>
     <dataobjects>
         <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Authentification" name="Authentification" supportsQuickData="false">
@@ -200,44 +200,44 @@
             <element name="languageCodeISO" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="note" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeveloperAuthentification" name="DeveloperAuthentification" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.DeveloperAuthentification" name="DeveloperAuthentification" supportsQuickData="false">
             <element name="DEVID" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="APPID" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="CERTID" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DoManifestTDRequest" name="DoManifestTDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.DoManifestTDRequest" name="DoManifestTDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentResponse" name="CreateShipmentResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.CreateShipmentResponse" name="CreateShipmentResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
-            <element name="creationStates" typeRef="intrashipservice.ws.de.isservice_1_0_de.CreationState" isList="true" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="creationStates" typeRef="intraship.ws.de.CreationState" isList="true" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" name="Statusinformation" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.Statusinformation" name="Statusinformation" supportsQuickData="false">
             <element name="statusCode" typeRef="java.math.BigInteger" isList="false" allowNull="false"/>
             <element name="statusMessage" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CreationState" name="CreationState" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.CreationState" name="CreationState" supportsQuickData="false">
             <element name="statusCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="statusMessages" typeRef="java.lang.String" isList="true" allowNull="false"/>
             <element name="sequenceNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
-            <element name="pieceInformations" typeRef="intrashipservice.ws.de.isservice_1_0_de.PieceInformation" isList="true" allowNull="false"/>
+            <element name="pieceInformations" typeRef="intraship.ws.de.PieceInformation" isList="true" allowNull="false"/>
             <element name="labelurl" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="XMLLabel" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="pickupConfirmationNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DoManifestResponse" name="DoManifestResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.DoManifestResponse" name="DoManifestResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
             <element name="manifestStates" typeRef="intrashipservice.ws.de.isservice_1_0_de.ManifestState" isList="true" allowNull="false"/>
         </dataobject>
         <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ManifestState" name="ManifestState" supportsQuickData="false">
             <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentDDRequest" name="UpdateShipmentDDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.UpdateShipmentDDRequest" name="UpdateShipmentDDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
             <element name="shipmentOrder" typeRef="intraship.ws.de.ShipmentOrderDDType" isList="false" allowNull="false"/>
@@ -249,7 +249,7 @@
             <element name="labelResponseType" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="PRINTONLYIFCODEABLE" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.BookPickupRequest" name="BookPickupRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.BookPickupRequest" name="BookPickupRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="bookingInformation" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupBookingInformationType" isList="false" allowNull="false"/>
             <element name="pickupAddress" typeRef="intrashipservice.ws.de.isservice_1_0_de.PickupAddressType" isList="false" allowNull="false"/>
@@ -284,40 +284,40 @@
             <element name="address" typeRef="intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType" isList="false" allowNull="false"/>
             <element name="communication" typeRef="intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetLabelTDRequest" name="GetLabelTDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetLabelTDRequest" name="GetLabelTDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetExportDocDDRequest" name="GetExportDocDDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetExportDocDDRequest" name="GetExportDocDDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
             <element name="docType" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DoManifestDDRequest" name="DoManifestDDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.DoManifestDDRequest" name="DoManifestDDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.BookPickupResponse" name="BookPickupResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.BookPickupResponse" name="BookPickupResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
             <element name="confirmationNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="shipmentNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.UpdateShipmentResponse" name="UpdateShipmentResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.UpdateShipmentResponse" name="UpdateShipmentResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
-            <element name="creationState" typeRef="intrashipservice.ws.de.isservice_1_0_de.CreationState" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="creationState" typeRef="intraship.ws.de.CreationState" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest" name="GetManifestDDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetManifestDDRequest" name="GetManifestDDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="manifestDateRange" typeRef="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest.ManifestDateRange" isList="false" allowNull="false"/>
+            <element name="manifestDateRange" typeRef="intraship.ws.de.GetManifestDDRequest.ManifestDateRange" isList="false" allowNull="false"/>
             <element name="manifestDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDRequest.ManifestDateRange" name="ManifestDateRange" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetManifestDDRequest.ManifestDateRange" name="ManifestDateRange" supportsQuickData="false">
             <element name="fromDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="toDate" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CreateShipmentTDRequest" name="CreateShipmentTDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.CreateShipmentTDRequest" name="CreateShipmentTDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentOrders" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType" isList="true" allowNull="false"/>
         </dataobject>
@@ -327,71 +327,71 @@
             <element name="pickup" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Pickup" isList="false" allowNull="false"/>
             <element name="labelResponseType" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetLabelDDRequest" name="GetLabelDDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetLabelDDRequest" name="GetLabelDDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CancelPickupRequest" name="CancelPickupRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.CancelPickupRequest" name="CancelPickupRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="bookingConfirmationNumber" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentResponse" name="DeleteShipmentResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.DeleteShipmentResponse" name="DeleteShipmentResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
             <element name="deletionStates" typeRef="intrashipservice.ws.de.isservice_1_0_de.DeletionState" isList="true" allowNull="false"/>
         </dataobject>
         <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeletionState" name="DeletionState" supportsQuickData="false">
             <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
         </dataobject>
         <dataobject javaType="intraship.ws.de.CreateShipmentDDRequest" name="CreateShipmentDDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentOrders" typeRef="intraship.ws.de.ShipmentOrderDDType" isList="true" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetManifestDDResponse" name="GetManifestDDResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetManifestDDResponse" name="GetManifestDDResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
             <element name="manifestPDFData" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.CancelPickupResponse" name="CancelPickupResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.CancelPickupResponse" name="CancelPickupResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentDDRequest" name="DeleteShipmentDDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.DeleteShipmentDDRequest" name="DeleteShipmentDDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetExportDocResponse" name="GetExportDocResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetExportDocResponse" name="GetExportDocResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
             <element name="exportDocDatas" typeRef="intrashipservice.ws.de.isservice_1_0_de.ExportDocData" isList="true" allowNull="false"/>
         </dataobject>
         <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.ExportDocData" name="ExportDocData" supportsQuickData="false">
             <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
             <element name="exportDocURL" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="exportDocPDFData" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.DeleteShipmentTDRequest" name="DeleteShipmentTDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.DeleteShipmentTDRequest" name="DeleteShipmentTDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetVersionResponse" name="GetVersionResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetVersionResponse" name="GetVersionResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetExportDocTDRequest" name="GetExportDocTDRequest" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetExportDocTDRequest" name="GetExportDocTDRequest" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
             <element name="shipmentNumbers" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="true" allowNull="false"/>
             <element name="docType" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.GetLabelResponse" name="GetLabelResponse" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.GetLabelResponse" name="GetLabelResponse" supportsQuickData="false">
             <element name="version" typeRef="intrashipservice.ws.de.isservice_1_0_de.Version" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
             <element name="labelDatas" typeRef="intrashipservice.ws.de.isservice_1_0_de.LabelData" isList="true" allowNull="false"/>
         </dataobject>
         <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.LabelData" name="LabelData" supportsQuickData="false">
             <element name="shipmentNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
-            <element name="status" typeRef="intrashipservice.ws.de.isservice_1_0_de.Statusinformation" isList="false" allowNull="false"/>
+            <element name="status" typeRef="intraship.ws.de.Statusinformation" isList="false" allowNull="false"/>
             <element name="labelurl" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="XMLLabel" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
@@ -617,7 +617,7 @@
         <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType" name="TDServiceGroupDateTimeOptionType" supportsQuickData="false">
             <element name="expressSaturday" typeRef="intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType.ExpressSaturday" isList="false" allowNull="false"/>
         </dataobject>
-        <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.PieceInformation" name="PieceInformation" supportsQuickData="false">
+        <dataobject javaType="intraship.ws.de.PieceInformation" name="PieceInformation" supportsQuickData="false">
             <element name="pieceNumber" typeRef="intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType" isList="false" allowNull="false"/>
         </dataobject>
         <dataobject javaType="intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType" name="FurtherAddressesDDType" supportsQuickData="false">
