@@ -39,7 +39,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="4">
       <Unit0>
         <Filename Value="customize_servicedef.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -53,6 +53,16 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="frmCustServDefMain"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="..\units\tools_utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="tools_utils"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\units\tools_const.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="tools_const"/>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -63,12 +73,13 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\frm"/>
+      <OtherUnitFiles Value="..\frm;..\units"/>
       <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
       <SyntaxOptions>
         <SyntaxMode Value="Delphi"/>
+        <UseAnsiStrings Value="False"/>
       </SyntaxOptions>
     </Parsing>
     <Linking>

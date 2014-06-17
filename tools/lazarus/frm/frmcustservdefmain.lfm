@@ -1,11 +1,11 @@
 object CustServDefMain: TCustServDefMain
   Left = 750
-  Height = 481
+  Height = 488
   Top = 151
   Width = 537
   BorderStyle = bsToolWindow
   Caption = 'servicedef.xml anpassen'
-  ClientHeight = 481
+  ClientHeight = 488
   ClientWidth = 537
   OnClose = FormClose
   OnCreate = FormCreate
@@ -14,7 +14,7 @@ object CustServDefMain: TCustServDefMain
   object pnlBottom: TPanel
     Left = 0
     Height = 34
-    Top = 447
+    Top = 454
     Width = 537
     Align = alBottom
     ClientHeight = 34
@@ -33,11 +33,11 @@ object CustServDefMain: TCustServDefMain
   end
   object pnlClient: TPanel
     Left = 0
-    Height = 447
+    Height = 454
     Top = 0
     Width = 537
     Align = alClient
-    ClientHeight = 447
+    ClientHeight = 454
     ClientWidth = 537
     TabOrder = 1
     object lblPackage1: TLabel
@@ -92,21 +92,23 @@ object CustServDefMain: TCustServDefMain
       Height = 22
       Top = 159
       Width = 23
-      Caption = '...'
+      Action = acSetSelection
+      ShowHint = True
+      ParentShowHint = False
     end
     object btnPackageDir2: TSpeedButton
       Left = 504
       Height = 22
       Top = 70
       Width = 23
-      Caption = '...'
+      Action = acGetPackageDir2
     end
     object btnPackageDir1: TSpeedButton
       Left = 504
       Height = 22
       Top = 29
       Width = 23
-      Caption = '...'
+      Action = acGetPackageDir1
     end
     object edtServiceDef: TEdit
       Left = 20
@@ -128,7 +130,7 @@ object CustServDefMain: TCustServDefMain
       Height = 22
       Top = 111
       Width = 23
-      Caption = '...'
+      Action = acGetServiceDev
     end
     object btnCustomize: TButton
       Left = 16
@@ -153,6 +155,53 @@ object CustServDefMain: TCustServDefMain
       Width = 74
       Caption = '<keine Datei>'
       ParentColor = False
+    end
+    object pbProgress: TProgressBar
+      Left = 1
+      Height = 20
+      Top = 433
+      Width = 535
+      Align = alBottom
+      TabOrder = 5
+    end
+  end
+  object dlgSelectDir: TSelectDirectoryDialog
+    FilterIndex = 0
+    left = 448
+    top = 400
+  end
+  object dlgOpen: TOpenDialog
+    Filter = 'XML-Dateien (*.xml)|*.xml|Alle Dateien (*.*)|*.*'
+    FilterIndex = 0
+    left = 336
+    top = 400
+  end
+  object acList: TActionList
+    left = 496
+    top = 208
+    object acGetPackageDir1: TAction
+      Category = 'ressourcen'
+      Caption = '...'
+      Hint = 'Pfad zu den Servicesourcen des Package: intrashipservice.ws.de.isservice_1_0_de wählen'
+      OnExecute = acGetPackageDir1Execute
+    end
+    object acGetPackageDir2: TAction
+      Category = 'ressourcen'
+      Caption = '...'
+      Hint = 'Pfad zu den Servicesourcen des Package: intraship.ws.de wählen'
+      OnExecute = acGetPackageDir2Execute
+    end
+    object acGetServiceDev: TAction
+      Category = 'ressourcen'
+      Caption = '...'
+      Hint = 'servicedef.xml auswählen'
+      OnExecute = acGetServiceDevExecute
+    end
+    object acSetSelection: TAction
+      Category = 'selection'
+      Caption = ':::'
+      Hint = 'Mögliche Anpassungen ermitteln'
+      OnExecute = acSetSelectionExecute
     end
   end
 end
