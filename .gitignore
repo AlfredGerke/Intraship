@@ -1,4 +1,14 @@
 #################
+## Lazarus
+#################
+
+tools/lazarus/lib/i386-win32/
+tools/lazarus/lpi/customize_servicedef.exe
+tools/lazarus/lpi/customize_servicedef.ini
+*.bak
+*.lps
+
+#################
 ## WaveMaker
 #################
 

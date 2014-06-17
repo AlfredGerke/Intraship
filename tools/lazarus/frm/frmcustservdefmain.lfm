@@ -1,0 +1,158 @@
+object CustServDefMain: TCustServDefMain
+  Left = 750
+  Height = 481
+  Top = 151
+  Width = 537
+  BorderStyle = bsToolWindow
+  Caption = 'servicedef.xml anpassen'
+  ClientHeight = 481
+  ClientWidth = 537
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '1.2.0.3'
+  object pnlBottom: TPanel
+    Left = 0
+    Height = 34
+    Top = 447
+    Width = 537
+    Align = alBottom
+    ClientHeight = 34
+    ClientWidth = 537
+    TabOrder = 0
+    object btnClose: TBitBtn
+      Left = 432
+      Height = 30
+      Top = 1
+      Width = 103
+      DefaultCaption = True
+      Kind = bkClose
+      ModalResult = 11
+      TabOrder = 0
+    end
+  end
+  object pnlClient: TPanel
+    Left = 0
+    Height = 447
+    Top = 0
+    Width = 537
+    Align = alClient
+    ClientHeight = 447
+    ClientWidth = 537
+    TabOrder = 1
+    object lblPackage1: TLabel
+      Left = 20
+      Height = 15
+      Top = 11
+      Width = 412
+      Caption = 'Absoluter Pfad zu den Servicesourcen: intrashipservice\ws\de\isservice_1_0_de'
+      ParentColor = False
+    end
+    object edtPackageDir1: TEdit
+      Left = 20
+      Height = 23
+      Top = 29
+      Width = 476
+      TabOrder = 0
+    end
+    object lblPackage2: TLabel
+      Left = 20
+      Height = 15
+      Top = 53
+      Width = 287
+      Caption = 'Absoluter Pfad zu den Servicesourcen: intraship\ws\de'
+      ParentColor = False
+    end
+    object edtPackageDir2: TEdit
+      Left = 20
+      Height = 23
+      Top = 70
+      Width = 476
+      TabOrder = 1
+    end
+    object cbxgrpSelect: TCheckGroup
+      Left = 16
+      Height = 201
+      Top = 159
+      Width = 480
+      AutoFill = True
+      Caption = ' Auswahl '
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      TabOrder = 2
+    end
+    object btnFind: TSpeedButton
+      Left = 504
+      Height = 22
+      Top = 159
+      Width = 23
+      Caption = '...'
+    end
+    object btnPackageDir2: TSpeedButton
+      Left = 504
+      Height = 22
+      Top = 70
+      Width = 23
+      Caption = '...'
+    end
+    object btnPackageDir1: TSpeedButton
+      Left = 504
+      Height = 22
+      Top = 29
+      Width = 23
+      Caption = '...'
+    end
+    object edtServiceDef: TEdit
+      Left = 20
+      Height = 23
+      Top = 111
+      Width = 476
+      TabOrder = 3
+    end
+    object lblServiceDef: TLabel
+      Left = 20
+      Height = 15
+      Top = 94
+      Width = 78
+      Caption = 'servicedef.xml:'
+      ParentColor = False
+    end
+    object btnServiceDef: TSpeedButton
+      Left = 504
+      Height = 22
+      Top = 111
+      Width = 23
+      Caption = '...'
+    end
+    object btnCustomize: TButton
+      Left = 16
+      Height = 25
+      Top = 368
+      Width = 480
+      Caption = 'Package-Zuordnungen korrigieren'
+      TabOrder = 4
+    end
+    object Label1: TLabel
+      Left = 16
+      Height = 15
+      Top = 405
+      Width = 149
+      Caption = 'Anpgepasste servicedef.xml:'
+      ParentColor = False
+    end
+    object lblNewServeDef: TLabel
+      Left = 169
+      Height = 15
+      Top = 405
+      Width = 74
+      Caption = '<keine Datei>'
+      ParentColor = False
+    end
+  end
+end
