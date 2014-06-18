@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Buttons, ExtCtrls, ActnList, ComCtrls;
+  Buttons, ExtCtrls, ActnList, ComCtrls, CheckLst;
 
 type
 
@@ -18,16 +18,18 @@ type
     acGetPackageDir2: TAction;
     acGetServiceDev: TAction;
     acSetSelection: TAction;
+    acCustomize: TAction;
     btnClose: TBitBtn;
     btnFind: TSpeedButton;
     btnPackageDir1: TSpeedButton;
     btnPackageDir2: TSpeedButton;
     btnCustomize: TButton;
-    cbxgrpSelect: TCheckGroup;
+    cbxlstSelect: TCheckListBox;
     edtServiceDef: TEdit;
     edtPackageDir1: TEdit;
     edtPackageDir2: TEdit;
     Label1: TLabel;
+    lblSelect: TLabel;
     lblNewServeDef: TLabel;
     lblServiceDef: TLabel;
     lblPackage1: TLabel;
@@ -38,17 +40,21 @@ type
     btnServiceDef: TSpeedButton;
     dlgSelectDir: TSelectDirectoryDialog;
     pbProgress: TProgressBar;
+    procedure acCustomizeExecute(Sender: TObject);
     procedure acGetPackageDir1Execute(Sender: TObject);
     procedure acGetPackageDir2Execute(Sender: TObject);
     procedure acGetServiceDevExecute(Sender: TObject);
     procedure acSetSelectionExecute(Sender: TObject);
+    procedure btnCustomizeClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
     FIniFilename: string;
     FFileListByPackageDir1: TStrings;
     FFileListByPackageDir2: TStrings;
+    FServiceDefStrings: TStrings;
 
+    procedure InitProgress(aMax: integer);
     procedure SetSelection;
     function GetInitDirForPackage1: string;
     function GetInitDirForPackage2: string;
@@ -81,22 +87,63 @@ begin
 end;
 
 {------------------------------------------------------------------------------}
+procedure TCustServDefMain.InitProgress(aMax: integer);
+begin
+  pbProgress.Step:=1;
+  pbProgress.Min:=0;
+  pbProgress.Max:=aMax;
+end;
+
+{------------------------------------------------------------------------------}
 procedure TCustServDefMain.SetSelection;
 var
   dir1: string;
   dir2: string;
+  service_def: string;
 begin
   dir1 := edtPackageDir1.Text;
   dir2 := edtPackageDir2.Text;
+  service_def := edtServiceDef.Text;
+  cbxlstSelect.Items.Clear;
+
+  InitProgress(7);
 
   if not DirectoryExists(dir1) or not DirectoryExists(dir2) then
   begin
     MessageDlg('Verzeichnisse für die Packages überprüfen!', mtWarning, [mbOK], 0);
     Exit;
   end;
+  pbProgress.StepIt;
 
+  if not Assigned(FServiceDefStrings) or not FileExists(service_def) then
+  begin
+    MessageDlg('servicedef.xml kann nicht geladen werden!', mtWarning, [mbOK], 0);
+    Exit;
+  end;
+  pbProgress.StepIt;
+
+  // 1. Dateien aus PackageDir1 für Package: intrashipservice.ws.de.isservice_1_0_de
   GetFilesByDir(dir1, FFileListByPackageDir1, '*.java');
+  pbProgress.StepIt;
+
+  // 2. Dateien aus PackageDir2 für Package: intraship.ws.de
   GetFilesByDir(dir2, FFileListByPackageDir2, '*.java');
+  pbProgress.StepIt;
+
+  // 3. servicedef.xml laden
+  FServiceDefStrings.LoadFromFile(service_def);
+  pbProgress.StepIt;
+
+  // 4. Dateien des Package: intraship.ws.de prüfen
+  GetSelectByServiceDef(FFileListByPackageDir1, FServiceDefStrings,
+    INTRASHIP_WS_DE, INTRASHIPSERVICE_WS_DE_ISSERVICE_1_0_DE, cbxlstSelect);
+  pbProgress.StepIt;
+
+  // 5. Dateien des Package: intrashipservice.ws.de.isservice_1_0_de
+  GetSelectByServiceDef(FFileListByPackageDir2, FServiceDefStrings,
+    INTRASHIPSERVICE_WS_DE_ISSERVICE_1_0_DE, INTRASHIP_WS_DE, cbxlstSelect);
+  pbProgress.StepIt;
+
 end;
 
 {------------------------------------------------------------------------------}
@@ -134,6 +181,12 @@ begin
 end;
 
 {------------------------------------------------------------------------------}
+procedure TCustServDefMain.acCustomizeExecute(Sender: TObject);
+begin
+  InitProgress(1);
+end;
+
+{------------------------------------------------------------------------------}
 procedure TCustServDefMain.acGetPackageDir2Execute(Sender: TObject);
 begin
   dlgSelectDir.InitialDir := GetInitDirForPackage2;
@@ -153,6 +206,11 @@ end;
 procedure TCustServDefMain.acSetSelectionExecute(Sender: TObject);
 begin
   SetSelection;
+end;
+
+procedure TCustServDefMain.btnCustomizeClick(Sender: TObject);
+begin
+
 end;
 
 {------------------------------------------------------------------------------}
@@ -191,6 +249,7 @@ begin
   FIniFilename := GetInifileName;
   FFileListByPackageDir1 := TStringList.Create;
   FFileListByPackageDir2 := TStringList.Create;
+  FServiceDefStrings := TStringList.Create;
 
   ReadWriteInfo(READ);
 end;
@@ -199,6 +258,9 @@ end;
 procedure TCustServDefMain.Done;
 begin
   ReadWriteInfo(WRITE);
+
+  if Assigned(FServiceDefStrings) then
+    FreeAndNil(FServiceDefStrings);
 
   if Assigned(FFileListByPackageDir1) then
     FreeAndNil(FFileListByPackageDir1);

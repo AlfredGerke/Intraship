@@ -70,23 +70,6 @@ object CustServDefMain: TCustServDefMain
       Width = 476
       TabOrder = 1
     end
-    object cbxgrpSelect: TCheckGroup
-      Left = 16
-      Height = 201
-      Top = 159
-      Width = 480
-      AutoFill = True
-      Caption = ' Auswahl '
-      ChildSizing.LeftRightSpacing = 6
-      ChildSizing.TopBottomSpacing = 6
-      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
-      ChildSizing.EnlargeVertical = crsHomogenousChildResize
-      ChildSizing.ShrinkHorizontal = crsScaleChilds
-      ChildSizing.ShrinkVertical = crsScaleChilds
-      ChildSizing.Layout = cclLeftToRightThenTopToBottom
-      ChildSizing.ControlsPerLine = 1
-      TabOrder = 2
-    end
     object btnFind: TSpeedButton
       Left = 504
       Height = 22
@@ -115,7 +98,7 @@ object CustServDefMain: TCustServDefMain
       Height = 23
       Top = 111
       Width = 476
-      TabOrder = 3
+      TabOrder = 2
     end
     object lblServiceDef: TLabel
       Left = 20
@@ -133,15 +116,16 @@ object CustServDefMain: TCustServDefMain
       Action = acGetServiceDev
     end
     object btnCustomize: TButton
-      Left = 16
+      Left = 20
       Height = 25
       Top = 368
-      Width = 480
-      Caption = 'Package-Zuordnungen korrigieren'
-      TabOrder = 4
+      Width = 476
+      Action = acCustomize
+      OnClick = btnCustomizeClick
+      TabOrder = 3
     end
     object Label1: TLabel
-      Left = 16
+      Left = 20
       Height = 15
       Top = 405
       Width = 149
@@ -149,7 +133,7 @@ object CustServDefMain: TCustServDefMain
       ParentColor = False
     end
     object lblNewServeDef: TLabel
-      Left = 169
+      Left = 173
       Height = 15
       Top = 405
       Width = 74
@@ -162,7 +146,23 @@ object CustServDefMain: TCustServDefMain
       Top = 433
       Width = 535
       Align = alBottom
+      TabOrder = 4
+    end
+    object cbxlstSelect: TCheckListBox
+      Left = 20
+      Height = 201
+      Top = 159
+      Width = 476
+      ItemHeight = 0
       TabOrder = 5
+    end
+    object lblSelect: TLabel
+      Left = 20
+      Height = 15
+      Top = 139
+      Width = 48
+      Caption = 'Auswahl:'
+      ParentColor = False
     end
   end
   object dlgSelectDir: TSelectDirectoryDialog
@@ -202,6 +202,11 @@ object CustServDefMain: TCustServDefMain
       Caption = ':::'
       Hint = 'Mögliche Anpassungen ermitteln'
       OnExecute = acSetSelectionExecute
+    end
+    object acCustomize: TAction
+      Category = 'customize'
+      Caption = 'Package-Zuordnungen korrigieren'
+      OnExecute = acCustomizeExecute
     end
   end
 end
