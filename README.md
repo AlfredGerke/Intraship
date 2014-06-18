@@ -224,6 +224,7 @@ Nachher:
         }
 
 
+
 `servicedef.xml` automatisch anpassen
 -------------------------------------
 
@@ -234,7 +235,7 @@ das die `types.js` falsch aufgebaut wird. Eine falsch eingerichtete `types.js` v
 
 Um diese falschen Package-Zuordnungen nicht von Hand auflösen zu müssen, wurde ein kleines Projekt in Lazarus/FreePascal aufgesetzt um diese Arbeiten zu automatisieren. 
 
-* [Customize servicedef.xml](https://github.com/AlfredGerke/Intraship/tree/master/tools/lazarus/lpi, "Customize servicedef.xml")
+* [Customize servicedef.xml](https://github.com/AlfredGerke/Intraship/tree/master/tools/lazarus/lpi "Customize servicedef.xml")
 
 Dem Programm werden die Ordner der Proxy-Klassen bekannt gegeben, sowie die zu überprüfende `servicedef.xml` des DHL-Service.
 Wenn Ordern und Datei bekannt sind, wird in einem ersten Schritt eine Zusammenstellung aller 
