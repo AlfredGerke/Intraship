@@ -5,8 +5,19 @@ unit frmCustServDefMain;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Buttons, ExtCtrls, ActnList, ComCtrls, CheckLst;
+  Classes,
+  SysUtils,
+  FileUtil,
+  Forms,
+  Controls,
+  Graphics,
+  Dialogs,
+  StdCtrls,
+  Buttons,
+  ExtCtrls,
+  ActnList,
+  ComCtrls,
+  CheckLst;
 
 type
 
@@ -19,17 +30,18 @@ type
     acGetServiceDev: TAction;
     acSetSelection: TAction;
     acCustomize: TAction;
+    acCheckSelection: TAction;
     btnClose: TBitBtn;
     btnFind: TSpeedButton;
     btnPackageDir1: TSpeedButton;
     btnPackageDir2: TSpeedButton;
     btnCustomize: TButton;
     cbxlstSelect: TCheckListBox;
+    cbxSelect: TCheckBox;
     edtServiceDef: TEdit;
     edtPackageDir1: TEdit;
     edtPackageDir2: TEdit;
     Label1: TLabel;
-    lblSelect: TLabel;
     lblNewServeDef: TLabel;
     lblServiceDef: TLabel;
     lblPackage1: TLabel;
@@ -40,12 +52,12 @@ type
     btnServiceDef: TSpeedButton;
     dlgSelectDir: TSelectDirectoryDialog;
     pbProgress: TProgressBar;
+    procedure acCheckSelectionExecute(Sender: TObject);
     procedure acCustomizeExecute(Sender: TObject);
     procedure acGetPackageDir1Execute(Sender: TObject);
     procedure acGetPackageDir2Execute(Sender: TObject);
     procedure acGetServiceDevExecute(Sender: TObject);
     procedure acSetSelectionExecute(Sender: TObject);
-    procedure btnCustomizeClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
@@ -54,6 +66,10 @@ type
     FFileListByPackageDir2: TStrings;
     FServiceDefStrings: TStrings;
 
+    procedure CustomizeServiceDef;
+    procedure StepItWihtText(aText: string;
+                             aStepIt: boolean = True);
+    procedure SaveNewSettingsForServiceDef;
     procedure InitProgress(aMax: integer);
     procedure SetSelection;
     function GetInitDirForPackage1: string;
@@ -87,10 +103,109 @@ begin
 end;
 
 {------------------------------------------------------------------------------}
+procedure TCustServDefMain.CustomizeServiceDef;
+var
+  anz_files: integer;
+  anz_lines: integer;
+  item: string;
+  orig_filename: string;
+  from_package: string;
+  to_package: string;
+  list: TStrings;
+  do_save_service_dev: boolean;
+begin
+  do_save_service_dev := False;
+
+  Screen.Cursor:=crHourGlass;
+
+  InitProgress(cbxlstSelect.Items.Count+1);
+  try
+    for anz_files:=0 to cbxlstSelect.Items.Count-1 do
+    begin
+      if cbxlstSelect.Checked[anz_files] then
+      begin
+        item := Trim(cbxlstSelect.Items.Strings[anz_files]);
+        item := StringReplace(item, ':', #13, [rfReplaceAll]);
+        item := StringReplace(item, '->', #13, [rfReplaceAll]);
+
+        list := TStringList.Create;
+        try
+          list.Text := item;
+          if (list.count = 3) then
+          begin
+            orig_filename := Trim(list.Strings[0]);
+            from_package := Trim(list.Strings[1]) + '.' + orig_filename;
+            to_package := Trim(list.Strings[2]) + '.' + orig_filename;
+
+            StepItWihtText(orig_filename, False);
+            for anz_lines := 0 to FServiceDefStrings.Count-1 do
+            begin
+              item := FServiceDefStrings.Text;
+              item := StringReplace(item, from_package, to_package, [rfReplaceAll]);
+              FServiceDefStrings.Text := item;
+
+              if not do_save_service_dev then
+                do_save_service_dev := True;
+            end;
+          end;
+        finally
+          if Assigned(list) then
+            FreeAndNil(list);
+        end;
+      end;
+
+      pbProgress.StepIt;
+    end;
+
+    if do_save_service_dev then
+      SaveNewSettingsForServiceDef
+    else
+      MessageDlg('Es wurden keine Änderungen vorgenommen!', mtInformation, [mbOK], 0);
+
+    pbProgress.StepIt;
+  finally
+    Screen.Cursor := crDefault;
+  end;
+end;
+
+{------------------------------------------------------------------------------}
+procedure TCustServDefMain.StepItWihtText(aText: string;
+  aStepIt: boolean = True);
+begin
+  pbProgress.Caption := aText;
+  if aStepIt then
+    pbProgress.StepIt;
+end;
+
+{------------------------------------------------------------------------------}
+procedure TCustServDefMain.SaveNewSettingsForServiceDef;
+var
+  orig_filename: string;
+  new_filename: string;
+  counter: integer;
+begin
+  orig_filename := edtServiceDef.Text;
+  counter := 0;
+
+  repeat
+    Inc(counter);
+    new_filename := Format('%s_new_%.8d', [orig_filename, counter]);
+  until not FileExists(new_filename);
+
+  FServiceDefStrings.SaveToFile(new_filename);
+
+  lblNewServeDef.Caption := ExtractFileName(new_filename);
+
+  MessageDlg(Format('Folgende Datei angelegt: %s', [new_filename]), mtInformation, [mbOK], 0);
+end;
+
+{------------------------------------------------------------------------------}
 procedure TCustServDefMain.InitProgress(aMax: integer);
 begin
   pbProgress.Step:=1;
   pbProgress.Min:=0;
+  pbProgress.Max:=0;
+  Application.ProcessMessages;
   pbProgress.Max:=aMax;
 end;
 
@@ -105,6 +220,8 @@ begin
   dir2 := edtPackageDir2.Text;
   service_def := edtServiceDef.Text;
   cbxlstSelect.Items.Clear;
+  cbxSelect.Checked := False;
+  lblNewServeDef.Caption := '<keine Datei>';
 
   InitProgress(7);
 
@@ -122,27 +239,32 @@ begin
   end;
   pbProgress.StepIt;
 
-  // 1. Dateien aus PackageDir1 für Package: intrashipservice.ws.de.isservice_1_0_de
-  GetFilesByDir(dir1, FFileListByPackageDir1, '*.java');
-  pbProgress.StepIt;
+  Screen.Cursor := crHourGlass;
+  try
+    // 1. Dateien aus PackageDir1 für Package: intrashipservice.ws.de.isservice_1_0_de
+    GetFilesByDir(dir1, FFileListByPackageDir1, '*.java');
+    StepItWihtText('intrashipservice.ws.de.isservice_1_0_de');
 
-  // 2. Dateien aus PackageDir2 für Package: intraship.ws.de
-  GetFilesByDir(dir2, FFileListByPackageDir2, '*.java');
-  pbProgress.StepIt;
+    // 2. Dateien aus PackageDir2 für Package: intraship.ws.de
+    GetFilesByDir(dir2, FFileListByPackageDir2, '*.java');
+    StepItWihtText('intraship.ws.de');
 
-  // 3. servicedef.xml laden
-  FServiceDefStrings.LoadFromFile(service_def);
-  pbProgress.StepIt;
+    // 3. servicedef.xml laden
+    FServiceDefStrings.LoadFromFile(service_def);
+    StepItWihtText('servicedef.xml laden');
 
-  // 4. Dateien des Package: intraship.ws.de prüfen
-  GetSelectByServiceDef(FFileListByPackageDir1, FServiceDefStrings,
-    INTRASHIP_WS_DE, INTRASHIPSERVICE_WS_DE_ISSERVICE_1_0_DE, cbxlstSelect);
-  pbProgress.StepIt;
+    // 4. Dateien des Package: intraship.ws.de prüfen
+    GetSelectByServiceDef(FFileListByPackageDir1, FServiceDefStrings,
+      INTRASHIP_WS_DE, INTRASHIPSERVICE_WS_DE_ISSERVICE_1_0_DE, cbxlstSelect);
+    StepItWihtText('Dateien des Package: intraship.ws.de prüfen');
 
-  // 5. Dateien des Package: intrashipservice.ws.de.isservice_1_0_de
-  GetSelectByServiceDef(FFileListByPackageDir2, FServiceDefStrings,
-    INTRASHIPSERVICE_WS_DE_ISSERVICE_1_0_DE, INTRASHIP_WS_DE, cbxlstSelect);
-  pbProgress.StepIt;
+    // 5. Dateien des Package: intrashipservice.ws.de.isservice_1_0_de
+    GetSelectByServiceDef(FFileListByPackageDir2, FServiceDefStrings,
+      INTRASHIPSERVICE_WS_DE_ISSERVICE_1_0_DE, INTRASHIP_WS_DE, cbxlstSelect);
+    StepItWihtText('Dateien des Package: intrashipservice.ws.de.isservice_1_0_de');
+  finally
+    Screen.Cursor := crDefault;
+  end;
 
 end;
 
@@ -183,7 +305,13 @@ end;
 {------------------------------------------------------------------------------}
 procedure TCustServDefMain.acCustomizeExecute(Sender: TObject);
 begin
-  InitProgress(1);
+  CustomizeServiceDef;
+end;
+
+{------------------------------------------------------------------------------}
+procedure TCustServDefMain.acCheckSelectionExecute(Sender: TObject);
+begin
+  cbxlstSelect.CheckAll(cbxSelect.State, False, False);
 end;
 
 {------------------------------------------------------------------------------}
@@ -206,11 +334,6 @@ end;
 procedure TCustServDefMain.acSetSelectionExecute(Sender: TObject);
 begin
   SetSelection;
-end;
-
-procedure TCustServDefMain.btnCustomizeClick(Sender: TObject);
-begin
-
 end;
 
 {------------------------------------------------------------------------------}
@@ -270,4 +393,3 @@ begin
 end;
 
 end.
-

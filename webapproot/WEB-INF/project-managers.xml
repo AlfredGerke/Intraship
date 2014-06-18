@@ -24,22 +24,22 @@
                         <value>intrashipservice.ws.de.isservice_1_0_de.PostOfficeTypeType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.PackStationTypeType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.PickupAddressTypeType</value>
+                        <value>intraship.ws.de.PickupAddressTypeType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.ContactTypeType</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType</value>
                         <value>intraship.ws.de.DeveloperAuthentification</value>
                         <value>intraship.ws.de.DoManifestTDRequest</value>
                         <value>intraship.ws.de.CreateShipmentResponse</value>
-                        <value>intraship.ws.de.Statusinformation</value>
+                        <value>intrashipservice.ws.de.isservice_1_0_de.Statusinformation</value>
                         <value>intraship.ws.de.CreationState</value>
                         <value>intraship.ws.de.DoManifestResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ManifestState</value>
+                        <value>intraship.ws.de.ManifestState</value>
                         <value>intraship.ws.de.UpdateShipmentDDRequest</value>
                         <value>intraship.ws.de.ShipmentOrderDDType</value>
                         <value>intraship.ws.de.BookPickupRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.PickupBookingInformationType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.PickupAddressType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.PickupOrdererType</value>
+                        <value>intraship.ws.de.PickupBookingInformationType</value>
+                        <value>intraship.ws.de.PickupAddressType</value>
+                        <value>intraship.ws.de.PickupOrdererType</value>
                         <value>intraship.ws.de.GetLabelTDRequest</value>
                         <value>intraship.ws.de.GetExportDocDDRequest</value>
                         <value>intraship.ws.de.DoManifestDDRequest</value>
@@ -48,85 +48,85 @@
                         <value>intraship.ws.de.GetManifestDDRequest</value>
                         <value>intraship.ws.de.GetManifestDDRequest.ManifestDateRange</value>
                         <value>intraship.ws.de.CreateShipmentTDRequest</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType</value>
+                        <value>intraship.ws.de.ShipmentOrderTDType</value>
                         <value>intraship.ws.de.GetLabelDDRequest</value>
                         <value>intraship.ws.de.CancelPickupRequest</value>
                         <value>intraship.ws.de.DeleteShipmentResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DeletionState</value>
+                        <value>intraship.ws.de.DeletionState</value>
                         <value>intraship.ws.de.CreateShipmentDDRequest</value>
                         <value>intraship.ws.de.GetManifestDDResponse</value>
                         <value>intraship.ws.de.CancelPickupResponse</value>
                         <value>intraship.ws.de.DeleteShipmentDDRequest</value>
                         <value>intraship.ws.de.GetExportDocResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ExportDocData</value>
+                        <value>intraship.ws.de.ExportDocData</value>
                         <value>intraship.ws.de.DeleteShipmentTDRequest</value>
                         <value>intraship.ws.de.GetVersionResponse</value>
                         <value>intraship.ws.de.GetExportDocTDRequest</value>
                         <value>intraship.ws.de.GetLabelResponse</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.LabelData</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceDD</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfigurationTeZu</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipperDDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ReceiverTDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ReceiverDDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.PackstationType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentItemTDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ReceiverType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipperType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipperTDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.IdentityType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentItemType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupPickupType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.PostfilialeType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.IdentityData</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.PickupDetailsType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentNotificationType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceTD</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType</value>
+                        <value>intraship.ws.de.LabelData</value>
+                        <value>intraship.ws.de.DDShipmentServiceGroupIdentType</value>
+                        <value>intraship.ws.de.ShipmentServiceDD</value>
+                        <value>intraship.ws.de.EndorsementServiceconfigurationTeZu</value>
+                        <value>intraship.ws.de.ShipperDDType</value>
+                        <value>intraship.ws.de.ReceiverTDType</value>
+                        <value>intraship.ws.de.DDServiceGroupBusinessPackInternationalType</value>
+                        <value>intraship.ws.de.ReceiverDDType</value>
+                        <value>intraship.ws.de.DDServiceGroupOtherType</value>
+                        <value>intraship.ws.de.ShipmentDetailsType</value>
+                        <value>intraship.ws.de.ShipmentDetailsDDType</value>
+                        <value>intraship.ws.de.DDServiceGroupDHLPaketType</value>
+                        <value>intraship.ws.de.PackstationType</value>
+                        <value>intraship.ws.de.TDServiceGroupOtherType</value>
+                        <value>intraship.ws.de.ShipmentItemTDType</value>
+                        <value>intraship.ws.de.ReceiverType</value>
+                        <value>intraship.ws.de.ShipperType</value>
+                        <value>intraship.ws.de.ShipperTDType</value>
+                        <value>intraship.ws.de.ExportDocumentDDType</value>
+                        <value>intraship.ws.de.IdentityType</value>
+                        <value>intraship.ws.de.ShipmentItemType</value>
+                        <value>intraship.ws.de.EndorsementServiceconfiguration</value>
+                        <value>intraship.ws.de.DDShipmentServiceGroupPickupType</value>
+                        <value>intraship.ws.de.PostfilialeType</value>
+                        <value>intraship.ws.de.IdentityData</value>
+                        <value>intraship.ws.de.PickupDetailsType</value>
+                        <value>intraship.ws.de.ShipmentNotificationType</value>
+                        <value>intraship.ws.de.ShipmentServiceTD</value>
+                        <value>intraship.ws.de.DDServiceGroupDateTimeOptionType</value>
+                        <value>intraship.ws.de.ExportDocumentTDType</value>
+                        <value>intraship.ws.de.TDServiceGroupDateTimeOptionType</value>
                         <value>intraship.ws.de.PieceInformation</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentItemDDType</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.Account</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.AccountPaidBy</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType.DeliveryAdress</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType.ExpressSaturday</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType.ExportDocPosition</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType.DeliveryOnTime</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.IdentityData.BankCard</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.IdentityData.IdentityCard</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.IdentityData.DrivingLicense</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType.ExportDocPosition</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType.Insurance</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.Endorsement</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory.AdvisoryData</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType.Attendance</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Bulkfreight</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.DangerousGoods</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Unfree</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.COD</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.HigherInsurance</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType.Endorsement</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.CheckMinimumAge</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.SMSAviso</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.ContractSubmission</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentPremium</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentExtra</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.Ident</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Shipment</value>
-                        <value>intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Pickup</value>
+                        <value>intraship.ws.de.FurtherAddressesDDType</value>
+                        <value>intraship.ws.de.ShipmentDetailsTDType</value>
+                        <value>intraship.ws.de.ShipmentItemDDType</value>
+                        <value>intraship.ws.de.ShipmentDetailsTDType.Account</value>
+                        <value>intraship.ws.de.ShipmentDetailsTDType.AccountPaidBy</value>
+                        <value>intraship.ws.de.FurtherAddressesDDType.DeliveryAdress</value>
+                        <value>intraship.ws.de.TDServiceGroupDateTimeOptionType.ExpressSaturday</value>
+                        <value>intraship.ws.de.ExportDocumentTDType.ExportDocPosition</value>
+                        <value>intraship.ws.de.DDServiceGroupDateTimeOptionType.DeliveryOnTime</value>
+                        <value>intraship.ws.de.IdentityData.BankCard</value>
+                        <value>intraship.ws.de.IdentityData.IdentityCard</value>
+                        <value>intraship.ws.de.IdentityData.DrivingLicense</value>
+                        <value>intraship.ws.de.ExportDocumentDDType.ExportDocPosition</value>
+                        <value>intraship.ws.de.TDServiceGroupOtherType.Insurance</value>
+                        <value>intraship.ws.de.DDServiceGroupDHLPaketType.Endorsement</value>
+                        <value>intraship.ws.de.DDServiceGroupDHLPaketType.ShipmentAdvisory</value>
+                        <value>intraship.ws.de.DDServiceGroupDHLPaketType.ShipmentAdvisory.AdvisoryData</value>
+                        <value>intraship.ws.de.ShipmentDetailsDDType.Attendance</value>
+                        <value>intraship.ws.de.DDServiceGroupOtherType.Bulkfreight</value>
+                        <value>intraship.ws.de.DDServiceGroupOtherType.DangerousGoods</value>
+                        <value>intraship.ws.de.DDServiceGroupOtherType.Unfree</value>
+                        <value>intraship.ws.de.DDServiceGroupOtherType.COD</value>
+                        <value>intraship.ws.de.DDServiceGroupOtherType.HigherInsurance</value>
+                        <value>intraship.ws.de.DDServiceGroupBusinessPackInternationalType.Endorsement</value>
+                        <value>intraship.ws.de.DDShipmentServiceGroupIdentType.CheckMinimumAge</value>
+                        <value>intraship.ws.de.DDShipmentServiceGroupIdentType.SMSAviso</value>
+                        <value>intraship.ws.de.DDShipmentServiceGroupIdentType.ContractSubmission</value>
+                        <value>intraship.ws.de.DDShipmentServiceGroupIdentType.IdentPremium</value>
+                        <value>intraship.ws.de.DDShipmentServiceGroupIdentType.IdentExtra</value>
+                        <value>intraship.ws.de.DDShipmentServiceGroupIdentType.Ident</value>
+                        <value>intraship.ws.de.ShipmentOrderTDType.Shipment</value>
+                        <value>intraship.ws.de.ShipmentOrderTDType.Pickup</value>
                         <value>intraship.ws.de.ShipmentOrderDDType.Shipment</value>
                         <value>intraship.ws.de.ShipmentOrderDDType.Pickup</value>
                         <value>intrashipservice.ws.de.isservice_1_0_de.NameTypeType.Company</value>

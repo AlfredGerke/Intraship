@@ -23,11 +23,14 @@ object CustServDefMain: TCustServDefMain
     object btnClose: TBitBtn
       Left = 432
       Height = 30
+      Hint = 'Anwendung schließen'
       Top = 1
       Width = 103
       DefaultCaption = True
       Kind = bkClose
       ModalResult = 11
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
     end
   end
@@ -53,6 +56,8 @@ object CustServDefMain: TCustServDefMain
       Height = 23
       Top = 29
       Width = 476
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
     end
     object lblPackage2: TLabel
@@ -68,6 +73,8 @@ object CustServDefMain: TCustServDefMain
       Height = 23
       Top = 70
       Width = 476
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
     end
     object btnFind: TSpeedButton
@@ -85,6 +92,8 @@ object CustServDefMain: TCustServDefMain
       Top = 70
       Width = 23
       Action = acGetPackageDir2
+      ShowHint = True
+      ParentShowHint = False
     end
     object btnPackageDir1: TSpeedButton
       Left = 504
@@ -92,12 +101,16 @@ object CustServDefMain: TCustServDefMain
       Top = 29
       Width = 23
       Action = acGetPackageDir1
+      ShowHint = True
+      ParentShowHint = False
     end
     object edtServiceDef: TEdit
       Left = 20
       Height = 23
       Top = 111
       Width = 476
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 2
     end
     object lblServiceDef: TLabel
@@ -114,6 +127,8 @@ object CustServDefMain: TCustServDefMain
       Top = 111
       Width = 23
       Action = acGetServiceDev
+      ShowHint = True
+      ParentShowHint = False
     end
     object btnCustomize: TButton
       Left = 20
@@ -121,15 +136,16 @@ object CustServDefMain: TCustServDefMain
       Top = 368
       Width = 476
       Action = acCustomize
-      OnClick = btnCustomizeClick
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 3
     end
     object Label1: TLabel
       Left = 20
       Height = 15
       Top = 405
-      Width = 149
-      Caption = 'Anpgepasste servicedef.xml:'
+      Width = 142
+      Caption = 'Angepasste servicedef.xml:'
       ParentColor = False
     end
     object lblNewServeDef: TLabel
@@ -146,23 +162,34 @@ object CustServDefMain: TCustServDefMain
       Top = 433
       Width = 535
       Align = alBottom
+      Max = 0
+      ParentShowHint = False
+      ShowHint = True
+      Smooth = True
+      Step = 1
       TabOrder = 4
+      BarShowText = True
     end
     object cbxlstSelect: TCheckListBox
       Left = 20
       Height = 201
+      Hint = 'Auswahl von falschen Package-Zuordnungen'
       Top = 159
       Width = 476
       ItemHeight = 0
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 5
     end
-    object lblSelect: TLabel
-      Left = 20
-      Height = 15
-      Top = 139
-      Width = 48
-      Caption = 'Auswahl:'
-      ParentColor = False
+    object cbxSelect: TCheckBox
+      Left = 24
+      Height = 19
+      Top = 138
+      Width = 68
+      Action = acCheckSelection
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
     end
   end
   object dlgSelectDir: TSelectDirectoryDialog
@@ -206,7 +233,14 @@ object CustServDefMain: TCustServDefMain
     object acCustomize: TAction
       Category = 'customize'
       Caption = 'Package-Zuordnungen korrigieren'
+      Hint = 'Package-Zuordnungen korrigieren'
       OnExecute = acCustomizeExecute
+    end
+    object acCheckSelection: TAction
+      Category = 'selection'
+      Caption = 'Auswahl:'
+      Hint = 'Auswahl markieren/demarkieren'
+      OnExecute = acCheckSelectionExecute
     end
   end
 end

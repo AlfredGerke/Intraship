@@ -1,6 +1,6 @@
 unit tools_const;
 
-{$mode delphi}
+{$mode Delphi}{$H+}
 
 interface
 

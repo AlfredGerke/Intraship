@@ -34,7 +34,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PickupBookingInformationType"
+					"type": "intraship.ws.de.PickupBookingInformationType"
 				},
 				"contactOrderer": {
 					"exclude": [],
@@ -44,7 +44,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PickupOrdererType"
+					"type": "intraship.ws.de.PickupOrdererType"
 				},
 				"pickupAddress": {
 					"exclude": [],
@@ -54,7 +54,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PickupAddressType"
+					"type": "intraship.ws.de.PickupAddressType"
 				},
 				"version": {
 					"exclude": [],
@@ -101,7 +101,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -155,7 +155,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -219,7 +219,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -246,7 +246,7 @@ wm.types = {
 					"isList": true,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType"
+					"type": "intraship.ws.de.ShipmentOrderTDType"
 				},
 				"version": {
 					"exclude": [],
@@ -350,6 +350,1170 @@ wm.types = {
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
+		"intraship.ws.de.DDServiceGroupBusinessPackInternationalType": {
+			"fields": {
+				"amountInternational": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"coilWithoutHelp": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"economy": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"endorsement": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupBusinessPackInternationalType.Endorsement"
+				},
+				"premium": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"seapacket": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupBusinessPackInternationalType.Endorsement": {
+			"fields": {
+				"days": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"ident": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupDHLPaketType": {
+			"fields": {
+				"endorsement": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupDHLPaketType.Endorsement"
+				},
+				"multipack": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"particularDelivery": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"regioPacket": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"shipmentAdvisory": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupDHLPaketType.ShipmentAdvisory"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupDHLPaketType.Endorsement": {
+			"fields": {
+				"NSI": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.EndorsementServiceconfiguration"
+				},
+				"UZN": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.EndorsementServiceconfiguration"
+				},
+				"keNa": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.EndorsementServiceconfiguration"
+				},
+				"soZue": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.EndorsementServiceconfiguration"
+				},
+				"teZu": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.EndorsementServiceconfigurationTeZu"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupDHLPaketType.ShipmentAdvisory": {
+			"fields": {
+				"advisoryDatas": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupDHLPaketType.ShipmentAdvisory.AdvisoryData"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupDHLPaketType.ShipmentAdvisory.AdvisoryData": {
+			"fields": {
+				"emailAddress": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"language": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"mobilePhoneNumber": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"moduleType": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"reference": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupDateTimeOptionType": {
+			"fields": {
+				"deliveryAfternoon": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"deliveryEarly": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"deliveryEvening": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"deliveryOnTime": {
+					"exclude": [],
+					"fieldOrder": 8,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupDateTimeOptionType.DeliveryOnTime"
+				},
+				"express0900": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"express1000": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"express1200": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"expressSaturday": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"expressSunday": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupDateTimeOptionType.DeliveryOnTime": {
+			"fields": {
+				"time": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupOtherType": {
+			"fields": {
+				"COD": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupOtherType.COD"
+				},
+				"bulkfreight": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupOtherType.Bulkfreight"
+				},
+				"bypass": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"dangerousGoods": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupOtherType.DangerousGoods"
+				},
+				"directInjection": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"higherInsurance": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupOtherType.HigherInsurance"
+				},
+				"unfree": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupOtherType.Unfree"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupOtherType.Bulkfreight": {
+			"fields": {
+				"bulkfreightType": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupOtherType.COD": {
+			"fields": {
+				"CODAmount": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"CODCurrency": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupOtherType.DangerousGoods": {
+			"fields": {
+				"dangerousGoodsClass": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"dangerousGoodsPackagingType": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"dangerousGoodsUNCode": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupOtherType.HigherInsurance": {
+			"fields": {
+				"insuranceAmount": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"insuranceCurrency": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDServiceGroupOtherType.Unfree": {
+			"fields": {
+				"customerNumber": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"paymentType": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDShipmentServiceGroupIdentType": {
+			"fields": {
+				"SMSAviso": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDShipmentServiceGroupIdentType.SMSAviso"
+				},
+				"checkMinimumAge": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDShipmentServiceGroupIdentType.CheckMinimumAge"
+				},
+				"contractSubmission": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDShipmentServiceGroupIdentType.ContractSubmission"
+				},
+				"ident": {
+					"exclude": [],
+					"fieldOrder": 8,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDShipmentServiceGroupIdentType.Ident"
+				},
+				"identExtra": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDShipmentServiceGroupIdentType.IdentExtra"
+				},
+				"identPremium": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDShipmentServiceGroupIdentType.IdentPremium"
+				},
+				"personally": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"proofOfDelivery": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"returnReceipt": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDShipmentServiceGroupIdentType.CheckMinimumAge": {
+			"fields": {
+				"minimumAge": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDShipmentServiceGroupIdentType.ContractSubmission": {
+			"fields": {
+				"totalDocsReceiver": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"totalDocsSender": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"totalPages": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"totalSignatures": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDShipmentServiceGroupIdentType.Ident": {
+			"fields": {
+				"dateOfBirth": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"identityCardNumber": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"identityCardType": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"name": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDShipmentServiceGroupIdentType.IdentExtra": {
+			"fields": {
+				"group1": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.IdentityData"
+				},
+				"group2": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.IdentityData"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDShipmentServiceGroupIdentType.IdentPremium": {
+			"fields": {
+				"contractID": {
+					"exclude": [],
+					"fieldOrder": 10,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"corrOfAddressAllowed": {
+					"exclude": [],
+					"fieldOrder": 20,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfContractAllowed": {
+					"exclude": [],
+					"fieldOrder": 21,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfContractIdAllowed": {
+					"exclude": [],
+					"fieldOrder": 22,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfDayOfBirthAllowed": {
+					"exclude": [],
+					"fieldOrder": 16,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfFirstNameAllowed": {
+					"exclude": [],
+					"fieldOrder": 15,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfFreetextsAllowed": {
+					"exclude": [],
+					"fieldOrder": 24,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfIdentityCardNumberAllowed": {
+					"exclude": [],
+					"fieldOrder": 19,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfIdentityCardTypeAllowed": {
+					"exclude": [],
+					"fieldOrder": 18,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfMinimumAgeAllowed": {
+					"exclude": [],
+					"fieldOrder": 17,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfNameAllowed": {
+					"exclude": [],
+					"fieldOrder": 14,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"corrOfNationalityAllowed": {
+					"exclude": [],
+					"fieldOrder": 23,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"dateOfBirth": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"district": {
+					"exclude": [],
+					"fieldOrder": 8,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"firstname": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"freeText1": {
+					"exclude": [],
+					"fieldOrder": 12,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"freeText2": {
+					"exclude": [],
+					"fieldOrder": 13,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"identityCardNumber": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"identityCardType": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"minimumAge": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"name": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"nationality": {
+					"exclude": [],
+					"fieldOrder": 11,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"postcodeAndCity": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"streetAndHouseNumber": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"withIDPContract": {
+					"exclude": [],
+					"fieldOrder": 9,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDShipmentServiceGroupIdentType.SMSAviso": {
+			"fields": {
+				"avisoIdent": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"mobilePhoneNumberReceiver": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"mobilePhoneNumberSender": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DDShipmentServiceGroupPickupType": {
+			"fields": {
+				"pickupLate": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"pickupSaturday": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
 		"intraship.ws.de.DeleteShipmentDDRequest": {
 			"fields": {
 				"shipmentNumbers": {
@@ -387,7 +1551,7 @@ wm.types = {
 					"isList": true,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DeletionState"
+					"type": "intraship.ws.de.DeletionState"
 				},
 				"status": {
 					"exclude": [],
@@ -397,7 +1561,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -435,6 +1599,33 @@ wm.types = {
 					"noChange": [],
 					"required": true,
 					"type": "intrashipservice.ws.de.isservice_1_0_de.Version"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.DeletionState": {
+			"fields": {
+				"shipmentNumber": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
+				},
+				"status": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				}
 			},
 			"internal": false,
@@ -515,7 +1706,7 @@ wm.types = {
 					"isList": true,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ManifestState"
+					"type": "intraship.ws.de.ManifestState"
 				},
 				"status": {
 					"exclude": [],
@@ -525,7 +1716,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -563,6 +1754,599 @@ wm.types = {
 					"noChange": [],
 					"required": true,
 					"type": "intrashipservice.ws.de.isservice_1_0_de.Version"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.EndorsementServiceconfiguration": {
+			"fields": {
+				"active": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.EndorsementServiceconfigurationTeZu": {
+			"fields": {
+				"active": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"tezuDate": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ExportDocData": {
+			"fields": {
+				"exportDocPDFData": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"exportDocURL": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"shipmentNumber": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
+				},
+				"status": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ExportDocumentDDType": {
+			"fields": {
+				"additionalFee": {
+					"exclude": [],
+					"fieldOrder": 10,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"amount": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"attestationNumber": {
+					"exclude": [],
+					"fieldOrder": 14,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"commodityCode": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"countryCodeOrigin": {
+					"exclude": [],
+					"fieldOrder": 9,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"customsCurrency": {
+					"exclude": [],
+					"fieldOrder": 12,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"customsValue": {
+					"exclude": [],
+					"fieldOrder": 11,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"description": {
+					"exclude": [],
+					"fieldOrder": 8,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"exportDocPositions": {
+					"exclude": [],
+					"fieldOrder": 16,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ExportDocumentDDType.ExportDocPosition"
+				},
+				"exportType": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"exportTypeDescription": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"invoiceDate": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"invoiceNumber": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"invoiceType": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"permitNumber": {
+					"exclude": [],
+					"fieldOrder": 13,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"termsOfTrade": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"withElectronicExportNtfctn": {
+					"exclude": [],
+					"fieldOrder": 15,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ExportDocumentDDType.ExportDocPosition": {
+			"fields": {
+				"amount": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"commodityCode": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"countryCodeOrigin": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"customsCurrency": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"customsValue": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"description": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"grossWeightInKG": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"netWeightInKG": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ExportDocumentTDType": {
+			"fields": {
+				"commodityCode": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"exportDocPositions": {
+					"exclude": [],
+					"fieldOrder": 8,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ExportDocumentTDType.ExportDocPosition"
+				},
+				"exportReason": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"exportType": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"invoiceDate": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"invoiceNumber": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"invoiceType": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"remark": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"signerTitle": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ExportDocumentTDType.ExportDocPosition": {
+			"fields": {
+				"ISOCountryCodeOfOrigin": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"amount": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"commodityCode": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"description": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"grossWeightInKG": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"netWeightInKG": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"valuePerPiece": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.FurtherAddressesDDType": {
+			"fields": {
+				"deliveryAdress": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.FurtherAddressesDDType.DeliveryAdress"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.FurtherAddressesDDType.DeliveryAdress": {
+			"fields": {
+				"address": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				},
+				"name3": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
 				}
 			},
 			"internal": false,
@@ -616,7 +2400,7 @@ wm.types = {
 					"isList": true,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ExportDocData"
+					"type": "intraship.ws.de.ExportDocData"
 				},
 				"status": {
 					"exclude": [],
@@ -626,7 +2410,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -717,7 +2501,7 @@ wm.types = {
 					"isList": true,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.LabelData"
+					"type": "intraship.ws.de.LabelData"
 				},
 				"status": {
 					"exclude": [],
@@ -727,7 +2511,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -855,7 +2639,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -889,6 +2673,707 @@ wm.types = {
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
+		"intraship.ws.de.IdentityData": {
+			"fields": {
+				"bankCard": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.IdentityData.BankCard"
+				},
+				"drivingLicense": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.IdentityData.DrivingLicense"
+				},
+				"identityCard": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.IdentityData.IdentityCard"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.IdentityData.BankCard": {
+			"fields": {
+				"bankCode": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"bankName": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"cardNumber": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"cardType": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.IdentityData.DrivingLicense": {
+			"fields": {
+				"authority": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"licenseNumber": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.IdentityData.IdentityCard": {
+			"fields": {
+				"cardAuthority": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"cardNumber": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.IdentityType": {
+			"fields": {
+				"city": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"dateOfBirth": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"firstName": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"houseNumber": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"lastName": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"nationality": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"postcode": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"street": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.LabelData": {
+			"fields": {
+				"XMLLabel": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"labelurl": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"shipmentNumber": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
+				},
+				"status": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ManifestState": {
+			"fields": {
+				"shipmentNumber": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
+				},
+				"status": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.PackstationType": {
+			"fields": {
+				"city": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"packstationNumber": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"postNumber": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"zip": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.PickupAddressType": {
+			"fields": {
+				"address": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.PickupAddressTypeType": {
+			"fields": {
+				"nativeAddress": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"packStation": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.PackStationTypeType"
+				},
+				"streetNameCode": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"streetNumberCode": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.PickupBookingInformationType": {
+			"fields": {
+				"account": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"amountOfPallets": {
+					"exclude": [],
+					"fieldOrder": 9,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"amountOfPieces": {
+					"exclude": [],
+					"fieldOrder": 8,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"attendance": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"closingTime": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"countOfShipments": {
+					"exclude": [],
+					"fieldOrder": 11,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"maxHeightInCM": {
+					"exclude": [],
+					"fieldOrder": 15,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"maxLengthInCM": {
+					"exclude": [],
+					"fieldOrder": 13,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"maxWidthInCM": {
+					"exclude": [],
+					"fieldOrder": 14,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"pickupDate": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"pickupLocation": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"productID": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"readyByTime": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"remark": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"totalVolumeWeight": {
+					"exclude": [],
+					"fieldOrder": 12,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"weightInKG": {
+					"exclude": [],
+					"fieldOrder": 10,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.PickupDetailsType": {
+			"fields": {
+				"closingTime": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"pickupDate": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"pickupLocation": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"readyByTime": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"remark": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.PickupOrdererType": {
+			"fields": {
+				"address": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				},
+				"name3": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
 		"intraship.ws.de.PieceInformation": {
 			"fields": {
 				"pieceNumber": {
@@ -900,6 +3385,834 @@ wm.types = {
 					"noChange": [],
 					"required": true,
 					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.PostfilialeType": {
+			"fields": {
+				"city": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"postNumber": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"postfilialNumber": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"zip": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ReceiverDDType": {
+			"fields": {
+				"VAT": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"address": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				},
+				"companyName3": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"packstation": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.PackstationType"
+				},
+				"postfiliale": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.PostfilialeType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ReceiverTDType": {
+			"fields": {
+				"VAT": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"address": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				},
+				"packstation": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.PackstationType"
+				},
+				"postfiliale": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.PostfilialeType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ReceiverType": {
+			"fields": {
+				"VAT": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"address": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				},
+				"packstation": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.PackstationType"
+				},
+				"postfiliale": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.PostfilialeType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentDetailsDDType": {
+			"fields": {
+				"EKP": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"attendance": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentDetailsDDType.Attendance"
+				},
+				"bankData": {
+					"exclude": [],
+					"fieldOrder": 9,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.BankTypeType"
+				},
+				"customerReference": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"declaredValueOfGoods": {
+					"exclude": [],
+					"fieldOrder": 12,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Float"
+				},
+				"declaredValueOfGoodsCurrency": {
+					"exclude": [],
+					"fieldOrder": 13,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"deliveryRemarks": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"description": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"notificationEmailText": {
+					"exclude": [],
+					"fieldOrder": 8,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"notifications": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentNotificationType"
+				},
+				"productCode": {
+					"exclude": [],
+					"fieldOrder": 10,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"services": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentServiceDD"
+				},
+				"shipmentDate": {
+					"exclude": [],
+					"fieldOrder": 11,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"shipmentItems": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentItemDDType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentDetailsDDType.Attendance": {
+			"fields": {
+				"partnerID": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentDetailsTDType": {
+			"fields": {
+				"account": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentDetailsTDType.Account"
+				},
+				"accountPaidBy": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentDetailsTDType.AccountPaidBy"
+				},
+				"declaredValueOfGoods": {
+					"exclude": [],
+					"fieldOrder": 12,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Float"
+				},
+				"declaredValueOfGoodsCurrency": {
+					"exclude": [],
+					"fieldOrder": 13,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"descriptionOfContent": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"dutiable": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"notificationEmailText": {
+					"exclude": [],
+					"fieldOrder": 9,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"notifications": {
+					"exclude": [],
+					"fieldOrder": 8,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentNotificationType"
+				},
+				"productCode": {
+					"exclude": [],
+					"fieldOrder": 10,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"services": {
+					"exclude": [],
+					"fieldOrder": 7,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentServiceTD"
+				},
+				"shipmentDate": {
+					"exclude": [],
+					"fieldOrder": 11,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"shipmentItems": {
+					"exclude": [],
+					"fieldOrder": 6,
+					"fieldSubType": null,
+					"include": [],
+					"isList": true,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentItemTDType"
+				},
+				"shipmentReference": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"termsOfTrade": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentDetailsTDType.Account": {
+			"fields": {
+				"accountNumberExpress": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentDetailsTDType.AccountPaidBy": {
+			"fields": {
+				"accountNumberExpress": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentDetailsType": {
+			"fields": {
+				"declaredValueOfGoods": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Float"
+				},
+				"declaredValueOfGoodsCurrency": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"productCode": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"shipmentDate": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentItemDDType": {
+			"fields": {
+				"heightInCM": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"lengthInCM": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"packageType": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"weightInKG": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"widthInCM": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentItemTDType": {
+			"fields": {
+				"heightInCM": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"lengthInCM": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"weightInKG": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"widthInCM": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentItemType": {
+			"fields": {
+				"heightInCM": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"lengthInCM": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				},
+				"weightInKG": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"widthInCM": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigInteger"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentNotificationType": {
+			"fields": {
+				"recipientEmailAddress": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"recipientName": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
 				}
 			},
 			"internal": false,
@@ -973,7 +4286,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PickupAddressType"
+					"type": "intraship.ws.de.PickupAddressType"
 				},
 				"pickupDetails": {
 					"exclude": [],
@@ -983,7 +4296,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PickupDetailsType"
+					"type": "intraship.ws.de.PickupDetailsType"
 				}
 			},
 			"internal": false,
@@ -1000,7 +4313,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType"
+					"type": "intraship.ws.de.ExportDocumentDDType"
 				},
 				"furtherAddresses": {
 					"exclude": [],
@@ -1010,7 +4323,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType"
+					"type": "intraship.ws.de.FurtherAddressesDDType"
 				},
 				"identity": {
 					"exclude": [],
@@ -1020,7 +4333,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.IdentityType"
+					"type": "intraship.ws.de.IdentityType"
 				},
 				"receiver": {
 					"exclude": [],
@@ -1030,7 +4343,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ReceiverDDType"
+					"type": "intraship.ws.de.ReceiverDDType"
 				},
 				"shipmentDetails": {
 					"exclude": [],
@@ -1040,7 +4353,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType"
+					"type": "intraship.ws.de.ShipmentDetailsDDType"
 				},
 				"shipper": {
 					"exclude": [],
@@ -1050,16 +4363,36 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipperDDType"
+					"type": "intraship.ws.de.ShipperDDType"
 				}
 			},
 			"internal": false,
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
-		"intraship.ws.de.Statusinformation": {
+		"intraship.ws.de.ShipmentOrderTDType": {
 			"fields": {
-				"statusCode": {
+				"labelResponseType": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"pickup": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentOrderTDType.Pickup"
+				},
+				"sequenceNumber": {
 					"exclude": [],
 					"fieldOrder": 0,
 					"fieldSubType": null,
@@ -1067,9 +4400,416 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "java.math.BigInteger"
+					"type": "java.lang.String"
 				},
-				"statusMessage": {
+				"shipment": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentOrderTDType.Shipment"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentOrderTDType.Pickup": {
+			"fields": {
+				"pickupAddress": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.PickupAddressType"
+				},
+				"pickupDetails": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.PickupDetailsType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentOrderTDType.Shipment": {
+			"fields": {
+				"exportDocument": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ExportDocumentTDType"
+				},
+				"receiver": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ReceiverTDType"
+				},
+				"shipmentDetails": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipmentDetailsTDType"
+				},
+				"shipper": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.ShipperTDType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentServiceDD": {
+			"fields": {
+				"serviceGroupBusinessPackInternational": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupBusinessPackInternationalType"
+				},
+				"serviceGroupDHLPaket": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupDHLPaketType"
+				},
+				"serviceGroupDateTimeOption": {
+					"exclude": [],
+					"fieldOrder": 5,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupDateTimeOptionType"
+				},
+				"serviceGroupOther": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDServiceGroupOtherType"
+				},
+				"shipmentServiceGroupIdent": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDShipmentServiceGroupIdentType"
+				},
+				"shipmentServiceGroupPickup": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.DDShipmentServiceGroupPickupType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipmentServiceTD": {
+			"fields": {
+				"serviceGroupDateTimeOption": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.TDServiceGroupDateTimeOptionType"
+				},
+				"serviceGroupOther": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.TDServiceGroupOtherType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipperDDType": {
+			"fields": {
+				"VAT": {
+					"exclude": [],
+					"fieldOrder": 4,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"address": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				},
+				"remark": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipperTDType": {
+			"fields": {
+				"VAT": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"address": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.ShipperType": {
+			"fields": {
+				"VAT": {
+					"exclude": [],
+					"fieldOrder": 3,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				},
+				"address": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
+				},
+				"communication": {
+					"exclude": [],
+					"fieldOrder": 2,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
+				},
+				"company": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.TDServiceGroupDateTimeOptionType": {
+			"fields": {
+				"expressSaturday": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.TDServiceGroupDateTimeOptionType.ExpressSaturday"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.TDServiceGroupDateTimeOptionType.ExpressSaturday": {
+			"fields": {
+				"shippingDate": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.String"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.TDServiceGroupOtherType": {
+			"fields": {
+				"goGreen": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.lang.Boolean"
+				},
+				"insurance": {
+					"exclude": [],
+					"fieldOrder": 1,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "intraship.ws.de.TDServiceGroupOtherType.Insurance"
+				}
+			},
+			"internal": false,
+			"liveService": false,
+			"service": "ISService_1_0_de"
+		},
+		"intraship.ws.de.TDServiceGroupOtherType.Insurance": {
+			"fields": {
+				"insuranceAmount": {
+					"exclude": [],
+					"fieldOrder": 0,
+					"fieldSubType": null,
+					"include": [],
+					"isList": false,
+					"noChange": [],
+					"required": true,
+					"type": "java.math.BigDecimal"
+				},
+				"insuranceCurrency": {
 					"exclude": [],
 					"fieldOrder": 1,
 					"fieldSubType": null,
@@ -1141,7 +4881,7 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
+					"type": "intrashipservice.ws.de.isservice_1_0_de.Statusinformation"
 				},
 				"version": {
 					"exclude": [],
@@ -1463,1197 +5203,6 @@ wm.types = {
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType": {
-			"fields": {
-				"amountInternational": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"coilWithoutHelp": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"economy": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"endorsement": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType.Endorsement"
-				},
-				"premium": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"seapacket": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType.Endorsement": {
-			"fields": {
-				"days": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"ident": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType": {
-			"fields": {
-				"endorsement": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.Endorsement"
-				},
-				"multipack": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"particularDelivery": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"regioPacket": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"shipmentAdvisory": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.Endorsement": {
-			"fields": {
-				"NSI": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration"
-				},
-				"UZN": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration"
-				},
-				"keNa": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration"
-				},
-				"soZue": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration"
-				},
-				"teZu": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfigurationTeZu"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory": {
-			"fields": {
-				"advisoryDatas": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory.AdvisoryData"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType.ShipmentAdvisory.AdvisoryData": {
-			"fields": {
-				"emailAddress": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"language": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"mobilePhoneNumber": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"moduleType": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"reference": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType": {
-			"fields": {
-				"deliveryAfternoon": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"deliveryEarly": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"deliveryEvening": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"deliveryOnTime": {
-					"exclude": [],
-					"fieldOrder": 8,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType.DeliveryOnTime"
-				},
-				"express0900": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"express1000": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"express1200": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"expressSaturday": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"expressSunday": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType.DeliveryOnTime": {
-			"fields": {
-				"time": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType": {
-			"fields": {
-				"COD": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.COD"
-				},
-				"bulkfreight": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Bulkfreight"
-				},
-				"bypass": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"dangerousGoods": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.DangerousGoods"
-				},
-				"directInjection": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"higherInsurance": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.HigherInsurance"
-				},
-				"unfree": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Unfree"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Bulkfreight": {
-			"fields": {
-				"bulkfreightType": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.COD": {
-			"fields": {
-				"CODAmount": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"CODCurrency": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.DangerousGoods": {
-			"fields": {
-				"dangerousGoodsClass": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"dangerousGoodsPackagingType": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"dangerousGoodsUNCode": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.HigherInsurance": {
-			"fields": {
-				"insuranceAmount": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"insuranceCurrency": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType.Unfree": {
-			"fields": {
-				"customerNumber": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"paymentType": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType": {
-			"fields": {
-				"SMSAviso": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.SMSAviso"
-				},
-				"checkMinimumAge": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.CheckMinimumAge"
-				},
-				"contractSubmission": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.ContractSubmission"
-				},
-				"ident": {
-					"exclude": [],
-					"fieldOrder": 8,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.Ident"
-				},
-				"identExtra": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentExtra"
-				},
-				"identPremium": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentPremium"
-				},
-				"personally": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"proofOfDelivery": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"returnReceipt": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.CheckMinimumAge": {
-			"fields": {
-				"minimumAge": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.ContractSubmission": {
-			"fields": {
-				"totalDocsReceiver": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"totalDocsSender": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"totalPages": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"totalSignatures": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.Ident": {
-			"fields": {
-				"dateOfBirth": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"identityCardNumber": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"identityCardType": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"name": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentExtra": {
-			"fields": {
-				"group1": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.IdentityData"
-				},
-				"group2": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.IdentityData"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.IdentPremium": {
-			"fields": {
-				"contractID": {
-					"exclude": [],
-					"fieldOrder": 10,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"corrOfAddressAllowed": {
-					"exclude": [],
-					"fieldOrder": 20,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfContractAllowed": {
-					"exclude": [],
-					"fieldOrder": 21,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfContractIdAllowed": {
-					"exclude": [],
-					"fieldOrder": 22,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfDayOfBirthAllowed": {
-					"exclude": [],
-					"fieldOrder": 16,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfFirstNameAllowed": {
-					"exclude": [],
-					"fieldOrder": 15,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfFreetextsAllowed": {
-					"exclude": [],
-					"fieldOrder": 24,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfIdentityCardNumberAllowed": {
-					"exclude": [],
-					"fieldOrder": 19,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfIdentityCardTypeAllowed": {
-					"exclude": [],
-					"fieldOrder": 18,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfMinimumAgeAllowed": {
-					"exclude": [],
-					"fieldOrder": 17,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfNameAllowed": {
-					"exclude": [],
-					"fieldOrder": 14,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"corrOfNationalityAllowed": {
-					"exclude": [],
-					"fieldOrder": 23,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"dateOfBirth": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"district": {
-					"exclude": [],
-					"fieldOrder": 8,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"firstname": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"freeText1": {
-					"exclude": [],
-					"fieldOrder": 12,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"freeText2": {
-					"exclude": [],
-					"fieldOrder": 13,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"identityCardNumber": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"identityCardType": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"minimumAge": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"name": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"nationality": {
-					"exclude": [],
-					"fieldOrder": 11,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"postcodeAndCity": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"streetAndHouseNumber": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"withIDPContract": {
-					"exclude": [],
-					"fieldOrder": 9,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType.SMSAviso": {
-			"fields": {
-				"avisoIdent": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"mobilePhoneNumberReceiver": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"mobilePhoneNumberSender": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupPickupType": {
-			"fields": {
-				"pickupLate": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				},
-				"pickupSaturday": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.DeletionState": {
-			"fields": {
-				"shipmentNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
-				},
-				"status": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
 		"intrashipservice.ws.de.isservice_1_0_de.DeliveryAddressTypeType": {
 			"fields": {
 				"nativeAddress": {
@@ -2758,50 +5307,6 @@ wm.types = {
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
-		"intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfiguration": {
-			"fields": {
-				"active": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.EndorsementServiceconfigurationTeZu": {
-			"fields": {
-				"active": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"tezuDate": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
 		"intrashipservice.ws.de.isservice_1_0_de.ErrorTypeType": {
 			"fields": {
 				"application": {
@@ -2883,854 +5388,6 @@ wm.types = {
 					"noChange": [],
 					"required": true,
 					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ExportDocData": {
-			"fields": {
-				"exportDocPDFData": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"exportDocURL": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"shipmentNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
-				},
-				"status": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType": {
-			"fields": {
-				"additionalFee": {
-					"exclude": [],
-					"fieldOrder": 10,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"amount": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"attestationNumber": {
-					"exclude": [],
-					"fieldOrder": 14,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"commodityCode": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"countryCodeOrigin": {
-					"exclude": [],
-					"fieldOrder": 9,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"customsCurrency": {
-					"exclude": [],
-					"fieldOrder": 12,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"customsValue": {
-					"exclude": [],
-					"fieldOrder": 11,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"description": {
-					"exclude": [],
-					"fieldOrder": 8,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"exportDocPositions": {
-					"exclude": [],
-					"fieldOrder": 16,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType.ExportDocPosition"
-				},
-				"exportType": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"exportTypeDescription": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"invoiceDate": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"invoiceNumber": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"invoiceType": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"permitNumber": {
-					"exclude": [],
-					"fieldOrder": 13,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"termsOfTrade": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"withElectronicExportNtfctn": {
-					"exclude": [],
-					"fieldOrder": 15,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ExportDocumentDDType.ExportDocPosition": {
-			"fields": {
-				"amount": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"commodityCode": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"countryCodeOrigin": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"customsCurrency": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"customsValue": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"description": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"grossWeightInKG": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"netWeightInKG": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType": {
-			"fields": {
-				"commodityCode": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"exportDocPositions": {
-					"exclude": [],
-					"fieldOrder": 8,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType.ExportDocPosition"
-				},
-				"exportReason": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"exportType": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"invoiceDate": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"invoiceNumber": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"invoiceType": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"remark": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"signerTitle": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType.ExportDocPosition": {
-			"fields": {
-				"ISOCountryCodeOfOrigin": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"amount": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"commodityCode": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"description": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"grossWeightInKG": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"netWeightInKG": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"valuePerPiece": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType": {
-			"fields": {
-				"deliveryAdress": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType.DeliveryAdress"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.FurtherAddressesDDType.DeliveryAdress": {
-			"fields": {
-				"address": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				},
-				"name3": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.IdentityData": {
-			"fields": {
-				"bankCard": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.IdentityData.BankCard"
-				},
-				"drivingLicense": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.IdentityData.DrivingLicense"
-				},
-				"identityCard": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.IdentityData.IdentityCard"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.IdentityData.BankCard": {
-			"fields": {
-				"bankCode": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"bankName": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"cardNumber": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"cardType": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.IdentityData.DrivingLicense": {
-			"fields": {
-				"authority": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"licenseNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.IdentityData.IdentityCard": {
-			"fields": {
-				"cardAuthority": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"cardNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.IdentityType": {
-			"fields": {
-				"city": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"dateOfBirth": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"firstName": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"houseNumber": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"lastName": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"nationality": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"postcode": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"street": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.LabelData": {
-			"fields": {
-				"XMLLabel": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"labelurl": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"shipmentNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
-				},
-				"status": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ManifestState": {
-			"fields": {
-				"shipmentNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType"
-				},
-				"status": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intraship.ws.de.Statusinformation"
 				}
 			},
 			"internal": false,
@@ -4059,408 +5716,6 @@ wm.types = {
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
-		"intrashipservice.ws.de.isservice_1_0_de.PackstationType": {
-			"fields": {
-				"city": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"packstationNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"postNumber": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"zip": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.PickupAddressType": {
-			"fields": {
-				"address": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.PickupAddressTypeType": {
-			"fields": {
-				"nativeAddress": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"packStation": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PackStationTypeType"
-				},
-				"streetNameCode": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"streetNumberCode": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.PickupBookingInformationType": {
-			"fields": {
-				"account": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"amountOfPallets": {
-					"exclude": [],
-					"fieldOrder": 9,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"amountOfPieces": {
-					"exclude": [],
-					"fieldOrder": 8,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"attendance": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"closingTime": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"countOfShipments": {
-					"exclude": [],
-					"fieldOrder": 11,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"maxHeightInCM": {
-					"exclude": [],
-					"fieldOrder": 15,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"maxLengthInCM": {
-					"exclude": [],
-					"fieldOrder": 13,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"maxWidthInCM": {
-					"exclude": [],
-					"fieldOrder": 14,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"pickupDate": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"pickupLocation": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"productID": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"readyByTime": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"remark": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"totalVolumeWeight": {
-					"exclude": [],
-					"fieldOrder": 12,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"weightInKG": {
-					"exclude": [],
-					"fieldOrder": 10,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.PickupDetailsType": {
-			"fields": {
-				"closingTime": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"pickupDate": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"pickupLocation": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"readyByTime": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"remark": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.PickupOrdererType": {
-			"fields": {
-				"address": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				},
-				"name3": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
 		"intrashipservice.ws.de.isservice_1_0_de.PostOfficeTypeType": {
 			"fields": {
 				"city": {
@@ -4502,834 +5757,6 @@ wm.types = {
 					"noChange": [],
 					"required": true,
 					"type": "intrashipservice.ws.de.isservice_1_0_de.Zip"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.PostfilialeType": {
-			"fields": {
-				"city": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"postNumber": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"postfilialNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"zip": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ReceiverDDType": {
-			"fields": {
-				"VAT": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"address": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				},
-				"companyName3": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"packstation": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PackstationType"
-				},
-				"postfiliale": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PostfilialeType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ReceiverTDType": {
-			"fields": {
-				"VAT": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"address": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				},
-				"packstation": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PackstationType"
-				},
-				"postfiliale": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PostfilialeType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ReceiverType": {
-			"fields": {
-				"VAT": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"address": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				},
-				"packstation": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PackstationType"
-				},
-				"postfiliale": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PostfilialeType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType": {
-			"fields": {
-				"EKP": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"attendance": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType.Attendance"
-				},
-				"bankData": {
-					"exclude": [],
-					"fieldOrder": 9,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.BankTypeType"
-				},
-				"customerReference": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"declaredValueOfGoods": {
-					"exclude": [],
-					"fieldOrder": 12,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Float"
-				},
-				"declaredValueOfGoodsCurrency": {
-					"exclude": [],
-					"fieldOrder": 13,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"deliveryRemarks": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"description": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"notificationEmailText": {
-					"exclude": [],
-					"fieldOrder": 8,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"notifications": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNotificationType"
-				},
-				"productCode": {
-					"exclude": [],
-					"fieldOrder": 10,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"services": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceDD"
-				},
-				"shipmentDate": {
-					"exclude": [],
-					"fieldOrder": 11,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"shipmentItems": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentItemDDType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsDDType.Attendance": {
-			"fields": {
-				"partnerID": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType": {
-			"fields": {
-				"account": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.Account"
-				},
-				"accountPaidBy": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.AccountPaidBy"
-				},
-				"declaredValueOfGoods": {
-					"exclude": [],
-					"fieldOrder": 12,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Float"
-				},
-				"declaredValueOfGoodsCurrency": {
-					"exclude": [],
-					"fieldOrder": 13,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"descriptionOfContent": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"dutiable": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"notificationEmailText": {
-					"exclude": [],
-					"fieldOrder": 9,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"notifications": {
-					"exclude": [],
-					"fieldOrder": 8,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentNotificationType"
-				},
-				"productCode": {
-					"exclude": [],
-					"fieldOrder": 10,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"services": {
-					"exclude": [],
-					"fieldOrder": 7,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceTD"
-				},
-				"shipmentDate": {
-					"exclude": [],
-					"fieldOrder": 11,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"shipmentItems": {
-					"exclude": [],
-					"fieldOrder": 6,
-					"fieldSubType": null,
-					"include": [],
-					"isList": true,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentItemTDType"
-				},
-				"shipmentReference": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"termsOfTrade": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.Account": {
-			"fields": {
-				"accountNumberExpress": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType.AccountPaidBy": {
-			"fields": {
-				"accountNumberExpress": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsType": {
-			"fields": {
-				"declaredValueOfGoods": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Float"
-				},
-				"declaredValueOfGoodsCurrency": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"productCode": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"shipmentDate": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentItemDDType": {
-			"fields": {
-				"heightInCM": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"lengthInCM": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"packageType": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"weightInKG": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"widthInCM": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentItemTDType": {
-			"fields": {
-				"heightInCM": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"lengthInCM": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"weightInKG": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"widthInCM": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentItemType": {
-			"fields": {
-				"heightInCM": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"lengthInCM": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				},
-				"weightInKG": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"widthInCM": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigInteger"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentNotificationType": {
-			"fields": {
-				"recipientEmailAddress": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"recipientName": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
 				}
 			},
 			"internal": false,
@@ -5383,372 +5810,6 @@ wm.types = {
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType": {
-			"fields": {
-				"labelResponseType": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"pickup": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Pickup"
-				},
-				"sequenceNumber": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"shipment": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Shipment"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Pickup": {
-			"fields": {
-				"pickupAddress": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PickupAddressType"
-				},
-				"pickupDetails": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.PickupDetailsType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentOrderTDType.Shipment": {
-			"fields": {
-				"exportDocument": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ExportDocumentTDType"
-				},
-				"receiver": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ReceiverTDType"
-				},
-				"shipmentDetails": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipmentDetailsTDType"
-				},
-				"shipper": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.ShipperTDType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceDD": {
-			"fields": {
-				"serviceGroupBusinessPackInternational": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupBusinessPackInternationalType"
-				},
-				"serviceGroupDHLPaket": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDHLPaketType"
-				},
-				"serviceGroupDateTimeOption": {
-					"exclude": [],
-					"fieldOrder": 5,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupDateTimeOptionType"
-				},
-				"serviceGroupOther": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDServiceGroupOtherType"
-				},
-				"shipmentServiceGroupIdent": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupIdentType"
-				},
-				"shipmentServiceGroupPickup": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.DDShipmentServiceGroupPickupType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipmentServiceTD": {
-			"fields": {
-				"serviceGroupDateTimeOption": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType"
-				},
-				"serviceGroupOther": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipperDDType": {
-			"fields": {
-				"VAT": {
-					"exclude": [],
-					"fieldOrder": 4,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"address": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				},
-				"remark": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipperTDType": {
-			"fields": {
-				"VAT": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"address": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.ShipperType": {
-			"fields": {
-				"VAT": {
-					"exclude": [],
-					"fieldOrder": 3,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				},
-				"address": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType"
-				},
-				"communication": {
-					"exclude": [],
-					"fieldOrder": 2,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.CommunicationTypeType"
-				},
-				"company": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.NameTypeType"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
 		"intrashipservice.ws.de.isservice_1_0_de.Status": {
 			"fields": {
 				"statusDescription": {
@@ -5776,9 +5837,9 @@ wm.types = {
 			"liveService": false,
 			"service": "ISService_1_0_de"
 		},
-		"intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType": {
+		"intrashipservice.ws.de.isservice_1_0_de.Statusinformation": {
 			"fields": {
-				"expressSaturday": {
+				"statusCode": {
 					"exclude": [],
 					"fieldOrder": 0,
 					"fieldSubType": null,
@@ -5786,70 +5847,9 @@ wm.types = {
 					"isList": false,
 					"noChange": [],
 					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType.ExpressSaturday"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupDateTimeOptionType.ExpressSaturday": {
-			"fields": {
-				"shippingDate": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.String"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType": {
-			"fields": {
-				"goGreen": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.lang.Boolean"
+					"type": "java.math.BigInteger"
 				},
-				"insurance": {
-					"exclude": [],
-					"fieldOrder": 1,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType.Insurance"
-				}
-			},
-			"internal": false,
-			"liveService": false,
-			"service": "ISService_1_0_de"
-		},
-		"intrashipservice.ws.de.isservice_1_0_de.TDServiceGroupOtherType.Insurance": {
-			"fields": {
-				"insuranceAmount": {
-					"exclude": [],
-					"fieldOrder": 0,
-					"fieldSubType": null,
-					"include": [],
-					"isList": false,
-					"noChange": [],
-					"required": true,
-					"type": "java.math.BigDecimal"
-				},
-				"insuranceCurrency": {
+				"statusMessage": {
 					"exclude": [],
 					"fieldOrder": 1,
 					"fieldSubType": null,

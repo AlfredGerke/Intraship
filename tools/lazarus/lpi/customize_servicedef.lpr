@@ -1,13 +1,16 @@
 program customize_servicedef;
 
-{$mode objfpc}{$H+}
+{$mode Delphi}{$H+}
 
 uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, frmCustServDefMain, tools_utils, tools_const
+  Forms,
+  frmCustServDefMain,
+  tools_utils,
+  tools_const
   { you can add units after this };
 
 {$R *.res}

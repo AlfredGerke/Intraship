@@ -7,7 +7,7 @@
     </title>  
   </head>  
   <body><h1>Intraship trifft WaveMaker</h1>
-    <p>Dieses Testprogramm demonstriert eine m&ouml;gliche Einbindung von DHL Intraship in eine WaveMaker-Anwendung. 
+    <p>Dieses Testprogramm demonstriert eine mögliche Einbindung von DHL Intraship in eine WaveMaker-Anwendung. 
     </p>
     <p><strong>Inhaltsangabe:</strong>
     </p>
@@ -26,10 +26,14 @@
       </li>
       <li>Fehler nach Aufbau der Schnittstelle
       </li>
-      <li>&Auml;nderungen an der Schnittstelle
+      <li>
+      <code>servicedef.xml
+      </code> automatisch anpassen
+      </li>
+      <li>Änderungen an der Schnittstelle
       </li>
     </ul><h2>Voraussetzungen</h2><h3>Entwicklerportal der DHL</h3>
-    <p>Um Informationen &uuml;ber die verschiedenen APIs von DHL Intraship zu erhalten, sowie  Zugang zum Testsystem zu erlangen, muss jeder Entwickler sich auf dem Entwicklerportal registrieren.
+    <p>Um Informationen über die verschiedenen APIs von DHL Intraship zu erhalten, sowie  Zugang zum Testsystem zu erlangen, muss jeder Entwickler sich auf dem Entwicklerportal registrieren.
     </p>
     <ul>
       <li>
@@ -38,17 +42,17 @@
     </ul>
     <p>Diese Testanwendung wird ohne Zugang zum Testsystem nicht funktionieren. 
     </p>
-    <p>Allerdings kann man jede Web API durch entsprechende Testsysteme simulieren, was  aber den logischen Anteil, der bei der Nutzung des Logistikportals zum tragen kommt, nur unzureichend ber&uuml;cksichtigt.
+    <p>Allerdings kann man jede Web API durch entsprechende Testsysteme simulieren, was  aber den logischen Anteil, der bei der Nutzung des Logistikportals zum tragen kommt, nur unzureichend berücksichtigt.
     </p><h3>Entwicklung unter WaveMaker</h3>
     <p>Die Anforderungen um den Code, der in der WaveMaker IDE bearbeitet wird zu verstehen, sind sehr gering. Ein Anwender mit Grundkenntnissen wird keine Probleme habe zu verstehen, wie die Komponenten zusammenwirken. 
     </p>
     <p>Allerdings sollte der Gebrauch von ServiceVariablen und einfachen Variablen sowie Pages und Controls im Prinzip bekannt sein.
     </p>
-    <p>Neben dem Gebrauch von Komponenten muss auch ein Grundverst&auml;ndnis f&uuml;r JavaScript  vorhanden sein.
+    <p>Neben dem Gebrauch von Komponenten muss auch ein Grundverständnis für JavaScript  vorhanden sein.
     </p><h3>Entwicklung von JavaServices</h3>
     <p>Die Entwicklung von JavaServices unter WaveMaker sollten im Prinzip verstanden sein. Es empfiehlt sich mit einer externen Entwicklungsumgebung zu arbeiten.
     </p>
-    <p>Dieses Projekt wurde mit Eclipse bearbeitet. Besonders die notwendigkeit den  Server zu debuggen macht ein externes Tool unumg&auml;nglich.
+    <p>Dieses Projekt wurde mit Eclipse bearbeitet. Besonders die notwendigkeit den  Server zu debuggen macht ein externes Tool unumgänglich.
     </p><h2>Versionen</h2>
     <ul>
       <li>WaveMaker 6.7.0
@@ -57,15 +61,15 @@
       </li>
     </ul><h2>Zielvorgabe und Realisierung</h2>
     <p>Bei dieser Anwendung handelt es sich um ein reines Testprogramm. Es ist den  Testprogrammen nachempfunden, welche auf dem 
-      <a href="https://entwickler.dhl.de/" title="Entwicklerportal der DHL">Entwicklerportal der DHL</a> zur Verf&uuml;gung gestellt werden.
+      <a href="https://entwickler.dhl.de/" title="Entwicklerportal der DHL">Entwicklerportal der DHL</a> zur Verfügung gestellt werden.
     </p>
     <p>Die Requests die dieses Testprogramm erstellt, sind vom Aufbau identisch mit den Requests  welches das Java-Testprogramm des Entwicklerportals erstellt. 
     </p>
     <p>Das Java-Testprogramm des Entwicklerportals kann somit als Referenz zu diesem Testprogramm genutzt werden.
     </p>
-    <p>Eine erste Version dieses Testprogrammes soll die Gesch&auml;ftskundenversand API vollst&auml;ndig implementieren.
+    <p>Eine erste Version dieses Testprogrammes soll die Geschäftskundenversand API vollständig implementieren.
     </p>
-    <p>Dieses Testprogramm soll folgende Fragen kl&auml;ren:
+    <p>Dieses Testprogramm soll folgende Fragen klären:
     </p>
     <ul>
       <li>Ob und wie man mit WaveMaker auf Intraship zugreifen kann
@@ -76,10 +80,10 @@
       </li>
       <li>Wie man die Schnittstelle in eine Anwendung einbindet
       </li>
-      <li>Wie man &Auml;nderungen an der Schnittstelle vermeidet oder zumindest minimiert
+      <li>Wie man Änderungen an der Schnittstelle vermeidet oder zumindest minimiert
       </li>
     </ul><h3>Request-Objecte</h3>
-    <p>Ein Request-Object wird einer Methode des DHL-Service &uuml;bergeben und  enth&auml;lt eine logische Struktur auf Grund derer ein Vorgang &uuml;ber die DHL-API in  Gang gesetzt wird.
+    <p>Ein Request-Object wird einer Methode des DHL-Service übergeben und  enthält eine logische Struktur auf Grund derer ein Vorgang über die DHL-API in  Gang gesetzt wird.
     </p>
     <ul>
       <li>Ein Request-Object wird vom RequestBuilder erstellt
@@ -88,36 +92,36 @@
       </li>
       <li>Der Response wird in eine Variable gesichert 
       </li>
-      <li>Diese Variable wird der Methode des DHL-Service als Parameter &uuml;bergeben 
+      <li>Diese Variable wird der Methode des DHL-Service als Parameter übergeben 
       </li>
-      <li>Die Datenwerte der Variable k&ouml;nnen beliebig im Client ge&auml;ndert werden
+      <li>Die Datenwerte der Variable können beliebig im Client geändert werden
       </li>
       <li>Eine Variable ist im Fall von Request-Objecten kein einfacher Wert, sondern immer eine komplexe Struktur 
       </li>
     </ul>
-    <p>Somit kann ein Request-Object f&uuml;r eine Methode des DHL-Service beliebig oft initialisiert  werden, ohne das hierzu der RequstBuilder erneut aufgerufen werden muss.
+    <p>Somit kann ein Request-Object für eine Methode des DHL-Service beliebig oft initialisiert  werden, ohne das hierzu der RequstBuilder erneut aufgerufen werden muss.
     </p><h3>Authentification Header</h3>
-    <p>Es wird ein Authendification-Object erstellt werden, welches wie das  Request-Object der Methode des DHL-Service &uuml;bergeben wird. W&auml;hrend aber das Request-Object  direkt an die DHL-API weiter geleitet wird, wird das Authentification-Object als  SOAPHeader dem Webservicecontext hinzu gef&uuml;gt.
+    <p>Es wird ein Authendification-Object erstellt werden, welches wie das  Request-Object der Methode des DHL-Service übergeben wird. Während aber das Request-Object  direkt an die DHL-API weiter geleitet wird, wird das Authentification-Object als  SOAPHeader dem Webservicecontext hinzu gefügt.
     </p>
     <ul>
       <li>Ein Authentication-Object wird vom JavaService CISBase erstellt
       </li>
       <li>Der Response wird in eine Variable gesichert
       </li>
-      <li>Diese Variable wird der Methode des DHL-Service als Parameter &uuml;bergeben
+      <li>Diese Variable wird der Methode des DHL-Service als Parameter übergeben
       </li>
-      <li>Die Datenwerte der Variable k&ouml;nnen beliebig im Client ge&auml;ndert werden
+      <li>Die Datenwerte der Variable können beliebig im Client geändert werden
       </li>
       <li>Eine Variable ist im Fall von Authentication-Object kein einfacher Wert, sondern immer eine komplexe Struktur 
       </li>
     </ul>
-    <p>Somit kann wie im Fall eines Request-Objectes, das Authentication-Object beliebig oft initialisiert werden, ohne hierzu den JavaService erneut aufrufen zu m&uuml;ssen. 
+    <p>Somit kann wie im Fall eines Request-Objectes, das Authentication-Object beliebig oft initialisiert werden, ohne hierzu den JavaService erneut aufrufen zu müssen. 
     </p><h3>Zugangsdaten</h3>
-    <p>Der Zugriff auf die Intraship-APIs wird durch Zugangsdaten gesichert. Diese Zugangsdaten  erh&auml;lt nur, wer sich auf dem Entwicklerportal der DHL registrieren l&auml;sst.
+    <p>Der Zugriff auf die Intraship-APIs wird durch Zugangsdaten gesichert. Diese Zugangsdaten  erhält nur, wer sich auf dem Entwicklerportal der DHL registrieren lässt.
     </p>
-    <p>Im ersten Schritt kommt es zu eine Anmeldung basierend auf HTTP Basis Authentication. Zus&auml;tzlich werden noch Credentials f&uuml;r den Zugriff auf die jeweilige API ben&ouml;tigt.
+    <p>Im ersten Schritt kommt es zu eine Anmeldung basierend auf HTTP Basis Authentication. Zusätzlich werden noch Credentials für den Zugriff auf die jeweilige API benötigt.
     </p>
-    <p>Die Anmeldedaten f&uuml;r die HTTP Basis Authentication k&ouml;nnen in den Projekteigenschaften  des Webservice hinterlegt werden. Die zus&auml;tzlichen Credentials k&ouml;nnen nach dem Start der  Anwendung in die Maske eingetragen werden.
+    <p>Die Anmeldedaten für die HTTP Basis Authentication können in den Projekteigenschaften  des Webservice hinterlegt werden. Die zusätzlichen Credentials können nach dem Start der  Anwendung in die Maske eingetragen werden.
     </p>
     <p>Alternativ dazu kann eine 
       <em>settings.ini
@@ -127,25 +131,25 @@
     </p>
     <p>Wenn keine HTTP Basis Authentication und/oder Credentials vorhanden sind, werden  diese mit den Zugangsdaten aus der Datei 
       <em>settings.ini
-      </em> erg&auml;nzt.
+      </em> ergänzt.
     </p><h2>WSDL: 
       <code>ISService_1_0_de.wsdl
       </code></h2>
-    <p>Die WSDL-Datei ist nicht Teil des Repositories. Um die Testanwendung starten zu k&ouml;nnen,  empfiehlt es sich den WSDL-Import f&uuml;r einen Clone auszuf&uuml;hren.
+    <p>Die WSDL-Datei ist nicht Teil des Repositories. Um die Testanwendung starten zu können,  empfiehlt es sich den WSDL-Import für einen Clone auszuführen.
     </p>
-    <p>Die nachfolgenden Punkte erl&auml;utern worauf besonders geachtet werden muss:
+    <p>Die nachfolgenden Punkte erläutern worauf besonders geachtet werden muss:
     </p>
     <ul>
       <li>wsdl4j.jar
       </li>
-      <li>&Auml;nderungen an der Schnittstelle
+      <li>Änderungen an der Schnittstelle
       </li>
       <li>Fehler nach Aufbau der Schnittstelle
       </li>
     </ul><h2>wsdl4j.jar</h2>
     <p>Zu jeder SOAP-API wird eine entsprechende URL bereitgestellt, welche auf eine WSDL-Resource verweist. Mit dieser URL wurde die Schnittstelle dieser Testanwendung mit Service und Proxy-Klassen eingerichtet.
     </p>
-    <p>Da der Aufbau einer solchen Schnittstelle &uuml;ber eine WSDL-Resource in der WaveMaker-Online-Dokumentation  ausf&uuml;hrlich beschrieben ist, verweise ich hier nur auf die f&uuml;r mich hilfreichsten Links:
+    <p>Da der Aufbau einer solchen Schnittstelle über eine WSDL-Resource in der WaveMaker-Online-Dokumentation  ausführlich beschrieben ist, verweise ich hier nur auf die für mich hilfreichsten Links:
     </p>
     <ul>
       <li>
@@ -155,7 +159,7 @@
       <a href="http://dev.wavemaker.com/wiki/bin/view/Documentation/AddaWebServiceCall" title="Add a Web Service Call">Add a Web Service Call</a>
       </li>
     </ul>
-    <p>Damit ein Import unter WaveMaker grunds&auml;tzlich durchgef&uuml;hrt werden kann, ist ein WSDL-Importer notwendig. Beim Einrichten des Webservice weist die IDE auf die Bibliothek 
+    <p>Damit ein Import unter WaveMaker grundsätzlich durchgeführt werden kann, ist ein WSDL-Importer notwendig. Beim Einrichten des Webservice weist die IDE auf die Bibliothek 
       <em>wsdl4j.jar
       </em> hin:
     </p>
@@ -166,25 +170,25 @@
     </ul>
     <p>Diese Bibliothek wird in den 
       <em>lib
-      </em>-Ordner des jeweiligen Projektes kopiert und  von dort automatisch durch die IDE den notwendigen Sourcen beim Ausf&uuml;hren der  Anwendung zur Verf&uuml;gung gestellt.
+      </em>-Ordner des jeweiligen Projektes kopiert und  von dort automatisch durch die IDE den notwendigen Sourcen beim Ausführen der  Anwendung zur Verfügung gestellt.
     </p>
-    <p>Neben dem Import, wird die gesamte Repr&auml;sentation und Manipulation der Service- und Proxy-Klassen  ausgehend von dieser Bibliothek vorgenommen.
+    <p>Neben dem Import, wird die gesamte Repräsentation und Manipulation der Service- und Proxy-Klassen  ausgehend von dieser Bibliothek vorgenommen.
     </p><h2>Fehler nach Aufbau der Schnittstelle</h2><h3>DHL-Websercie: 
       <code>ISService_1_0_de
       </code></h3>
-    <p>Der gleichnamige Webservice wurde durch den WSDL-Import angelegt und stellt alle  notwendigen Methoden f&uuml;r die Arbeit mit der Gesch&auml;ftskundenversand API zur Verf&uuml;gung.
+    <p>Der gleichnamige Webservice wurde durch den WSDL-Import angelegt und stellt alle  notwendigen Methoden für die Arbeit mit der Geschäftskundenversand API zur Verfügung.
     </p>
     <p>Allerdings haben sich in der Datei 
       <em>ISService10De.java
-      </em> Fehler eingeschlichen. Ob diese  Fehler durch einen unsachgem&auml;&szlig;en Umgang mit dem Importer oder aber durch fehlerhafte Interpretation durch den Importer zustande kamen, wurde nicht n&auml;her untersucht.
+      </em> Fehler eingeschlichen. Ob diese  Fehler durch einen unsachgemäßen Umgang mit dem Importer oder aber durch fehlerhafte Interpretation durch den Importer zustande kamen, wurde nicht näher untersucht.
     </p>
-    <p>Diese Fehler fanden ebenfalls Einzug in die zugeh&ouml;rige 
+    <p>Diese Fehler fanden ebenfalls Einzug in die zugehörige 
       <code>servicedef.xml
       </code> des Webservice und  somit auch in die 
       <code>types.js
       </code> der Testanwendung.
     </p>
-    <p>S&auml;mtliche Request-Klassen und einige Proxy-Klassen wurden einem falschen Package zugeordnet. <br />Es wurden zwei Packages angelegt:
+    <p>Sämtliche Request-Klassen und einige Proxy-Klassen wurden einem falschen Package zugeordnet. <br />Es wurden zwei Packages angelegt:
     </p>
     <ul>
       <li>
@@ -196,14 +200,14 @@
       </code>
       </li>
     </ul>
-    <p>Beim Aufl&ouml;sen der Fehler wurde wie folgt vorgegangen:
+    <p>Beim Auflösen der Fehler wurde wie folgt vorgegangen:
     </p>
     <ul>
-      <li>&Uuml;ber QuickFix (Eclipse) die falschen Packagezuordnungen korrigieren
+      <li>Über QuickFix (Eclipse) die falschen Packagezuordnungen korrigieren
       </li>
-      <li>In Eclipse die 
-      <code>servciedef.xml
-      </code> entsprechend anpassen
+      <li>siehe: 
+      <code>servicedef.xml
+      </code> automatisch anpassen
       </li>
       <li>
       <code>types.js
@@ -212,13 +216,13 @@
     </ul>
     <p>Solange in 
       <code>types.js
-      </code> die falschen Packagezuordnungen f&uuml;r einige Ressourcen des Webservice vorhanden sind, kann der Service nicht fehlerfrei ausgef&uuml;hrt werden.
+      </code> die falschen Packagezuordnungen für einige Ressourcen des Webservice vorhanden sind, kann der Service nicht fehlerfrei ausgeführt werden.
     </p>
-    <p>Au&szlig;er der Datei 
+    <p>Außer der Datei 
       <code>ISService10De.java
       </code> musste keine weitere Java-Source angepasst werden.    
     </p>
-    <p>Beispiel f&uuml;r falsche Packagezuordnung in 
+    <p>Beispiel für falsche Packagezuordnung in 
       <code>ISService10De.java
       </code>:
     </p>
@@ -242,7 +246,52 @@
       response = iswsServicePortTypeService.createShipmentDD(part1);
       return response;
     }
-</code></pre><h2>&Auml;nderungen an der Schnittstelle</h2><h3>Zugangsdaten</h3>
+</code></pre><h2>
+      <code>servicedef.xml
+      </code> automatisch anpassen</h2>
+    <p>Im vorliegendem Beispiel wurde die 
+      <code>servicedef.xml
+      </code> des DHL-Service mit sehr vielen falschen Package-Zuordnungen angelegt. Ob diese Fehler aufgrund einer unsachgemäßen Nutzung des WSDL-Importers oder aber aufgrund von Fehlern im WSDL-Importer entstanden sind, wurde nicht weiter geprüft. Fehler in einer 
+      <code>servicedef.xml
+      </code> sorgen im weiteren Verlauf der Entwicklung mit WaveMaker dafür,  das die 
+      <code>types.js
+      </code> falsch aufgebaut wird. Eine falsch eingerichtete 
+      <code>types.js
+      </code> verhindert eine korrekte Nutzung von Java- oder WebServices.
+    </p>
+    <p>Um diese falschen Package-Zuordnungen nicht von Hand auflösen zu müssen, wurde ein kleines Projekt in Lazarus/FreePascal aufgesetzt um diese Arbeiten zu automatisieren. 
+    </p>
+    <ul>
+      <li>
+      <a href="https://github.com/AlfredGerke/Intraship/tree/master/tools/lazarus/lpi," title="Customize servicedef.xml">Customize servicedef.xml</a>
+      </li>
+    </ul>
+    <p>Dem Programm werden die Ordner der Proxy-Klassen bekannt gegeben, sowie die zu überprüfende 
+      <code>servicedef.xml
+      </code> des DHL-Service. Wenn Ordern und Datei bekannt sind, wird in einem ersten Schritt eine Zusammenstellung aller  falschen Package-Zuordnungen erstellt und in einer Liste zur Verfügung gestellt.
+    </p>
+    <p>Jeder Eintrag in der Liste zeigt an, welche Klasse falsch zugeordnet wurde und wie die falsche und wie die richtige Package-Zuordnung lautet. Jeden Eintrag in der Liste kann man über eine Checkbox aus- bzw. abwählen.
+    </p>
+    <p>In einem zweiten Schritt werden nun die ausgwählten Einträge in der Liste in der ausgwählten 
+      <code>servicedef.xml
+      </code> angepasst und nach Beendigung in einer neuen Datei abgelegt.
+    </p>
+    <p>Die original 
+      <code>servicedef.xml
+      </code> wird nicht verändert.
+    </p>
+    <p>Die neu erstellte Datei kann nun überprüft und anschließend für die original Datei eingesetzt werden.
+    </p>
+    <p>Als letztes muss WaveMaker gestartet und ein beliebieger Java-Serivce erneut gesichert werden.  Das Sicher eines Java-Service wird alle notwendigen Dateien darunter auch die 
+      <code>types.js
+      </code> neu erstellen.
+    </p>
+    <p>Die 
+      <code>types.js
+      </code> wird immer dann von WaveMaker komplett neu erstellt, wenn einem Projekt neue oder veränderte Typen bekannt gegeben werden. Aus diesem Grund ist es sinnlos, Änderungen manuell in dieser Datei vorzunehem, da es wahrscheinlich ist, das diese wieder verloren gehen. Änderungen müssen in den Ausgangssourcen in diesem Fall der 
+      <code>servicedef.xml
+      </code> vorgenommen werden.
+    </p><h2>Änderungen an der Schnittstelle</h2><h3>Zugangsdaten</h3>
     <p>Um vom Server aus Zugriff auf die Zugansdaten der Datei 
       <code>settings.ini
       </code> zu erlangen, wurde die Schnittstelle des Service 
@@ -252,7 +301,7 @@
 <pre><code>    public CreateShipmentResponse createShipmentDD(CreateShipmentDDRequest part1, Authentification header) {
       CreateShipmentResponse response;
       /** 
-       * Anpassung durch den Entwickler, wird nicht vom Importer ersetllt
+       * Anpassung durch den Entwickler, wird nicht vom Importer erstellt
        */            
       bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
       header = Credentials.getInstance().setAuthentificationIfNeeded(header);
@@ -262,15 +311,15 @@
       return response;
     }
 </code></pre><h3>SOAPLoggingHandler</h3>
-    <p>&Uuml;ber einen SOAPLoggingHandler kann ein Request und ein Response zur Analyse von Fehler komplett geloggt werden. Im Constructor des Webservice wurde zu diesem Zweck dessen Context ein SOAPLoggingHandler zugef&uuml;hrt. 
+    <p>Über einen SOAPLoggingHandler kann ein Request und ein Response zur Analyse von Fehler komplett geloggt werden. Im Constructor des Webservice wurde zu diesem Zweck dessen Context ein SOAPLoggingHandler zugeführt. 
     </p>
-    <p>Allerdings hat es Probleme beim Einsatz des daf&uuml;r vorgesehen SOAPHandlers gegeben:
+    <p>Allerdings hat es Probleme beim Einsatz des dafür vorgesehen SOAPHandlers gegeben:
     </p>
     <ul>
       <li>com.wavemaker.runtime.ws.jaxws.SOAPLoggingHandler
       </li>
     </ul>
-    <p>Ob diese Probleme von einem falschen Verst&auml;ndnis des Handlers oder einem Bug herr&uuml;hrte, wurde nicht n&auml;her untersucht. Stattdessen wurde ein anderer LoggingHandler zum Einsatz gebracht:
+    <p>Ob diese Probleme von einem falschen Verständnis des Handlers oder einem Bug herrührte, wurde nicht näher untersucht. Stattdessen wurde ein anderer LoggingHandler zum Einsatz gebracht:
     </p>
 <pre><code>    public ISService10De() {
       ISService10DeClient isService10DeClient;
@@ -282,7 +331,7 @@
       }
       iswsServicePortTypeService = isService10DeClient.getShipmentServiceSOAP11Port0();
       /** 
-       * Anpassung durch den Entwickler, wird nicht vom Importer ersetllt
+       * Anpassung durch den Entwickler, wird nicht vom Importer erstellt
        */            
       MySOAPLoggingHandler.addToPort(((BindingProvider) iswsServicePortTypeService).getBinding()); 
     }         
@@ -292,7 +341,7 @@
     </p>
     <p>Der Request und der Response werden im Wavemaker-Log abgelegt. 
     </p>
-    <p>Da es sich hier um ein Testprogramm handelt, wurde kein Wert darauf gelegt den  Logger ein- oder ausschalten zu k&ouml;nnen. Das loggen dieser Werte macht nat&uuml;rlich  nur im Testbetrieb Sinn. Im Produktivbetrieb sollte man darauf verzichten. 
+    <p>Da es sich hier um ein Testprogramm handelt, wurde kein Wert darauf gelegt den  Logger ein- oder ausschalten zu können. Das loggen dieser Werte macht natürlich  nur im Testbetrieb Sinn. Im Produktivbetrieb sollte man darauf verzichten. 
     </p>  
   </body>
 </html>

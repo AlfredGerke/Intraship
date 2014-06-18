@@ -14,6 +14,7 @@ Dieses Testprogramm demonstriert eine mögliche Einbindung von DHL Intraship in 
 - WSDL: `ISService_1_0_de.wsdl`
 - wsdl4j.jar
 - Fehler nach Aufbau der Schnittstelle
+- `servicedef.xml` automatisch anpassen
 - Änderungen an der Schnittstelle
 
 
@@ -190,7 +191,7 @@ Es wurden zwei Packages angelegt:
 Beim Auflösen der Fehler wurde wie folgt vorgegangen:
 
 * Über QuickFix (Eclipse) die falschen Packagezuordnungen korrigieren
-* In Eclipse die `servciedef.xml` entsprechend anpassen
+* siehe: `servicedef.xml` automatisch anpassen
 * `types.js` durch kompilieren der Java-Sourcen aus der WaveMaker-IDE heraus neu bilden
 
 Solange in `types.js` die falschen Packagezuordnungen für einige Ressourcen des Webservice vorhanden sind,
@@ -222,6 +223,38 @@ Nachher:
           return response;
         }
 
+
+`servicedef.xml` automatisch anpassen
+-------------------------------------
+
+Im vorliegendem Beispiel wurde die `servicedef.xml` des DHL-Service mit sehr vielen falschen Package-Zuordnungen angelegt.
+Ob diese Fehler aufgrund einer unsachgemäßen Nutzung des WSDL-Importers oder aber aufgrund von Fehlern im WSDL-Importer entstanden sind, wurde nicht weiter geprüft.
+Fehler in einer `servicedef.xml` sorgen im weiteren Verlauf der Entwicklung mit WaveMaker dafür, 
+das die `types.js` falsch aufgebaut wird. Eine falsch eingerichtete `types.js` verhindert eine korrekte Nutzung von Java- oder WebServices.
+
+Um diese falschen Package-Zuordnungen nicht von Hand auflösen zu müssen, wurde ein kleines Projekt in Lazarus/FreePascal aufgesetzt um diese Arbeiten zu automatisieren. 
+
+* [Customize servicedef.xml](https://github.com/AlfredGerke/Intraship/tree/master/tools/lazarus/lpi, "Customize servicedef.xml")
+
+Dem Programm werden die Ordner der Proxy-Klassen bekannt gegeben, sowie die zu überprüfende `servicedef.xml` des DHL-Service.
+Wenn Ordern und Datei bekannt sind, wird in einem ersten Schritt eine Zusammenstellung aller 
+falschen Package-Zuordnungen erstellt und in einer Liste zur Verfügung gestellt.
+
+Jeder Eintrag in der Liste zeigt an, welche Klasse falsch zugeordnet wurde und wie die falsche und wie die richtige Package-Zuordnung lautet.
+Jeden Eintrag in der Liste kann man über eine Checkbox aus- bzw. abwählen.
+
+In einem zweiten Schritt werden nun die ausgwählten Einträge in der Liste in der ausgwählten `servicedef.xml` angepasst und nach Beendigung in einer neuen Datei abgelegt.
+
+Die original `servicedef.xml` wird nicht verändert.
+
+Die neu erstellte Datei kann nun überprüft und anschließend für die original Datei eingesetzt werden.
+
+Als letztes muss WaveMaker gestartet und ein beliebieger Java-Serivce erneut gesichert werden. 
+Das Sicher eines Java-Service wird alle notwendigen Dateien darunter auch die `types.js` neu erstellen.
+
+Die `types.js` wird immer dann von WaveMaker komplett neu erstellt, wenn einem Projekt neue oder veränderte Typen bekannt gegeben werden.
+Aus diesem Grund ist es sinnlos, Änderungen manuell in dieser Datei vorzunehem, da es wahrscheinlich ist, das diese wieder verloren gehen.
+Änderungen müssen in den Ausgangssourcen in diesem Fall der `servicedef.xml` vorgenommen werden.
 
 Änderungen an der Schnittstelle
 -------------------------------
