@@ -47,9 +47,14 @@ Intraship.extend({
     addGetShipmentDDRequestHandler: function(rsddr) {
         this.onGetShipmentDDRequest = rsddr;
     },
-    getAuthentificationHeader: function() {
+    addGetShipmentTDRequestHandler: function(rstdr) {
+        this.onGetShipmentTDRequest = rstdr;
+    },    
+    getAuthentificationHeader: function(flag) {
         try {
-            console.debug('Start srvGetAuthentication');
+            console.debug('Start srvGetAuthentication: ' + flag);
+
+            this.currentMod = flag;
 
             if (this.srvGetAuthentication.canUpdate()) {
                 this.srvGetAuthentication.update();
@@ -63,9 +68,24 @@ Intraship.extend({
         }
     },
     srvGetAuthenticationSuccess: function(inSender, inDeprecated) {
+        var mod = this.currentMod;
+
         this.onSetCredentials();
 
-        this.onGetShipmentDDRequest();
+        switch (mod) {
+        case "CreateShipmentDD":
+            this.onGetShipmentDDRequest();
+
+            break;
+        case "CreateShipmentTD":
+            this.onGetShipmentTDRequest();
+
+            break;
+        default:
+            this.toastError("Kein gültiges Modul gewählt: " + mod);
+
+            break;
+        }
     },
     setShipmentNrByResponse: function(shipNr) {
         this.onSetShipmentNrByResponse(shipNr);

@@ -4,5 +4,9 @@
         <parameter name="isXMLLabel" typeRef="java.lang.Boolean" isList="false"/>
         <return typeRef="intraship.ws.de.CreateShipmentDDRequest" isList="false"/>
     </operation>
+    <operation name="getShipmentTDRequest">
+        <parameter name="isXMLLabel" typeRef="java.lang.Boolean" isList="false"/>
+        <return typeRef="intraship.ws.de.CreateShipmentTDRequest" isList="false"/>
+    </operation>
     <dataobjects/>
 </service>

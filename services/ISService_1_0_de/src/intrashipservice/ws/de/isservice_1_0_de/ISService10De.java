@@ -101,6 +101,12 @@ public class ISService10De {
 
     public CreateShipmentResponse createShipmentTD(CreateShipmentTDRequest part1, Authentification header) {
         CreateShipmentResponse response;
+        /**
+         * Credentials-Verarbeitung von Hand eingefügt, wurde nicht vom Importer angelegt 
+         */
+        bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
+        header = Credentials.getInstance().setAuthentificationIfNeeded(header);
+        
         SOAPBindingResolver.setBindingProperties(((BindingProvider) iswsServicePortTypeService), bindingProperties);
         SOAPBindingResolver.setHeaders(((WSBindingProvider) iswsServicePortTypeService), header);
         response = iswsServicePortTypeService.createShipmentTD(part1);

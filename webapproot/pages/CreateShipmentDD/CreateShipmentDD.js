@@ -4,7 +4,7 @@ dojo.declare("CreateShipmentDD", wm.Page, {
     },
     "preferredDevice": "desktop",
     btnCreateShipmentDDClick: function(inSender) {
-        app.getAuthentificationHeader();
+        app.getAuthentificationHeader("CreateShipmentDD");
     },
     getShipmentDDRequestHandler: function() {
         var scope = this;
