@@ -1,0 +1,1 @@
+dojo.require("project.resources.javascript.DemoUtils");

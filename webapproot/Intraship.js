@@ -35,6 +35,9 @@ dojo.declare("Intraship", wm.Application, {
 });
 
 Intraship.extend({
+    start: function() {
+        this.utils = new DemoUtils();
+    },
     addGetShipmentNrHandler: function(gsnr) {
         this.onGetShipmentNr = gsnr;
     },
@@ -49,7 +52,7 @@ Intraship.extend({
     },
     addGetShipmentTDRequestHandler: function(rstdr) {
         this.onGetShipmentTDRequest = rstdr;
-    },    
+    },
     getAuthentificationHeader: function(flag) {
         try {
             console.debug('Start srvGetAuthentication: ' + flag);

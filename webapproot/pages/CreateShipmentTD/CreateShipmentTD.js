@@ -32,17 +32,20 @@ dojo.declare("CreateShipmentTD", wm.Page, {
     srvCreateShipmentTDError: function(inSender, inError) {
         app.toastError(this.name + ".srvGetShipmentTDRequest failed: " + inError);
     },
-    getSipmentNumberByXML: function() {
-        var xml = this.edtXMLLabel.getDataValue();
-        var jsdom = dojox.xml.parser.parse(xml);
-        var nodeList = jsdom.getElementsByTagName("SHIPMENTNR");
-        var node = nodeList[0].childNodes[0];
+    setSipmentNumberHandler: function() {
+        return function(shipnr) {
+            app.setShipmentNrByResponse(shipnr);
+        };
+    },
+    getXMLLabelHandler: function() {
+        var scope = this;
 
-        app.setShipmentNrByResponse(node.nodeValue);
+        return function() {
+            return scope.edtXMLLabel.getDataValue();
+        };
     },
     edtXMLLabelChange: function(inSender, inDisplayValue, inDataValue, inSetByCode) {
-        dojo.require("dojox.xml.parser");
-        dojo.ready(this, "getSipmentNumberByXML");
+        app.utils.getShipmentNrByLabel(this.getXMLLabelHandler(), this.setSipmentNumberHandler());
     },
     _end: 0
 });
