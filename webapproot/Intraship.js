@@ -39,6 +39,9 @@ Intraship.extend({
     start: function() {
         this.utils = new DemoUtils();
     },
+    addDeleteShipmentDDRequestHandler: function(gdsddr) {
+        this.onGetDeleteShipmentDDRequest = gdsddr;
+    },
     addGetLabelDDRequestHandler: function(glddr) {
         this.onGetLabelDDRequest = glddr;
     },
@@ -76,6 +79,7 @@ Intraship.extend({
     },
     srvGetAuthenticationSuccess: function(inSender, inDeprecated) {
         var mod = this.currentMod;
+        var shipnr = "";
 
         this.onSetCredentials();
 
@@ -89,11 +93,19 @@ Intraship.extend({
 
             break;
         case "GetLabelDD":
-            var shipnr = this.getShipmentNr();
+            shipnr = this.getShipmentNr();
 
             this.varResultByGetShipmentNr.setValue("dataValue", shipnr);
 
             this.onGetLabelDDRequest();
+
+            break;
+        case "DeleteShipmentDD":
+            shipnr = this.getShipmentNr();
+
+            this.varResultByGetShipmentNr.setValue("dataValue", shipnr);
+
+            this.onGetDeleteShipmentDDRequest();
 
             break;
         default:

@@ -33,8 +33,12 @@ GetLabelDD.widgets = {
 	lbxMain: ["wm.Layout", {"horizontalAlign":"left","verticalAlign":"top"}, {}, {
 		pnlGetLabelDD: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"GetLabelDD"}, {}, {
 			pnlTop: ["wm.Panel", {"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-				btnCreateShipmentDD: ["wm.Button", {"caption":"Execute","margin":"4","width":"154px"}, {"onclick":"btnCreateShipmentDDClick"}],
-				cbxXML_Rrequest: ["wm.Checkbox", {"caption":"Created by Labeltype: XML","captionSize":"200px","checkedValue":false,"dataValue":false,"displayValue":false,"width":"200px"}, {}]
+				btnGetLabelDD: ["wm.Button", {"caption":"Execute","margin":"4","width":"154px"}, {"onclick":"btnCreateShipmentDDClick"}],
+				cbxXML_Rrequest: ["wm.Checkbox", {"caption":"Created by Labeltype: XML","captionSize":"200px","checkedValue":false,"displayValue":false,"width":"200px"}, {}, {
+					binding: ["wm.Binding", {}, {}, {
+						wire: ["wm.Wire", {"expression":"${edtXMLLabel.dataValue} != \"\"","targetProperty":"dataValue"}, {}]
+					}]
+				}]
 			}],
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by GetLabelDD"}, {}, {
@@ -52,12 +56,12 @@ GetLabelDD.widgets = {
 					}],
 					pnlStatusResponse: ["wm.Panel", {"height":"28px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
 						pnlStatusResponse1: ["wm.Panel", {"height":"25px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-							edtStatusCpde: ["wm.Number", {"caption":"StatusCode","displayValue":"","placeHolder":"Code","width":"165px"}, {}, {
+							edtStatusCpde: ["wm.Number", {"caption":"StatusCode","displayValue":"","helpText":"Allgemeiner StatusCode","placeHolder":"Code","width":"165px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.status.statusCode","targetProperty":"dataValue"}, {}]
 								}]
 							}],
-							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"150px","displayValue":"","emptyValue":"emptyString","placeHolder":"StatusMessage","width":"100%"}, {}, {
+							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"150px","displayValue":"","emptyValue":"emptyString","helpText":"Allgemeine Statusmeldung","placeHolder":"Message","width":"100%"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.status.statusMessage","targetProperty":"dataValue"}, {}]
 								}]

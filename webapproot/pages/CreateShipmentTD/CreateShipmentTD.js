@@ -3,7 +3,6 @@ dojo.declare("CreateShipmentTD", wm.Page, {
 
     },
     "preferredDevice": "desktop",
-
     btnCreateShipmentTDClick: function(inSender) {
         app.getAuthentificationHeader("CreateShipmentTD");
     },
