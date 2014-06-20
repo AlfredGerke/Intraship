@@ -163,6 +163,12 @@ public class ISService10De {
 
     public GetLabelResponse getLabelDD(GetLabelDDRequest part1, Authentification header) {
         GetLabelResponse response;
+        /**
+         * Credentials-Verarbeitung von Hand eingefügt, wurde nicht vom Importer angelegt 
+         */
+        bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
+        header = Credentials.getInstance().setAuthentificationIfNeeded(header);
+        
         SOAPBindingResolver.setBindingProperties(((BindingProvider) iswsServicePortTypeService), bindingProperties);
         SOAPBindingResolver.setHeaders(((WSBindingProvider) iswsServicePortTypeService), header);
         response = iswsServicePortTypeService.getLabelDD(part1);

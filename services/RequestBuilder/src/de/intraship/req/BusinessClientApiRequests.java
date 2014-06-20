@@ -14,12 +14,14 @@ import intrashipservice.ws.de.isservice_1_0_de.NameTypeType.Company;
 import intrashipservice.ws.de.isservice_1_0_de.NameTypeType.Person;
 import intrashipservice.ws.de.isservice_1_0_de.NativeAddressTypeType;
 import intrashipservice.ws.de.isservice_1_0_de.Origin;
+import intrashipservice.ws.de.isservice_1_0_de.ShipmentNumberTypeType;
 import intrashipservice.ws.de.isservice_1_0_de.Version;
 import intrashipservice.ws.de.isservice_1_0_de.Zip;
 
 import intraship.ws.de.CreateShipmentDDRequest;
 import intraship.ws.de.CreateShipmentTDRequest;
 import intraship.ws.de.ExportDocumentTDType;
+import intraship.ws.de.GetLabelDDRequest;
 import intraship.ws.de.ReceiverDDType;
 import intraship.ws.de.ReceiverTDType;
 import intraship.ws.de.ShipmentDetailsDDType;
@@ -327,5 +329,22 @@ public class BusinessClientApiRequests extends JavaServiceSuperClass {
     createShipmentTDRequest.getShipmentOrders().add(shipmentOrderTDType);
 
     return createShipmentTDRequest;
+  }
+  
+  public GetLabelDDRequest GetLabelDDRequest(String shipmentNr) {
+    GetLabelDDRequest ddRequest = new GetLabelDDRequest();
+    
+    ddRequest.setVersion(createVersion());
+    
+    ShipmentNumberTypeType shNumber = new ShipmentNumberTypeType();
+
+    if (!shipmentNr.equals(""))
+      shNumber.setShipmentNumber(shipmentNr);
+    else
+      shNumber.setShipmentNumber(TestConstants.DUMMY_SHIPMENT_NUMBER);
+    
+    ddRequest.getShipmentNumbers().add(shNumber);
+    
+    return ddRequest;
   }
 }

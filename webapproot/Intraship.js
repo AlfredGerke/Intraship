@@ -29,7 +29,8 @@ dojo.declare("Intraship", wm.Application, {
 			binding: ["wm.Binding", {}, {}, {
 				wire: ["wm.Wire", {"expression":undefined,"source":"app.srvGetAuthentication","targetProperty":"dataSet"}, {}]
 			}]
-		}]
+		}], 
+		varResultByGetShipmentNr: ["wm.Variable", {"type":"StringData"}, {}]
 	},
 	_end: 0
 });
@@ -38,8 +39,11 @@ Intraship.extend({
     start: function() {
         this.utils = new DemoUtils();
     },
+    addGetLabelDDRequestHandler: function(glddr) {
+        this.onGetLabelDDRequest = glddr;
+    },
     addGetShipmentNrHandler: function(gsnr) {
-        this.onGetShipmentNr = gsnr;
+        this.getShipmentNr = gsnr;
     },
     addSetShipmentNrHandler: function(gsbr) {
         this.onSetShipmentNrByResponse = gsbr;
@@ -82,6 +86,14 @@ Intraship.extend({
             break;
         case "CreateShipmentTD":
             this.onGetShipmentTDRequest();
+
+            break;
+        case "GetLabelDD":
+            var shipnr = this.getShipmentNr();
+
+            this.varResultByGetShipmentNr.setValue("dataValue", shipnr);
+
+            this.onGetLabelDDRequest();
 
             break;
         default:
