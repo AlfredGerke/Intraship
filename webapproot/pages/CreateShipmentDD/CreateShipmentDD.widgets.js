@@ -39,6 +39,18 @@ CreateShipmentDD.widgets = {
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by CreateShipmentDD"}, {}, {
 					pnlLabelResponse: ["wm.Panel", {"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
+						pnlWSVersion: ["wm.Panel", {"height":"28px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Major","width":"125px"}, {}, {
+								binding: ["wm.Binding", {}, {}, {
+									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.version.majorRelease","targetProperty":"dataValue"}, {}]
+								}]
+							}],
+							edtMinorVersion: ["wm.Text", {"caption":"Minor","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionsunternummer des verarbeitenden WebService","placeHolder":"Minor","width":"125px"}, {}, {
+								binding: ["wm.Binding", {}, {}, {
+									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.version.minorRelease","targetProperty":"dataValue"}, {}]
+								}]
+							}]
+						}],
 						edtLabelURL: ["wm.Text", {"caption":undefined,"displayValue":"","emptyValue":"emptyString","helpText":"URL kann über einen PDF-Reader direkt im Browser verarbeitet werden","placeHolder":"Label URL","singleLine":false,"styles":{},"width":"100%"}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates.labelurl","targetProperty":"dataValue"}, {}]
@@ -47,6 +59,15 @@ CreateShipmentDD.widgets = {
 						edtXMLLabel: ["wm.LargeTextArea", {"caption":undefined,"captionPosition":"left","captionSize":"100px","displayValue":"","emptyValue":"emptyString","height":"100%","helpText":undefined,"styles":{},"width":"100%"}, {"onchange":"edtXMLLabelChange"}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates.XMLLabel","targetProperty":"dataValue"}, {}]
+							}]
+						}],
+						gridDetails: ["wm.DojoGrid", {"columns":[
+{"show":true,"field":"statusCode","title":"StatusCode","width":"127px","align":"left","formatFunc":"","mobileColumn":false},
+{"show":true,"field":"shipmentNumber.shipmentNumber","title":"ShipmentNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"StatusCode: \" + ${statusCode} +\n\"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"ShipmentNumber: \" + ${shipmentNumber.shipmentNumber}\n + \"</div>\"\n\n","mobileColumn":true}
+],"dsType":"intraship.ws.de.CreationState","margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+							binding: ["wm.Binding", {}, {}, {
+								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates","targetProperty":"dataSet"}, {}]
 							}]
 						}]
 					}],

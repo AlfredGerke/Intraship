@@ -28,5 +28,12 @@ dojo.declare("DeleteShipmentDD", wm.Page, {
     onStart: function(inPage) {
         app.addDeleteShipmentDDRequestHandler(this.getDeleteShipmentDDRequestHandler());
     },
+	srvDeleteShipmentDDResult: function(inSender, inDeprecated) {
+		
+        //app.toastInfo(inDeprecated.deletionStates[0].data.shipmentNumber.data.shipmentNumber);
+        //app.toastInfo(inDeprecated.deletionStates[0].data.status.data.statusCode);
+        //app.toastInfo(inDeprecated.deletionStates[0].data.status.data.statusMessage);
+		
+	},
 	_end: 0
 });

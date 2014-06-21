@@ -43,6 +43,18 @@ GetLabelDD.widgets = {
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by GetLabelDD"}, {}, {
 					pnlLabelResponse: ["wm.Panel", {"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
+						pnlWSVersion: ["wm.Panel", {"height":"28px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Minor","width":"125px"}, {}, {
+								binding: ["wm.Binding", {}, {}, {
+									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.version.majorRelease","targetProperty":"dataValue"}, {}]
+								}]
+							}],
+							edtMinorVersion: ["wm.Text", {"caption":"Minor","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionsunternummer des verarbeitenden WebService","placeHolder":"Minor","width":"125px"}, {}, {
+								binding: ["wm.Binding", {}, {}, {
+									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.version.minorRelease","targetProperty":"dataValue"}, {}]
+								}]
+							}]
+						}],
 						edtLabelURL: ["wm.Text", {"caption":undefined,"displayValue":"","emptyValue":"emptyString","helpText":"URL kann über einen PDF-Reader direkt im Browser verarbeitet werden","placeHolder":"Label URL","singleLine":false,"styles":{},"width":"100%"}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.labelDatas.labelurl","targetProperty":"dataValue"}, {}]
