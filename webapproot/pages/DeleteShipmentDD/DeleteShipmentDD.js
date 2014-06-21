@@ -12,21 +12,21 @@ dojo.declare("DeleteShipmentDD", wm.Page, {
         return function() {
             try {
                 console.debug('Start srvGetDeleteShipmentDDRequest');
-
-                if (scope.srvDeleteShipmentDDRequest.canUpdate()) {
-                    scope.srvDeleteShipmentDDRequest.update();
+                          
+                if (scope.srvGetDeleteShipmentDDRequest.canUpdate()) {
+                    scope.srvGetDeleteShipmentDDRequest.update();
                 } else {
                     app.toastError("Keine Request-Object erstellt!");
                 }
 
-                console.debug('End srvDeleteShipmentDDRequest');
+                console.debug('End srvGetDeleteShipmentDDRequest');
             } catch (e) {
-                app.toastError(scope.name + ".srvDeleteShipmentDDRequest failed: " + e.toString());
+                app.toastError(scope.name + ".srvGetDeleteShipmentDDRequest failed: " + e.toString());
             }
         };
     },
     onStart: function(inPage) {
         app.addDeleteShipmentDDRequestHandler(this.getDeleteShipmentDDRequestHandler());
     },
-    _end: 0
+	_end: 0
 });

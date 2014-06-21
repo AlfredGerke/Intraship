@@ -4,6 +4,10 @@
         <parameter name="shipmentNr" typeRef="java.lang.String" isList="false"/>
         <return typeRef="intraship.ws.de.GetLabelDDRequest" isList="false"/>
     </operation>
+    <operation name="getDeleteShipmentDDRequest">
+        <parameter name="shipmentNr" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="intraship.ws.de.DeleteShipmentDDRequest" isList="false"/>
+    </operation>
     <operation name="getShipmentDDRequest">
         <parameter name="isXMLLabel" typeRef="java.lang.Boolean" isList="false"/>
         <return typeRef="intraship.ws.de.CreateShipmentDDRequest" isList="false"/>

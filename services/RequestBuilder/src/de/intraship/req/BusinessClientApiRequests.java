@@ -20,6 +20,7 @@ import intrashipservice.ws.de.isservice_1_0_de.Zip;
 
 import intraship.ws.de.CreateShipmentDDRequest;
 import intraship.ws.de.CreateShipmentTDRequest;
+import intraship.ws.de.DeleteShipmentDDRequest;
 import intraship.ws.de.ExportDocumentTDType;
 import intraship.ws.de.GetLabelDDRequest;
 import intraship.ws.de.ReceiverDDType;
@@ -73,7 +74,8 @@ public class BusinessClientApiRequests extends JavaServiceSuperClass {
 
     Calendar today = Calendar.getInstance();
 
-    today.add(Calendar.DAY_OF_MONTH, 2);
+    today.add(Calendar.DAY_OF_MONTH,
+      2);
 
     shipmentDetails.setProductCode(TestConstants.DD_PROD_CODE);
     shipmentDetails.setShipmentDate(formatter.format(today.getTime()));
@@ -195,24 +197,25 @@ public class BusinessClientApiRequests extends JavaServiceSuperClass {
     shipmentItem.setLengthInCM(new BigInteger("50"));
     shipmentItem.setWidthInCM(new BigInteger("30"));
     shipmentItem.setHeightInCM(new BigInteger("15"));
-    
+
     return shipmentItem;
   }
 
   private ShipmentDetailsTDType createShipmentDetailsTDType(int shipmentItemNb) {
 
     Calendar today = Calendar.getInstance();
-    today.add(Calendar.DAY_OF_MONTH, 2);
-    
+    today.add(Calendar.DAY_OF_MONTH,
+      2);
+
     SimpleDateFormat formatter = new SimpleDateFormat(TestConstants.SDF);
     ShipmentDetailsTDType shipmentDetails = new ShipmentDetailsTDType();
     Account acc = new Account();
-    
+
     shipmentDetails.setProductCode(TestConstants.TD_PROD_CODE);
     shipmentDetails.setShipmentDate(formatter.format(today.getTime()));
-    
+
     acc.setAccountNumberExpress(TestConstants.TD_ACC_NUMBER_EXPRESS);
-    
+
     shipmentDetails.setAccount(acc);
     shipmentDetails.setDutiable(TestConstants.TD_DUTIABLE);
     shipmentDetails.setDescriptionOfContent(TestConstants.SHIPMENT_DESC);
@@ -232,7 +235,7 @@ public class BusinessClientApiRequests extends JavaServiceSuperClass {
   private ExportDocumentTDType createDefaultExportDocTDType(String date) {
 
     ExportDocumentTDType exportDoc = new ExportDocumentTDType();
-    
+
     exportDoc.setInvoiceType(TestConstants.INVOICE_TYPE);
     exportDoc.setInvoiceDate(date);
     exportDoc.setInvoiceNumber(TestConstants.INVOICE_NUMBER);
@@ -287,19 +290,14 @@ public class BusinessClientApiRequests extends JavaServiceSuperClass {
   }
 
   public CreateShipmentTDRequest getShipmentTDRequest(Boolean isXMLLabel) {
-
     Calendar today = Calendar.getInstance();
     SimpleDateFormat formatter = new SimpleDateFormat(TestConstants.SDF);
 
-    // create empty request
     CreateShipmentTDRequest createShipmentTDRequest = new CreateShipmentTDRequest();
-    // set version element
     createShipmentTDRequest.setVersion(createVersion());
-    // create shipment order object
+    
     ShipmentOrderTDType shipmentOrderTDType = new ShipmentOrderTDType();
-
     shipmentOrderTDType.setSequenceNumber("1");
-
     ShipmentOrderTDType.Shipment shipment = new ShipmentOrderTDType.Shipment();
     shipmentOrderTDType.setShipment(shipment);
 
@@ -320,7 +318,7 @@ public class BusinessClientApiRequests extends JavaServiceSuperClass {
     receiver.setAddress(createReceiverNativeAddressType(true));
     receiver.setCommunication(createReceiverCommunicationType());
 
-    if (isXMLLabel) {    
+    if (isXMLLabel) {
       shipmentOrderTDType.setLabelResponseType("XML");
     } else {
       shipmentOrderTDType.setLabelResponseType("URL");
@@ -330,13 +328,30 @@ public class BusinessClientApiRequests extends JavaServiceSuperClass {
 
     return createShipmentTDRequest;
   }
-  
+
   public GetLabelDDRequest GetLabelDDRequest(String shipmentNr) {
+
     GetLabelDDRequest ddRequest = new GetLabelDDRequest();
+
+    ddRequest.setVersion(createVersion());
+
+    ShipmentNumberTypeType shNumber = new ShipmentNumberTypeType();
+
+    if (!shipmentNr.equals(""))
+      shNumber.setShipmentNumber(shipmentNr);
+    else
+      shNumber.setShipmentNumber(TestConstants.DUMMY_SHIPMENT_NUMBER);
+
+    ddRequest.getShipmentNumbers().add(shNumber);
+
+    return ddRequest;
+  }
+
+  public DeleteShipmentDDRequest getDeleteShipmentDDRequest(String shipmentNr) {
+    DeleteShipmentDDRequest ddRequest = new DeleteShipmentDDRequest();
+    ShipmentNumberTypeType shNumber = new ShipmentNumberTypeType();
     
     ddRequest.setVersion(createVersion());
-    
-    ShipmentNumberTypeType shNumber = new ShipmentNumberTypeType();
 
     if (!shipmentNr.equals(""))
       shNumber.setShipmentNumber(shipmentNr);

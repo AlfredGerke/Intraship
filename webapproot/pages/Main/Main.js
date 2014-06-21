@@ -5,19 +5,19 @@ dojo.declare("Main", wm.Page, {
     "preferredDevice": "desktop",
     getShipmentNrHandler: function() {
         var scope = this;
-        
+
         return function() {
             var snr = scope.edtShipmentNr.dataValue;
-            
+
             return snr;
         };
     },
     setShipmentNrByResponseHandler: function() {
         var scope = this;
-        
+
         return function(snr) {
             scope.edtShipmentNr.setValue("dataValue", snr);
-        };            
+        };
     },
     setCredentialsHandler: function() {
         var scope = this;

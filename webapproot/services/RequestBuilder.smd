@@ -8,6 +8,14 @@
 		}],
 		"returnType": "intraship.ws.de.GetLabelDDRequest"
 	}, {
+		"name": "getDeleteShipmentDDRequest",
+		"operationType": null,
+		"parameters": [{
+			"name": "shipmentNr",
+			"type": "java.lang.String"
+		}],
+		"returnType": "intraship.ws.de.DeleteShipmentDDRequest"
+	}, {
 		"name": "getShipmentDDRequest",
 		"operationType": null,
 		"parameters": [{
