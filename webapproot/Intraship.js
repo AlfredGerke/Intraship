@@ -30,7 +30,8 @@ dojo.declare("Intraship", wm.Application, {
 				wire: ["wm.Wire", {"expression":undefined,"source":"app.srvGetAuthentication","targetProperty":"dataSet"}, {}]
 			}]
 		}], 
-		varResultByGetShipmentNr: ["wm.Variable", {"type":"StringData"}, {}]
+		varResultByGetShipmentNr: ["wm.Variable", {"type":"StringData"}, {}], 
+		varResultByStatusMessages: ["wm.Variable", {"isList":true,"type":"AnyData"}, {}]
 	},
 	_end: 0
 });

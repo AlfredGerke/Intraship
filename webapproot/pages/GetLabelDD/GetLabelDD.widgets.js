@@ -64,6 +64,21 @@ GetLabelDD.widgets = {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.labelDatas.XMLLabel","targetProperty":"dataValue"}, {}]
 							}]
+						}],
+						gridDetails: ["wm.DojoGrid", {"columns":[
+{"show":true,"field":"shipmentNumber.shipmentNumber","title":"ShipmentNumber","width":"300px","align":"left","formatFunc":"","mobileColumn":false},
+{"show":true,"field":"status.statusCode","title":"StatusCode","width":"125px","align":"left","formatFunc":"","mobileColumn":false},
+{"show":true,"field":"status.statusMessage","title":"StatusMessage","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"ShipmentNumber: \" + ${shipmentNumber.shipmentNumber} +\n\"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"StatusCode: \" + ${status.statusCode}\n + \"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"StatusMessage: \" + ${status.statusMessage}\n + \"</div>\"\n\n","mobileColumn":true},
+{"show":false,"field":"shipmentNumber.identCode","title":"ShipmentNumber.identCode","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"shipmentNumber.licensePlate","title":"ShipmentNumber.licensePlate","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"shipmentNumber.airwayBill","title":"ShipmentNumber.airwayBill","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"labelurl","title":"Labelurl","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"XMLLabel","title":"XMLLabel","width":"100%","align":"left","formatFunc":"","mobileColumn":false}
+],"dsType":"intraship.ws.de.LabelData","height":"100px","margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+							binding: ["wm.Binding", {}, {}, {
+								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.labelDatas","targetProperty":"dataSet"}, {}]
+							}]
 						}]
 					}],
 					pnlStatusResponse: ["wm.Panel", {"height":"28px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {

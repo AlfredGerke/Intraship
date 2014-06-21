@@ -35,5 +35,8 @@ dojo.declare("DeleteShipmentDD", wm.Page, {
         //app.toastInfo(inDeprecated.deletionStates[0].data.status.data.statusMessage);
 		
 	},
+	onShow: function() {
+		app.varResultByStatusMessages.clearData();
+	},
 	_end: 0
 });

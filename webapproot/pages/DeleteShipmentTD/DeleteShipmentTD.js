@@ -4,5 +4,8 @@ dojo.declare("DeleteShipmentTD", wm.Page, {
 	},
 	"preferredDevice": "desktop",
 
+	onShow: function() {
+		app.varResultByStatusMessages.clearData();
+	},
 	_end: 0
 });

@@ -1,5 +1,5 @@
 CreateShipmentDD.widgets = {
-	srvCreateShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"createShipmentDD","service":"ISService_1_0_de"}, {"onError":"srvCreateShipmentDDError"}, {
+	srvCreateShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"createShipmentDD","service":"ISService_1_0_de"}, {"onError":"srvCreateShipmentDDError","onResult":"srvCreateShipmentDDResult"}, {
 		input: ["wm.ServiceInput", {"type":"createShipmentDDInputs"}, {}, {
 			binding: ["wm.Binding", {}, {}, {
 				wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetShipmentDDRequest","targetProperty":"part1"}, {}],
@@ -62,12 +62,27 @@ CreateShipmentDD.widgets = {
 							}]
 						}],
 						gridDetails: ["wm.DojoGrid", {"columns":[
-{"show":true,"field":"statusCode","title":"StatusCode","width":"127px","align":"left","formatFunc":"","mobileColumn":false},
+{"show":true,"field":"statusCode","title":"StatusCode","width":"125px","align":"left","formatFunc":"","mobileColumn":false},
 {"show":true,"field":"shipmentNumber.shipmentNumber","title":"ShipmentNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
-{"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"StatusCode: \" + ${statusCode} +\n\"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"ShipmentNumber: \" + ${shipmentNumber.shipmentNumber}\n + \"</div>\"\n\n","mobileColumn":true}
-],"dsType":"intraship.ws.de.CreationState","margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+{"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"StatusCode: \" + ${statusCode} +\n\"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"ShipmentNumber: \" + ${shipmentNumber.shipmentNumber}\n + \"</div>\"\n\n","mobileColumn":true},
+{"show":false,"field":"shipmentNumber.identCode","title":"ShipmentNumber.identCode","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"shipmentNumber.licensePlate","title":"ShipmentNumber.licensePlate","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"shipmentNumber.airwayBill","title":"ShipmentNumber.airwayBill","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"labelurl","title":"Labelurl","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"XMLLabel","title":"XMLLabel","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"sequenceNumber","title":"SequenceNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"pickupConfirmationNumber","title":"PickupConfirmationNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false}
+],"dsType":"intraship.ws.de.CreationState","height":"100px","localizationStructure":{},"margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates","targetProperty":"dataSet"}, {}]
+							}]
+						}],
+						gridDetailMessages: ["wm.DojoGrid", {"columns":[
+{"show":true,"field":"dataValue","title":"StatusMessages","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"StatusMessages: \" + ${dataValue} +\n\"</div>\"\n\n","mobileColumn":true}
+],"dsType":"AnyData","height":"100px","margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+							binding: ["wm.Binding", {}, {}, {
+								wire: ["wm.Wire", {"expression":undefined,"source":"app.varResultByStatusMessages","targetProperty":"dataSet"}, {}]
 							}]
 						}]
 					}],

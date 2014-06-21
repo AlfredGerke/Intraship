@@ -46,5 +46,14 @@ dojo.declare("CreateShipmentDD", wm.Page, {
     edtXMLLabelChange: function(inSender, inDisplayValue, inDataValue, inSetByCode) {
         app.utils.getShipmentNrByLabel(this.getXMLLabelHandler(), this.setSipmentNumberHandler());
     },
-    _end: 0
+    srvCreateShipmentDDResult: function(inSender, inDeprecated) {
+        var ds = app.utils.getMessagesByCreationState(inDeprecated.creationStates);
+
+        app.varResultByStatusMessages.clearData();
+        app.varResultByStatusMessages.setData(ds);
+	},
+	onShow: function() {
+		app.varResultByStatusMessages.clearData();
+	},
+	_end: 0
 });

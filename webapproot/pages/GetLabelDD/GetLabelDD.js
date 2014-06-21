@@ -28,5 +28,8 @@ dojo.declare("GetLabelDD", wm.Page, {
     onStart: function(inPage) {
         app.addGetLabelDDRequestHandler(this.getLabelDDRequestHandler());
     },
-    _end: 0
+    onShow: function() {
+		app.varResultByStatusMessages.clearData();
+	},
+	_end: 0
 });

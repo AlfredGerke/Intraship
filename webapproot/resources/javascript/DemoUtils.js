@@ -15,5 +15,23 @@ dojo.declare("DemoUtils", null, {
      
      dojo.require("dojox.xml.parser");
      dojo.ready(this, "getSipmentNumberByXML");
+  },
+  getMessagesByCreationState: function(creStates) {
+    var messages = new Array();
+    var anz_states = creStates.length;
+    var z = 0;
+        
+    for (i = 0; i < anz_states; i++) {
+      var creState = creStates[i].data;
+      var anz_messages = creState.statusMessages.data._list.length;
+      
+      for (j = 0; j < anz_messages; j++) {
+        var message = creState.statusMessages.data._list[j];
+        
+        messages.push(message.data.dataValue);
+      }
+    }
+    
+    return messages;    
   }
 });
