@@ -29,7 +29,10 @@ dojo.declare("GetLabelDD", wm.Page, {
         app.addGetLabelDDRequestHandler(this.getLabelDDRequestHandler());
     },
     onShow: function() {
-		app.varResultByStatusMessages.clearData();
-	},
-	_end: 0
+        app.varResultByStatusMessages.clearData();
+    },
+    srvGetLabelDDError: function(inSender, inError) {
+        app.toastError(this.name + ".srvGetLabelDD failed: " + inError);
+    },
+    _end: 0
 });

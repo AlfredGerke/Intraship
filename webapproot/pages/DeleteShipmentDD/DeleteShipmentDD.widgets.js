@@ -1,5 +1,5 @@
 DeleteShipmentDD.widgets = {
-	srvDeleteShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"deleteShipmentDD","service":"ISService_1_0_de"}, {}, {
+	srvDeleteShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"deleteShipmentDD","service":"ISService_1_0_de"}, {"onError":"srvDeleteShipmentDDError"}, {
 		input: ["wm.ServiceInput", {"type":"deleteShipmentDDInputs"}, {}, {
 			binding: ["wm.Binding", {}, {}, {
 				wire: ["wm.Wire", {"expression":undefined,"source":"app.varResultByGetAuthentication","targetProperty":"header"}, {}],
@@ -58,7 +58,7 @@ DeleteShipmentDD.widgets = {
 {"show":false,"field":"shipmentNumber.identCode","title":"ShipmentNumber.identCode","width":"100%","displayType":"Java.lang.String","align":"left","formatFunc":""},
 {"show":false,"field":"shipmentNumber.licensePlate","title":"ShipmentNumber.licensePlate","width":"100%","displayType":"Java.lang.String","align":"left","formatFunc":""},
 {"show":false,"field":"shipmentNumber.airwayBill","title":"ShipmentNumber.airwayBill","width":"100%","displayType":"Java.lang.String","align":"left","formatFunc":""}
-],"dsType":"intraship.ws.de.DeletionState","height":"100%","margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+],"dsType":"intraship.ws.de.DeletionState","height":"100%","margin":"4","minDesktopHeight":100,"minHeight":100,"minWidth":600,"singleClickEdit":true}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentDD.deletionStates","targetProperty":"dataSet"}, {}]
 							}]

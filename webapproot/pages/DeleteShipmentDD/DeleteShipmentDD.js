@@ -12,7 +12,7 @@ dojo.declare("DeleteShipmentDD", wm.Page, {
         return function() {
             try {
                 console.debug('Start srvGetDeleteShipmentDDRequest');
-                          
+
                 if (scope.srvGetDeleteShipmentDDRequest.canUpdate()) {
                     scope.srvGetDeleteShipmentDDRequest.update();
                 } else {
@@ -28,8 +28,11 @@ dojo.declare("DeleteShipmentDD", wm.Page, {
     onStart: function(inPage) {
         app.addDeleteShipmentDDRequestHandler(this.getDeleteShipmentDDRequestHandler());
     },
-	onShow: function() {
-		app.varResultByStatusMessages.clearData();
+    onShow: function() {
+        app.varResultByStatusMessages.clearData();
+    },
+    srvDeleteShipmentDDError: function(inSender, inError) {
+    	app.toastError(this.name + ".srvDeleteShipmentDD failed: " + inError);
 	},
 	_end: 0
 });

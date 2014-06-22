@@ -1,5 +1,5 @@
 GetLabelDD.widgets = {
-	srvGetLabelDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"getLabelDD","service":"ISService_1_0_de"}, {}, {
+	srvGetLabelDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"getLabelDD","service":"ISService_1_0_de"}, {"onError":"srvGetLabelDDError"}, {
 		input: ["wm.ServiceInput", {"type":"getLabelDDInputs"}, {}, {
 			binding: ["wm.Binding", {}, {}, {
 				wire: ["wm.Wire", {"expression":undefined,"source":"app.varResultByGetAuthentication","targetProperty":"header"}, {}],
@@ -75,7 +75,7 @@ GetLabelDD.widgets = {
 {"show":false,"field":"shipmentNumber.airwayBill","title":"ShipmentNumber.airwayBill","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"labelurl","title":"Labelurl","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"XMLLabel","title":"XMLLabel","width":"100%","align":"left","formatFunc":"","mobileColumn":false}
-],"dsType":"intraship.ws.de.LabelData","height":"100px","margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+],"dsType":"intraship.ws.de.LabelData","height":"100px","margin":"4","minDesktopHeight":60,"minWidth":875,"singleClickEdit":true}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.labelDatas","targetProperty":"dataSet"}, {}]
 							}]

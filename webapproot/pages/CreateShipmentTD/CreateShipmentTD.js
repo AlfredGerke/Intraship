@@ -44,7 +44,7 @@ dojo.declare("CreateShipmentTD", wm.Page, {
         };
     },
     edtXMLLabelChange: function(inSender, inDisplayValue, inDataValue, inSetByCode) {
-        app.utils.getShipmentNrByLabel(this.getXMLLabelHandler(), this.setAirwillBillHandler());
+        app.utils.getAirwayBillByLabel(this.getXMLLabelHandler(), this.setAirwillBillHandler());
     },
     srvCreateShipmentTDResult: function(inSender, inDeprecated) {
         var ds = app.utils.getMessagesByCreationState(inDeprecated.creationStates);
@@ -54,6 +54,13 @@ dojo.declare("CreateShipmentTD", wm.Page, {
     },
     onShow: function() {
         app.varResultByStatusMessages.clearData();
+    },
+    gridDetailsCellDblClick: function(inSender, evt, selectedItem, rowId, fieldId, rowNode, cellNode) {
+        if (selectedItem.data.shipmentNumber) {
+            app.setAirwayBillByResponse(selectedItem.data.shipmentNumber.data.airwayBill);
+        } else {
+            app.toastWarning("Keine Sendungsinformationen vorhanden...");
+        }
     },
     _end: 0
 });

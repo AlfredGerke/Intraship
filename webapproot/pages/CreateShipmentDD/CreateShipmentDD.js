@@ -51,9 +51,16 @@ dojo.declare("CreateShipmentDD", wm.Page, {
 
         app.varResultByStatusMessages.clearData();
         app.varResultByStatusMessages.setData(ds);
-	},
-	onShow: function() {
-		app.varResultByStatusMessages.clearData();
-	},
-	_end: 0
+    },
+    onShow: function() {
+        app.varResultByStatusMessages.clearData();
+    },
+    gridDetailsCellDblClick: function(inSender, evt, selectedItem, rowId, fieldId, rowNode, cellNode) {
+        if (selectedItem.data.shipmentNumber) {
+            app.setShipmentNrByResponse(selectedItem.data.shipmentNumber.data.shipmentNumber);
+        } else {
+            app.toastWarning("Keine Sendungsinformationen vorhanden...");
+        }
+    },
+    _end: 0
 });

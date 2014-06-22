@@ -72,7 +72,7 @@ CreateShipmentDD.widgets = {
 {"show":false,"field":"XMLLabel","title":"XMLLabel","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"sequenceNumber","title":"SequenceNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"pickupConfirmationNumber","title":"PickupConfirmationNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false}
-],"dsType":"intraship.ws.de.CreationState","height":"100px","localizationStructure":{},"margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+],"dsType":"intraship.ws.de.CreationState","height":"100px","localizationStructure":{},"margin":"4","minDesktopHeight":60,"minWidth":400,"singleClickEdit":true}, {"onCellDblClick":"gridDetailsCellDblClick"}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates","targetProperty":"dataSet"}, {}]
 							}]
@@ -80,7 +80,7 @@ CreateShipmentDD.widgets = {
 						gridDetailMessages: ["wm.DojoGrid", {"columns":[
 {"show":true,"field":"dataValue","title":"StatusMessages","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"StatusMessages: \" + ${dataValue} +\n\"</div>\"\n\n","mobileColumn":true}
-],"dsType":"AnyData","height":"100px","margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+],"dsType":"AnyData","height":"100px","margin":"4","minDesktopHeight":60,"minWidth":400,"singleClickEdit":true}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"app.varResultByStatusMessages","targetProperty":"dataSet"}, {}]
 							}]

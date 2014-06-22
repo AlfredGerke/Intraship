@@ -31,5 +31,8 @@ dojo.declare("DeleteShipmentTD", wm.Page, {
 	onStart: function( inPage) {
 		app.addDeleteShipmentTDRequestHandler(this.getDeleteShipmentTDRequestHandler());
 	},
+	srvDeleteShipmentTDError: function(inSender, inError) {
+		app.toastError(this.name + ".srvDeleteShipmentTD failed: " + inError);
+	},
 	_end: 0
 });

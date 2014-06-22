@@ -1,5 +1,5 @@
 DeleteShipmentTD.widgets = {
-	srvDeleteShipmentTD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"deleteShipmentTD","service":"ISService_1_0_de"}, {}, {
+	srvDeleteShipmentTD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"deleteShipmentTD","service":"ISService_1_0_de"}, {"onError":"srvDeleteShipmentTDError"}, {
 		binding: ["wm.Binding", {}, {}, {
 			wire: ["wm.Wire", {"expression":undefined,"source":"pnlDeleteResponse","targetProperty":"loadingDialog"}, {}]
 		}],
@@ -58,7 +58,7 @@ DeleteShipmentTD.widgets = {
 {"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"AirwayBill: \" + ${shipmentNumber.airwayBill} +\n\"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"ShipmentNr: \" + ${shipmentNumber.shipmentNumber}\n + \"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"StatusCode: \" + ${status.statusCode}\n + \"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"StatusMessage: \" + ${status.statusMessage}\n + \"</div>\"\n\n","mobileColumn":false},
 {"show":false,"field":"shipmentNumber.identCode","title":"ShipmentNumber.identCode","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"shipmentNumber.licensePlate","title":"ShipmentNumber.licensePlate","width":"100%","align":"left","formatFunc":"","mobileColumn":false}
-],"height":"100%","margin":"4","minDesktopHeight":60,"singleClickEdit":true}, {}, {
+],"height":"100%","margin":"4","minDesktopHeight":100,"minHeight":100,"minWidth":875,"singleClickEdit":true}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentTD.deletionStates","targetProperty":"dataSet"}, {}]
 							}]
