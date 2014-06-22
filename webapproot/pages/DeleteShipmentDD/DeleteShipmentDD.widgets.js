@@ -1,5 +1,5 @@
 DeleteShipmentDD.widgets = {
-	srvDeleteShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"deleteShipmentDD","service":"ISService_1_0_de"}, {"onResult":"srvDeleteShipmentDDResult"}, {
+	srvDeleteShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"deleteShipmentDD","service":"ISService_1_0_de"}, {}, {
 		input: ["wm.ServiceInput", {"type":"deleteShipmentDDInputs"}, {}, {
 			binding: ["wm.Binding", {}, {}, {
 				wire: ["wm.Wire", {"expression":undefined,"source":"app.varResultByGetAuthentication","targetProperty":"header"}, {}],

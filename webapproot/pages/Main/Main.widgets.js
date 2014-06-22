@@ -54,7 +54,8 @@ Main.widgets = {
 				edtPass: ["wm.Text", {"caption":"Password","captionSize":"110px","dataValue":"","displayValue":"","emptyValue":"emptyString","helpText":"Wenn kein Eintrag vorhanden, dann wird aus settings.ini ein Eintrag entnommen","password":true,"placeHolder":"Signature","width":"350px"}, {}]
 			}],
 			pnlInputOutput: ["wm.FancyPanel", {"margin":"5,5,5,5","styles":{},"title":"In / Out"}, {}, {
-				edtShipmentNr: ["wm.Text", {"caption":"ShipmentNr","dataValue":undefined,"displayValue":"","helpText":"Sendungsnummer wird aus einem XML-Label ausgelesen und GetLabelDD und DeleteShipmentDD/-TD zur Verfügung gestellt","placeHolder":"Number","width":"343px"}, {}]
+				edtShipmentNr: ["wm.Text", {"caption":"ShipmentNr","dataValue":"","displayValue":"","emptyValue":"emptyString","helpText":"Sendungsnummer wird aus einem XML-Label ausgelesen und GetLabelDD und DeleteShipmentDD zur Verfügung gestellt","placeHolder":"Number","width":"343px"}, {}],
+				edtAirwayBill: ["wm.Text", {"caption":"AirwayBill","dataValue":"","displayValue":"","emptyValue":"emptyString","helpText":"Airwaybill wird aus einem XML-Label ausgelesen und DeleteShipmentTD zur Verfügung gestellt","placeHolder":"Airwaybill","width":"343px"}, {}]
 			}]
 		}],
 		pnlDesktop: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","styles":{},"verticalAlign":"top","width":"100%"}, {}, {

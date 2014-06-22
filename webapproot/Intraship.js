@@ -40,17 +40,26 @@ Intraship.extend({
     start: function() {
         this.utils = new DemoUtils();
     },
+    addDeleteShipmentTDRequestHandler: function(gdstdr) {
+        this.onGetDeleteShipmentTDRequest = gdstdr;
+    },
     addDeleteShipmentDDRequestHandler: function(gdsddr) {
         this.onGetDeleteShipmentDDRequest = gdsddr;
     },
     addGetLabelDDRequestHandler: function(glddr) {
         this.onGetLabelDDRequest = glddr;
     },
+    addGetAirwayBillHandler: function(gawb) {
+        this.getAriwayBill = gawb;
+    },
     addGetShipmentNrHandler: function(gsnr) {
         this.getShipmentNr = gsnr;
     },
     addSetShipmentNrHandler: function(gsbr) {
         this.onSetShipmentNrByResponse = gsbr;
+    },
+    addSetAirwayBillHandler: function(gabr) {
+        this.onSetAirwayBillByResponse = gabr;
     },
     addSetCredentialsHandler: function(osc) {
         this.onSetCredentials = osc;
@@ -109,14 +118,24 @@ Intraship.extend({
             this.onGetDeleteShipmentDDRequest();
 
             break;
+        case "DeleteShipmentTD":
+            airwaybill = this.getAriwayBill();
+
+            this.varResultByGetShipmentNr.setValue("dataValue", airwaybill);
+
+            this.onGetDeleteShipmentTDRequest();
+            break;
         default:
             this.toastError("Kein gültiges Modul gewählt: " + mod);
 
             break;
         }
     },
-    setShipmentNrByResponse: function(shipNr) {
-        this.onSetShipmentNrByResponse(shipNr);
+    setShipmentNrByResponse: function(nr) {
+        this.onSetShipmentNrByResponse(nr);
+    },
+    setAirwayBillByResponse: function(air) {
+        this.onSetAirwayBillByResponse(air);
     },
     _end: 0
 });

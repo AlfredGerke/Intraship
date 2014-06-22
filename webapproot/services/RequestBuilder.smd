@@ -16,6 +16,14 @@
 		}],
 		"returnType": "intraship.ws.de.DeleteShipmentDDRequest"
 	}, {
+		"name": "getDeleteShipmentTDRequest",
+		"operationType": null,
+		"parameters": [{
+			"name": "airwayBill",
+			"type": "java.lang.String"
+		}],
+		"returnType": "intraship.ws.de.DeleteShipmentTDRequest"
+	}, {
 		"name": "getShipmentDDRequest",
 		"operationType": null,
 		"parameters": [{

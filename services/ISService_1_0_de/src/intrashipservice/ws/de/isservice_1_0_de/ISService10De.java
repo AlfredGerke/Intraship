@@ -129,6 +129,12 @@ public class ISService10De {
 
     public DeleteShipmentResponse deleteShipmentTD(DeleteShipmentTDRequest part1, Authentification header) {
         DeleteShipmentResponse response;
+        /**
+         * Credentials-Verarbeitung von Hand eingefügt, wurde nicht vom Importer angelegt 
+         */
+        bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
+        header = Credentials.getInstance().setAuthentificationIfNeeded(header);
+        
         SOAPBindingResolver.setBindingProperties(((BindingProvider) iswsServicePortTypeService), bindingProperties);
         SOAPBindingResolver.setHeaders(((WSBindingProvider) iswsServicePortTypeService), header);
         response = iswsServicePortTypeService.deleteShipmentTD(part1);

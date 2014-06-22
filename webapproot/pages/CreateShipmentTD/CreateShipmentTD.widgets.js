@@ -64,10 +64,10 @@ CreateShipmentTD.widgets = {
 						gridDetails: ["wm.DojoGrid", {"columns":[
 {"show":true,"field":"statusCode","title":"StatusCode","width":"125px","align":"left","formatFunc":"","mobileColumn":false},
 {"show":true,"field":"shipmentNumber.shipmentNumber","title":"ShipmentNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
-{"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"StatusCode: \" + ${statusCode} +\n\"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"ShipmentNumber: \" + ${shipmentNumber.shipmentNumber}\n + \"</div>\"\n\n","mobileColumn":true},
+{"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"StatusCode: \" + ${statusCode} +\n\"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"ShipmentNumber: \" + ${shipmentNumber.shipmentNumber}\n + \"</div>\"\n\n+ \"<div class='MobileRow'>\" +\n\"AirwayBill: \" + ${shipmentNumber.airwayBill}\n + \"</div>\"\n\n","mobileColumn":true},
 {"show":false,"field":"shipmentNumber.identCode","title":"ShipmentNumber.identCode","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"shipmentNumber.licensePlate","title":"ShipmentNumber.licensePlate","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
-{"show":false,"field":"shipmentNumber.airwayBill","title":"ShipmentNumber.airwayBill","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
+{"show":true,"field":"shipmentNumber.airwayBill","title":"AirwayBill","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"labelurl","title":"Labelurl","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"XMLLabel","title":"XMLLabel","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"sequenceNumber","title":"SequenceNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false},

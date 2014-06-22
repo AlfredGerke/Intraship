@@ -8,6 +8,10 @@
         <parameter name="shipmentNr" typeRef="java.lang.String" isList="false"/>
         <return typeRef="intraship.ws.de.DeleteShipmentDDRequest" isList="false"/>
     </operation>
+    <operation name="getDeleteShipmentTDRequest">
+        <parameter name="airwayBill" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="intraship.ws.de.DeleteShipmentTDRequest" isList="false"/>
+    </operation>
     <operation name="getShipmentDDRequest">
         <parameter name="isXMLLabel" typeRef="java.lang.Boolean" isList="false"/>
         <return typeRef="intraship.ws.de.CreateShipmentDDRequest" isList="false"/>

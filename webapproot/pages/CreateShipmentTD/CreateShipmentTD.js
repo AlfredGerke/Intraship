@@ -31,9 +31,9 @@ dojo.declare("CreateShipmentTD", wm.Page, {
     srvCreateShipmentTDError: function(inSender, inError) {
         app.toastError(this.name + ".srvGetShipmentTDRequest failed: " + inError);
     },
-    setSipmentNumberHandler: function() {
-        return function(shipnr) {
-            app.setShipmentNrByResponse(shipnr);
+    setAirwillBillHandler: function() {
+        return function(air) {
+            app.setAirwayBillByResponse(air);
         };
     },
     getXMLLabelHandler: function() {
@@ -44,7 +44,7 @@ dojo.declare("CreateShipmentTD", wm.Page, {
         };
     },
     edtXMLLabelChange: function(inSender, inDisplayValue, inDataValue, inSetByCode) {
-        app.utils.getShipmentNrByLabel(this.getXMLLabelHandler(), this.setSipmentNumberHandler());
+        app.utils.getShipmentNrByLabel(this.getXMLLabelHandler(), this.setAirwillBillHandler());
     },
     srvCreateShipmentTDResult: function(inSender, inDeprecated) {
         var ds = app.utils.getMessagesByCreationState(inDeprecated.creationStates);

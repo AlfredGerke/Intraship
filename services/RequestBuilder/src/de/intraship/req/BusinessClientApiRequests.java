@@ -21,6 +21,7 @@ import intrashipservice.ws.de.isservice_1_0_de.Zip;
 import intraship.ws.de.CreateShipmentDDRequest;
 import intraship.ws.de.CreateShipmentTDRequest;
 import intraship.ws.de.DeleteShipmentDDRequest;
+import intraship.ws.de.DeleteShipmentTDRequest;
 import intraship.ws.de.ExportDocumentTDType;
 import intraship.ws.de.GetLabelDDRequest;
 import intraship.ws.de.ReceiverDDType;
@@ -362,4 +363,20 @@ public class BusinessClientApiRequests extends JavaServiceSuperClass {
     
     return ddRequest;
   }
+  
+  public DeleteShipmentTDRequest getDeleteShipmentTDRequest(String airwayBill) {
+    DeleteShipmentTDRequest tdRequest = new DeleteShipmentTDRequest();
+    ShipmentNumberTypeType shNumber = new ShipmentNumberTypeType();
+    
+    tdRequest.setVersion(createVersion());
+
+    if (!airwayBill.equals(""))
+      shNumber.setAirwayBill(airwayBill);
+    else
+      shNumber.setAirwayBill(TestConstants.DUMMY_AIRWAY_BILL);
+    
+    tdRequest.getShipmentNumbers().add(shNumber);
+    
+    return tdRequest;
+  }  
 }

@@ -3,6 +3,15 @@ dojo.declare("Main", wm.Page, {
 
     },
     "preferredDevice": "desktop",
+    getAirwayBillHandler: function() {
+        var scope = this;
+
+        return function() {
+            var airwaybill = scope.edtAirwayBill.dataValue;
+
+            return airwaybill;
+        };
+    },
     getShipmentNrHandler: function() {
         var scope = this;
 
@@ -17,6 +26,13 @@ dojo.declare("Main", wm.Page, {
 
         return function(snr) {
             scope.edtShipmentNr.setValue("dataValue", snr);
+        };
+    },
+    setAirwayBillByResponseHandler: function() {
+        var scop = this;
+
+        return function(air) {
+            scope.edtAirwayBill.setValue("dataValue", air);
         };
     },
     setCredentialsHandler: function() {
@@ -35,7 +51,9 @@ dojo.declare("Main", wm.Page, {
     onStart: function(inPage) {
         app.addSetCredentialsHandler(this.setCredentialsHandler());
         app.addSetShipmentNrHandler(this.setShipmentNrByResponseHandler());
+        app.addSetAirwayBillHandler(this.setAirwayBillByResponseHandler());
         app.addGetShipmentNrHandler(this.getShipmentNrHandler());
+        app.addGetAirwayBillHandler(this.getAirwayBillHandler());
     },
     _end: 0
 });

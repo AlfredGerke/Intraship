@@ -1,14 +1,24 @@
 dojo.provide("project.resources.javascript.DemoUtils");
 
 dojo.declare("DemoUtils", null, {
-  getSipmentNumberByXML: function() {
+  getValueByTagName: function(tag) {
     var xml = this.getXMLLabel();
     var jsdom = dojox.xml.parser.parse(xml);
-    var nodeList = jsdom.getElementsByTagName("SHIPMENTNR");
+    var nodeList = jsdom.getElementsByTagName(tag);
     var node = nodeList[0].childNodes[0];
-
-    this.setShipmentNr(node.nodeValue);  
+    
+    return node.nodeValue;  
   },
+  getSipmentNumberByXML: function() {
+    var nodeValue = this.getValueByTagName("SHIPMENTNR");
+
+    this.setShipmentNr(nodeValue);  
+  },
+  getAirwayBillByXML: function() {
+    var nodeValue = this.getValueByTagName("AIRWAYBILL");
+
+    this.setShipmentNr(nodeValue);  
+  },  
   getShipmentNrByLabel: function(gxmlh, sshipnr) {
      this.getXMLLabel = gxmlh;
      this.setShipmentNr = sshipnr;
@@ -16,6 +26,13 @@ dojo.declare("DemoUtils", null, {
      dojo.require("dojox.xml.parser");
      dojo.ready(this, "getSipmentNumberByXML");
   },
+  getAirwayBillByLabel: function(gxmlh, sairway) {
+     this.getXMLLabel = gxmlh;
+     this.setAirwayBill = sairway;
+     
+     dojo.require("dojox.xml.parser");
+     dojo.ready(this, "getAirwayBillByXML");
+  },  
   getMessagesByCreationState: function(creStates) {
     var messages = new Array();
     var anz_states = creStates.length;
