@@ -15,6 +15,7 @@ dojo.declare("Intraship", wm.Application, {
 	"sessionExpirationHandler": "navigateToLogin", 
 	"studioVersion": "6.7.0.RELEASE", 
 	"tabletMain": "", 
+	"tabletTheme": "wm.base.widget.themes.wm_default", 
 	"theme": "wm.base.widget.themes.wm_default", 
 	"toastPosition": "br", 
 	"touchToClickDelay": 500, 
