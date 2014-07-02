@@ -8,14 +8,43 @@ MainTablet.widgets = {
 			}]
 		}]
 	}],
+	varResultByNavItems: ["wm.Variable", {"dataSet":"","type":"StringData"}, {"onSetData":"varResultByNavItemsSetData"}, {
+		binding: ["wm.Binding", {}, {}, {
+			wire: ["wm.Wire", {"expression":undefined,"source":"lstNavigation.selectedItem.dataValue","targetProperty":"dataSet.dataValue"}, {}]
+		}]
+	}],
+	navCallCreateShipmentDD: ["wm.NavigationCall", {"operation":"gotoPageContainerPage"}, {}, {
+		input: ["wm.ServiceInput", {"type":"gotoPageContainerPageInputs"}, {}, {
+			binding: ["wm.Binding", {}, {}, {
+				wire: ["wm.Wire", {"expression":"\"CreateShipmentDD\"","targetProperty":"pageName"}, {}],
+				wire1: ["wm.Wire", {"expression":undefined,"source":"pagContainer","targetProperty":"pageContainer"}, {}]
+			}]
+		}]
+	}],
+	navCallGetShipmentDD: ["wm.NavigationCall", {"operation":"gotoPageContainerPage"}, {}, {
+		input: ["wm.ServiceInput", {"type":"gotoPageContainerPageInputs"}, {}, {
+			binding: ["wm.Binding", {}, {}, {
+				wire: ["wm.Wire", {"expression":"\"GetLabelDD\"","targetProperty":"pageName"}, {}],
+				wire1: ["wm.Wire", {"expression":undefined,"source":"pagContainer","targetProperty":"pageContainer"}, {}]
+			}]
+		}]
+	}],
+	navCallDeleteShipmentDD: ["wm.NavigationCall", {"operation":"gotoPageContainerPage"}, {}, {
+		input: ["wm.ServiceInput", {"type":"gotoPageContainerPageInputs"}, {}, {
+			binding: ["wm.Binding", {}, {}, {
+				wire: ["wm.Wire", {"expression":"\"DeleteShipmentTD\"","targetProperty":"pageName"}, {}],
+				wire1: ["wm.Wire", {"expression":undefined,"source":"pagContainer","targetProperty":"pageContainer"}, {}]
+			}]
+		}]
+	}],
 	lbxMain: ["wm.Layout", {"horizontalAlign":"left","styles":{},"verticalAlign":"top"}, {}, {
 		pnlDesktop: ["wm.Panel", {"deviceType":["tablet"],"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-			pnlLeft: ["wm.Panel", {"deviceType":["tablet"],"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"270px"}, {}, {
+			pnlLeft: ["wm.Panel", {"deviceSizes":null,"deviceType":["tablet"],"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"270px"}, {}, {
 				lstNavigation: ["wm.List", {"_classes":{"domNode":["GridListStyle","MobileListStyle"]},"border":"1","columns":[
 {"show":true,"field":"dataValue","title":"Geschäftskundenversand API","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"Geschäftskundenversand API: \" + ${dataValue} +\n\"</div>\"\n\n","mobileColumn":true},
 {"show":true,"controller":"rightarrow","width":"20px","title":"-","field":"_rightArrow","mobileColumn":true}
-],"deviceType":["tablet"],"height":"100%","isNavigationMenu":true,"minDesktopHeight":60,"primaryKeyFields":["dataValue"],"rightNavArrow":true,"scrollToSelection":true,"styleAsGrid":false,"styles":{}}, {"onSelect":"lstNavigationSelect"}, {
+],"deviceSizes":["900","650","450"],"deviceType":["tablet"],"height":"100%","isNavigationMenu":true,"minDesktopHeight":60,"primaryKeyFields":["dataValue"],"rightNavArrow":true,"scrollToSelection":true,"styleAsGrid":false,"styles":{},"toggleSelect":true}, {}, {
 					binding: ["wm.Binding", {}, {}, {
 						wire: ["wm.Wire", {"expression":undefined,"source":"varNavItems","targetProperty":"dataSet"}, {}],
 						wire1: ["wm.Wire", {"expression":undefined,"source":"varNavItems.queryVar","targetProperty":"selectedItem"}, {}]

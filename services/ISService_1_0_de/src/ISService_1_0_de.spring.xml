@@ -3,8 +3,8 @@
     <bean class="intrashipservice.ws.de.isservice_1_0_de.ISService10De" scope="singleton" lazy-init="true" id="ISService_1_0_de">
         <property name="bindingProperties">
             <bean class="com.wavemaker.runtime.ws.BindingProperties">
-                <property name="connectionTimeout" value="10000"/>
-                <property name="requestTimeout" value="10000"/>
+                <property name="connectionTimeout" value="60000"/>
+                <property name="requestTimeout" value="60000"/>
             </bean>
         </property>
     </bean>

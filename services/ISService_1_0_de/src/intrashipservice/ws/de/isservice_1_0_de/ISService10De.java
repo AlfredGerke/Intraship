@@ -64,7 +64,7 @@ public class ISService10De {
         iswsServicePortTypeService = isService10DeClient.getShipmentServiceSOAP11Port0();
 
         /**
-         * LoggingHandler von Hand eingefügt, wurde nicht vom Importer angelegt 
+         * LoggingHandler von Hand eingefï¿½gt, wurde nicht vom Importer angelegt 
          */
         MySOAPLoggingHandler.addToPort(((BindingProvider) iswsServicePortTypeService).getBinding()); 
     }
@@ -88,7 +88,7 @@ public class ISService10De {
     public CreateShipmentResponse createShipmentDD(CreateShipmentDDRequest part1, Authentification header) {
         CreateShipmentResponse response;     
         /**
-         * Credentials-Verarbeitung von Hand eingefügt, wurde nicht vom Importer angelegt 
+         * Credentials-Verarbeitung von Hand eingefï¿½gt, wurde nicht vom Importer angelegt 
          */
         bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
@@ -102,7 +102,7 @@ public class ISService10De {
     public CreateShipmentResponse createShipmentTD(CreateShipmentTDRequest part1, Authentification header) {
         CreateShipmentResponse response;
         /**
-         * Credentials-Verarbeitung von Hand eingefügt, wurde nicht vom Importer angelegt 
+         * Credentials-Verarbeitung von Hand eingefï¿½gt, wurde nicht vom Importer angelegt 
          */
         bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
@@ -116,7 +116,7 @@ public class ISService10De {
     public DeleteShipmentResponse deleteShipmentDD(DeleteShipmentDDRequest part1, Authentification header) {
         DeleteShipmentResponse response;
         /**
-         * Credentials-Verarbeitung von Hand eingefügt, wurde nicht vom Importer angelegt 
+         * Credentials-Verarbeitung von Hand eingefï¿½gt, wurde nicht vom Importer angelegt 
          */
         bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
@@ -130,7 +130,7 @@ public class ISService10De {
     public DeleteShipmentResponse deleteShipmentTD(DeleteShipmentTDRequest part1, Authentification header) {
         DeleteShipmentResponse response;
         /**
-         * Credentials-Verarbeitung von Hand eingefügt, wurde nicht vom Importer angelegt 
+         * Credentials-Verarbeitung von Hand eingefï¿½gt, wurde nicht vom Importer angelegt 
          */
         bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
@@ -176,7 +176,7 @@ public class ISService10De {
     public GetLabelResponse getLabelDD(GetLabelDDRequest part1, Authentification header) {
         GetLabelResponse response;
         /**
-         * Credentials-Verarbeitung von Hand eingefügt, wurde nicht vom Importer angelegt 
+         * Credentials-Verarbeitung von Hand eingefï¿½gt, wurde nicht vom Importer angelegt 
          */
         bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
