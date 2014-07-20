@@ -8,7 +8,7 @@ MainTablet.widgets = {
 			}]
 		}]
 	}],
-	varResultByNavItems: ["wm.Variable", {"dataSet":"","type":"StringData"}, {"onSetData":"varResultByNavItemsSetData"}, {
+	varResultByNavItems: ["wm.Variable", {"dataSet":"","type":"StringData"}, {}, {
 		binding: ["wm.Binding", {}, {}, {
 			wire: ["wm.Wire", {"expression":undefined,"source":"lstNavigation.selectedItem.dataValue","targetProperty":"dataSet.dataValue"}, {}]
 		}]
@@ -37,17 +37,16 @@ MainTablet.widgets = {
 			}]
 		}]
 	}],
-	lbxMain: ["wm.Layout", {"horizontalAlign":"left","styles":{},"verticalAlign":"top"}, {}, {
+	lbxMain: ["wm.Layout", {"enableTouchHeight":true,"horizontalAlign":"left","styles":{},"verticalAlign":"top"}, {}, {
 		pnlDesktop: ["wm.Panel", {"deviceType":["tablet"],"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 			pnlLeft: ["wm.Panel", {"deviceSizes":null,"deviceType":["tablet"],"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"270px"}, {}, {
 				lstNavigation: ["wm.List", {"_classes":{"domNode":["GridListStyle","MobileListStyle"]},"border":"1","columns":[
 {"show":true,"field":"dataValue","title":"Geschäftskundenversand API","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"Geschäftskundenversand API: \" + ${dataValue} +\n\"</div>\"\n\n","mobileColumn":true},
 {"show":true,"controller":"rightarrow","width":"20px","title":"-","field":"_rightArrow","mobileColumn":true}
-],"deviceSizes":["900","650","450"],"deviceType":["tablet"],"height":"100%","isNavigationMenu":true,"minDesktopHeight":60,"primaryKeyFields":["dataValue"],"rightNavArrow":true,"scrollToSelection":true,"styleAsGrid":false,"styles":{},"toggleSelect":true}, {}, {
+],"deviceSizes":["900","650","450"],"deviceType":["tablet"],"height":"100%","isNavigationMenu":false,"minDesktopHeight":60,"primaryKeyFields":["dataValue"],"rightNavArrow":true,"scrollToSelection":true,"styleAsGrid":false,"styles":{},"toggleSelect":true}, {"onSelect":"lstNavigationSelect"}, {
 					binding: ["wm.Binding", {}, {}, {
-						wire: ["wm.Wire", {"expression":undefined,"source":"varNavItems","targetProperty":"dataSet"}, {}],
-						wire1: ["wm.Wire", {"expression":undefined,"source":"varNavItems.queryVar","targetProperty":"selectedItem"}, {}]
+						wire: ["wm.Wire", {"expression":undefined,"source":"varNavItems","targetProperty":"dataSet"}, {}]
 					}]
 				}]
 			}],

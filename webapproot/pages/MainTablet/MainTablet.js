@@ -24,8 +24,8 @@ dojo.declare("MainTablet", wm.Page, {
         app.addSetShipmentNrHandler(this.setShipmentNrByResponseHandler());
         app.addGetShipmentNrHandler(this.getShipmentNrHandler());
     },
-    varResultByNavItemsSetData: function(inSender) {
-        var mod = this.varResultByNavItems.getData("dataValue");
+	lstNavigationSelect: function(inSender, inItem) {
+        var mod = this.varResultByNavItems.getValue("dataValue");
 
         switch (mod) {
         case "CreateShipmentDD":
@@ -33,16 +33,18 @@ dojo.declare("MainTablet", wm.Page, {
 
             break;
         case "GetShipmentDD":
+            this.navCallGetShipmentDD.update();
 
             break;
         case "DeleteShipmentDD":
+           this.navCallDeleteShipmentDD.update();
 
             break;
         default:
-            this.toastError("Kein gültiges Modul gewählt: " + mod);
+            app.toastError("Kein gültiges Modul gewählt: " + mod);
 
             break;
-        }
-    },
-    _end: 0
+        }		
+	},
+	_end: 0
 });

@@ -32,7 +32,7 @@ GetLabelDD.widgets = {
 	}],
 	lbxMain: ["wm.Layout", {"horizontalAlign":"left","verticalAlign":"top"}, {}, {
 		pnlGetLabelDD: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"GetLabelDD"}, {}, {
-			pnlTop: ["wm.Panel", {"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+			pnlTop: ["wm.Panel", {"desktopHeight":"40px","enableTouchHeight":true,"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				btnGetLabelDD: ["wm.Button", {"caption":"Execute","margin":"4","width":"154px"}, {"onclick":"btnCreateShipmentDDClick"}],
 				cbxXML_Rrequest: ["wm.Checkbox", {"caption":"Created by Labeltype: XML","captionSize":"200px","checkedValue":false,"displayValue":false,"width":"200px"}, {}, {
 					binding: ["wm.Binding", {}, {}, {
@@ -43,7 +43,7 @@ GetLabelDD.widgets = {
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by GetLabelDD"}, {}, {
 					pnlLabelResponse: ["wm.Panel", {"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-						pnlWSVersion: ["wm.Panel", {"height":"28px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+						pnlWSVersion: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Minor","width":"125px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.version.majorRelease","targetProperty":"dataValue"}, {}]
@@ -75,14 +75,14 @@ GetLabelDD.widgets = {
 {"show":false,"field":"shipmentNumber.airwayBill","title":"ShipmentNumber.airwayBill","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"labelurl","title":"Labelurl","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"XMLLabel","title":"XMLLabel","width":"100%","align":"left","formatFunc":"","mobileColumn":false}
-],"dsType":"intraship.ws.de.LabelData","height":"100px","margin":"4","minDesktopHeight":60,"minWidth":875,"singleClickEdit":true}, {}, {
+],"desktopHeight":"100px","dsType":"intraship.ws.de.LabelData","enableTouchHeight":true,"height":"100px","margin":"4","minDesktopHeight":60,"minWidth":875,"singleClickEdit":true}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.labelDatas","targetProperty":"dataSet"}, {}]
 							}]
 						}]
 					}],
-					pnlStatusResponse: ["wm.Panel", {"height":"28px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-						pnlStatusResponse1: ["wm.Panel", {"height":"25px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+					pnlStatusResponse: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
+						pnlStatusResponse1: ["wm.Panel", {"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 							edtStatusCpde: ["wm.Number", {"caption":"StatusCode","displayValue":"","helpText":"Allgemeiner StatusCode","placeHolder":"Code","width":"165px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.status.statusCode","targetProperty":"dataValue"}, {}]

@@ -32,13 +32,13 @@ DeleteShipmentDD.widgets = {
 	}],
 	lbxMain: ["wm.Layout", {"horizontalAlign":"left","verticalAlign":"top"}, {}, {
 		pnlDeleteShipmentDD: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"DeleteShipmentDD"}, {}, {
-			pnlTop: ["wm.Panel", {"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+			pnlTop: ["wm.Panel", {"desktopHeight":"40px","enableTouchHeight":true,"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				btnDeleteShipmentDD: ["wm.Button", {"caption":"Execute","margin":"4","width":"154px"}, {"onclick":"btnDeleteShipmentDDClick"}]
 			}],
-			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by DeleteShipmentDD"}, {}, {
-					pnlDeleteResponse: ["wm.Panel", {"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-						pnlWSVersion: ["wm.Panel", {"height":"28px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+			pnlClient: ["wm.Panel", {"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+				pnlResponse: ["wm.FancyPanel", {"enableTouchHeight":true,"margin":"0,0,0,0","styles":{},"title":"Response by DeleteShipmentDD"}, {}, {
+					pnlDeleteResponse: ["wm.Panel", {"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
+						pnlWSVersion: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Major","width":"125px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentDD.version.majorRelease","targetProperty":"dataValue"}, {}]
@@ -58,14 +58,14 @@ DeleteShipmentDD.widgets = {
 {"show":false,"field":"shipmentNumber.identCode","title":"ShipmentNumber.identCode","width":"100%","displayType":"Java.lang.String","align":"left","formatFunc":""},
 {"show":false,"field":"shipmentNumber.licensePlate","title":"ShipmentNumber.licensePlate","width":"100%","displayType":"Java.lang.String","align":"left","formatFunc":""},
 {"show":false,"field":"shipmentNumber.airwayBill","title":"ShipmentNumber.airwayBill","width":"100%","displayType":"Java.lang.String","align":"left","formatFunc":""}
-],"dsType":"intraship.ws.de.DeletionState","height":"100%","margin":"4","minDesktopHeight":100,"minHeight":100,"minWidth":600,"singleClickEdit":true}, {}, {
+],"dsType":"intraship.ws.de.DeletionState","enableTouchHeight":true,"height":"100%","margin":"4","minDesktopHeight":100,"minHeight":100,"minWidth":600,"singleClickEdit":true}, {}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentDD.deletionStates","targetProperty":"dataSet"}, {}]
 							}]
 						}]
 					}],
-					pnlStatusResponse: ["wm.Panel", {"height":"28px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-						pnlStatusResponse1: ["wm.Panel", {"height":"25px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+					pnlStatusResponse: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
+						pnlStatusResponse1: ["wm.Panel", {"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 							edtStatusCpde: ["wm.Number", {"caption":"StatusCode","displayValue":"","helpText":"Allgemeiner StatusCode","placeHolder":"Code","width":"165px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentDD.status.statusCode","targetProperty":"dataValue"}, {}]
