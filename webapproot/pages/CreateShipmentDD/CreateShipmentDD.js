@@ -55,12 +55,14 @@ dojo.declare("CreateShipmentDD", wm.Page, {
     onShow: function() {
         app.varResultByStatusMessages.clearData();
     },
-    gridDetailsCellDblClick: function(inSender, evt, selectedItem, rowId, fieldId, rowNode, cellNode) {
-        if (selectedItem.data.shipmentNumber) {
-            app.setShipmentNrByResponse(selectedItem.data.shipmentNumber.data.shipmentNumber);
-        } else {
-            app.toastWarning("Keine Sendungsinformationen vorhanden...");
-        }
+    gridDetailsSelect: function(inSender) {
+        app.toastWarning("Hier muss was geändert werden!");
+        
+        //if (selectedItem.data.shipmentNumber) {
+        //    app.setShipmentNrByResponse(selectedItem.data.shipmentNumber.data.shipmentNumber);
+        //} else {
+        //    app.toastWarning("Keine Sendungsinformationen vorhanden...");
+        //}
     },
     _end: 0
 });

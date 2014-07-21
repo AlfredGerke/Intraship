@@ -30,6 +30,7 @@ CreateShipmentDD.widgets = {
 			wire: ["wm.Wire", {"expression":undefined,"source":"srvGetShipmentDDRequest","targetProperty":"dataSet"}, {}]
 		}]
 	}],
+	varSelectedItemByGridDetails: ["wm.Variable", {"type":"StringData"}, {}],
 	lbxMain: ["wm.Layout", {"horizontalAlign":"left","styles":{},"verticalAlign":"top","width":"1455px"}, {}, {
 		pnlCreateShipmentDD: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"CreateShipmentDD"}, {}, {
 			pnlTop: ["wm.Panel", {"desktopHeight":"40px","enableTouchHeight":true,"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","mobileHeight":"40px","verticalAlign":"top","width":"100%"}, {}, {
@@ -39,13 +40,13 @@ CreateShipmentDD.widgets = {
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by CreateShipmentDD"}, {}, {
 					pnlLabelResponse: ["wm.Panel", {"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-						pnlWSVersion: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","layoutKind":"left-to-right","mobileHeight":"35px","verticalAlign":"top","width":"100%"}, {}, {
-							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Major","width":"125px"}, {}, {
+						pnlWSVersion: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","layoutKind":"left-to-right","mobileHeight":"35px","styles":{},"verticalAlign":"top","width":"100%"}, {}, {
+							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Major","styles":{},"width":"125px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.version.majorRelease","targetProperty":"dataValue"}, {}]
 								}]
 							}],
-							edtMinorVersion: ["wm.Text", {"caption":"Minor","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionsunternummer des verarbeitenden WebService","placeHolder":"Minor","width":"125px"}, {}, {
+							edtMinorVersion: ["wm.Text", {"caption":"Minor","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionsunternummer des verarbeitenden WebService","placeHolder":"Minor","styles":{},"width":"125px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.version.minorRelease","targetProperty":"dataValue"}, {}]
 								}]
@@ -72,9 +73,10 @@ CreateShipmentDD.widgets = {
 {"show":false,"field":"XMLLabel","title":"XMLLabel","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"sequenceNumber","title":"SequenceNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"pickupConfirmationNumber","title":"PickupConfirmationNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false}
-],"desktopHeight":"100px","dsType":"intraship.ws.de.CreationState","enableTouchHeight":true,"height":"100px","localizationStructure":{},"margin":"4","minDesktopHeight":60,"minMobileHeight":60,"minWidth":400,"mobileHeight":"100px","singleClickEdit":true}, {"onCellDblClick":"gridDetailsCellDblClick"}, {
+],"desktopHeight":"100px","deviceType":["desktop","tablet"],"dsType":"intraship.ws.de.CreationState","enableTouchHeight":true,"height":"100px","localizationStructure":{},"margin":"4","minDesktopHeight":60,"minMobileHeight":60,"minWidth":400,"mobileHeight":"100px","singleClickEdit":true,"styles":{}}, {"onSelect":"gridDetailsSelect"}, {
 							binding: ["wm.Binding", {}, {}, {
-								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates","targetProperty":"dataSet"}, {}]
+								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates","targetProperty":"dataSet"}, {}],
+								wire1: ["wm.Wire", {"expression":undefined,"source":"varSelectedItemByGridDetails.dataValue","targetProperty":"selectedItem"}, {}]
 							}]
 						}],
 						gridDetailMessages: ["wm.DojoGrid", {"columns":[

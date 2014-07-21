@@ -1,5 +1,5 @@
 MainTablet.widgets = {
-	varNavItems: ["wm.Variable", {"isList":true,"json":"[{\"dataValue\":\"CreateShipmentDD\"},{\"dataValue\":\"GetShipmentDD\"},{\"dataValue\":\"DeleteShipmentDD\"}]","type":"StringData"}, {}],
+	varNavItems: ["wm.Variable", {"isList":true,"json":"[{\"dataValue\":\"CreateShipmentDD\"},{\"dataValue\":\"GetLabelDD\"},{\"dataValue\":\"DeleteShipmentDD\"}]","type":"StringData"}, {}],
 	navCallInformation: ["wm.NavigationCall", {"operation":"gotoPageContainerPage"}, {}, {
 		input: ["wm.ServiceInput", {"type":"gotoPageContainerPageInputs"}, {}, {
 			binding: ["wm.Binding", {}, {}, {
@@ -32,12 +32,12 @@ MainTablet.widgets = {
 	navCallDeleteShipmentDD: ["wm.NavigationCall", {"operation":"gotoPageContainerPage"}, {}, {
 		input: ["wm.ServiceInput", {"type":"gotoPageContainerPageInputs"}, {}, {
 			binding: ["wm.Binding", {}, {}, {
-				wire: ["wm.Wire", {"expression":"\"DeleteShipmentTD\"","targetProperty":"pageName"}, {}],
-				wire1: ["wm.Wire", {"expression":undefined,"source":"pagContainer","targetProperty":"pageContainer"}, {}]
+				wire1: ["wm.Wire", {"expression":undefined,"source":"pagContainer","targetProperty":"pageContainer"}, {}],
+				wire: ["wm.Wire", {"expression":"\"DeleteShipmentDD\"","targetProperty":"pageName"}, {}]
 			}]
 		}]
 	}],
-	lbxMain: ["wm.Layout", {"enableTouchHeight":true,"horizontalAlign":"left","styles":{},"verticalAlign":"top"}, {}, {
+	lbxMain: ["wm.Layout", {"deviceSizes":["900","650","450"],"enableTouchHeight":true,"horizontalAlign":"left","styles":{},"verticalAlign":"top"}, {}, {
 		pnlDesktop: ["wm.Panel", {"deviceType":["tablet"],"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 			pnlLeft: ["wm.Panel", {"deviceSizes":null,"deviceType":["tablet"],"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"270px"}, {}, {
 				lstNavigation: ["wm.List", {"_classes":{"domNode":["GridListStyle","MobileListStyle"]},"border":"1","columns":[
