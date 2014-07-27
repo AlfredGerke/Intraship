@@ -30,11 +30,11 @@ GetLabelDD.widgets = {
 			wire: ["wm.Wire", {"expression":undefined,"source":"srvGetLabelDDRequest","targetProperty":"dataSet"}, {}]
 		}]
 	}],
-	lbxMain: ["wm.Layout", {"horizontalAlign":"left","verticalAlign":"top"}, {}, {
+	lbxMain: ["wm.Layout", {"horizontalAlign":"left","styles":{},"verticalAlign":"top"}, {}, {
 		pnlGetLabelDD: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"GetLabelDD"}, {}, {
 			pnlTop: ["wm.Panel", {"desktopHeight":"40px","enableTouchHeight":true,"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				btnGetLabelDD: ["wm.Button", {"caption":"Execute","margin":"4","width":"154px"}, {"onclick":"btnCreateShipmentDDClick"}],
-				cbxXML_Rrequest: ["wm.Checkbox", {"caption":"Created by Labeltype: XML","captionSize":"200px","checkedValue":false,"displayValue":false,"width":"200px"}, {}, {
+				cbxXML_Rrequest: ["wm.Checkbox", {"caption":"Created by Labeltype: XML","captionSize":"200px","checkedValue":false,"displayValue":false,"readonly":true,"width":"200px"}, {}, {
 					binding: ["wm.Binding", {}, {}, {
 						wire: ["wm.Wire", {"expression":"${edtXMLLabel.dataValue} != \"\"","targetProperty":"dataValue"}, {}]
 					}]
@@ -43,13 +43,13 @@ GetLabelDD.widgets = {
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by GetLabelDD"}, {}, {
 					pnlLabelResponse: ["wm.Panel", {"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-						pnlWSVersion: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Minor","width":"125px"}, {}, {
+						pnlWSVersion: ["wm.Panel", {"desktopHeight":"35px","enableTouchHeight":true,"height":"35px","horizontalAlign":"left","layoutKind":"left-to-right","styles":{},"verticalAlign":"top","width":"100%"}, {}, {
+							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Minor","readonly":true,"styles":{},"width":"125px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.version.majorRelease","targetProperty":"dataValue"}, {}]
 								}]
 							}],
-							edtMinorVersion: ["wm.Text", {"caption":"Minor","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionsunternummer des verarbeitenden WebService","placeHolder":"Minor","width":"125px"}, {}, {
+							edtMinorVersion: ["wm.Text", {"caption":"Minor","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionsunternummer des verarbeitenden WebService","placeHolder":"Minor","readonly":true,"styles":{},"width":"125px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.version.minorRelease","targetProperty":"dataValue"}, {}]
 								}]
@@ -81,14 +81,14 @@ GetLabelDD.widgets = {
 							}]
 						}]
 					}],
-					pnlStatusResponse: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
+					pnlStatusResponse: ["wm.Panel", {"desktopHeight":"35px","enableTouchHeight":true,"height":"35px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
 						pnlStatusResponse1: ["wm.Panel", {"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-							edtStatusCpde: ["wm.Number", {"caption":"StatusCode","displayValue":"","helpText":"Allgemeiner StatusCode","placeHolder":"Code","width":"165px"}, {}, {
+							edtStatusCpde: ["wm.Number", {"caption":"StatusCode","displayValue":"","helpText":"Allgemeiner StatusCode","placeHolder":"Code","readonly":true,"width":"165px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.status.statusCode","targetProperty":"dataValue"}, {}]
 								}]
 							}],
-							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"150px","displayValue":"","emptyValue":"emptyString","helpText":"Allgemeine Statusmeldung","placeHolder":"Message","width":"100%"}, {}, {
+							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"150px","displayValue":"","emptyValue":"emptyString","helpText":"Allgemeine Statusmeldung","placeHolder":"Message","readonly":true,"width":"100%"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetLabelDD.status.statusMessage","targetProperty":"dataValue"}, {}]
 								}]

@@ -38,13 +38,13 @@ DeleteShipmentDD.widgets = {
 			pnlClient: ["wm.Panel", {"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"enableTouchHeight":true,"margin":"0,0,0,0","styles":{},"title":"Response by DeleteShipmentDD"}, {}, {
 					pnlDeleteResponse: ["wm.Panel", {"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-						pnlWSVersion: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Major","width":"125px"}, {}, {
+						pnlWSVersion: ["wm.Panel", {"desktopHeight":"35px","enableTouchHeight":true,"height":"35px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
+							edtMajorVersion: ["wm.Text", {"caption":"Major","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionshauptnummer des verarbeitenden WebService","placeHolder":"Major","readonly":true,"width":"125px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentDD.version.majorRelease","targetProperty":"dataValue"}, {}]
 								}]
 							}],
-							edtMinorVersion: ["wm.Text", {"caption":"Minor","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionsunternummer des verarbeitenden WebService","placeHolder":"Minor","width":"125px"}, {}, {
+							edtMinorVersion: ["wm.Text", {"caption":"Minor","captionSize":"50px","displayValue":"","emptyValue":"emptyString","helpText":"Versionsunternummer des verarbeitenden WebService","placeHolder":"Minor","readonly":true,"width":"125px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentDD.version.minorRelease","targetProperty":"dataValue"}, {}]
 								}]
@@ -64,14 +64,14 @@ DeleteShipmentDD.widgets = {
 							}]
 						}]
 					}],
-					pnlStatusResponse: ["wm.Panel", {"desktopHeight":"30px","enableTouchHeight":true,"height":"30px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
+					pnlStatusResponse: ["wm.Panel", {"desktopHeight":"35px","enableTouchHeight":true,"height":"35px","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
 						pnlStatusResponse1: ["wm.Panel", {"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-							edtStatusCpde: ["wm.Number", {"caption":"StatusCode","displayValue":"","helpText":"Allgemeiner StatusCode","placeHolder":"Code","width":"165px"}, {}, {
+							edtStatusCpde: ["wm.Number", {"caption":"StatusCode","displayValue":"","helpText":"Allgemeiner StatusCode","placeHolder":"Code","readonly":true,"width":"165px"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentDD.status.statusCode","targetProperty":"dataValue"}, {}]
 								}]
 							}],
-							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"150px","displayValue":"","emptyValue":"emptyString","helpText":"Allgemeine Statusmessage","placeHolder":"Message","width":"100%"}, {}, {
+							edtStatusMessage: ["wm.Text", {"caption":"StatusMessage","captionSize":"150px","displayValue":"","emptyValue":"emptyString","helpText":"Allgemeine Statusmessage","placeHolder":"Message","readonly":true,"width":"100%"}, {}, {
 								binding: ["wm.Binding", {}, {}, {
 									wire: ["wm.Wire", {"expression":undefined,"source":"varResultByDeleteShipmentDD.status.statusMessage","targetProperty":"dataValue"}, {}]
 								}]

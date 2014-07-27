@@ -44,7 +44,7 @@ MainTablet.widgets = {
 {"show":true,"field":"dataValue","title":"Geschäftskundenversand API","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"PHONE COLUMN","title":"-","width":"100%","align":"left","expression":"\"<div class='MobileRowTitle'>\" +\n\"Geschäftskundenversand API: \" + ${dataValue} +\n\"</div>\"\n\n","mobileColumn":true},
 {"show":true,"controller":"rightarrow","width":"20px","title":"-","field":"_rightArrow","mobileColumn":true}
-],"deviceSizes":["900","650","450"],"deviceType":["tablet"],"height":"100%","isNavigationMenu":false,"minDesktopHeight":60,"primaryKeyFields":["dataValue"],"rightNavArrow":true,"scrollToSelection":true,"styleAsGrid":false,"styles":{},"toggleSelect":true}, {"onSelect":"lstNavigationSelect"}, {
+],"deviceSizes":["900","650","450"],"deviceType":["tablet"],"height":"100%","isNavigationMenu":false,"minDesktopHeight":60,"primaryKeyFields":["dataValue"],"rightNavArrow":true,"scrollToSelection":true,"styleAsGrid":false,"styles":{}}, {"onSelect":"lstNavigationSelect"}, {
 					binding: ["wm.Binding", {}, {}, {
 						wire: ["wm.Wire", {"expression":undefined,"source":"varNavItems","targetProperty":"dataSet"}, {}]
 					}]
@@ -56,7 +56,7 @@ MainTablet.widgets = {
 				}],
 				pagContainer: ["wm.PageContainer", {"deferLoad":true,"deviceType":["tablet"],"styles":{}}, {}],
 				pnlDetailButtom: ["wm.Panel", {"height":"40px","horizontalAlign":"center","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
-					btnInfo: ["wm.Button", {"caption":"About","height":"100%","margin":"4"}, {"onclick":"navCallInformation"}]
+					btnInfo: ["wm.Button", {"caption":"About","height":"100%","margin":"4"}, {"onclick":"navCallInformation","onclick1":"btnInfoClick1"}]
 				}]
 			}]
 		}]

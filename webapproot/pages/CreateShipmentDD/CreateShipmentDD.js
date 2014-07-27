@@ -56,13 +56,13 @@ dojo.declare("CreateShipmentDD", wm.Page, {
         app.varResultByStatusMessages.clearData();
     },
     gridDetailsSelect: function(inSender) {
-        app.toastWarning("Hier muss was geändert werden!");
-        
-        //if (selectedItem.data.shipmentNumber) {
-        //    app.setShipmentNrByResponse(selectedItem.data.shipmentNumber.data.shipmentNumber);
-        //} else {
-        //    app.toastWarning("Keine Sendungsinformationen vorhanden...");
-        //}
+        var shipmentNr = this.varSelectedItemShipmentNr.getValue("dataValue");
+
+        if (shipmentNr) {
+            app.setShipmentNrByResponse(shipmentNr);
+        } else {
+            app.toastWarning("Keine Sendungsinformationen vorhanden...");
+        }
     },
     _end: 0
 });

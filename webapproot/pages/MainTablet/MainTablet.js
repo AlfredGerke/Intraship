@@ -4,7 +4,7 @@ dojo.declare("MainTablet", wm.Page, {
     start: function() {
 
     },
-  setCredentialsHandler: function() {
+    setCredentialsHandler: function() {
         return function() {
             var emptyStr = "";
 
@@ -13,7 +13,7 @@ dojo.declare("MainTablet", wm.Page, {
             app.varResultByGetAuthentication.setValue("type", 0);
             app.varResultByGetAuthentication.setValue("accountNumber", 0);
         };
-    },    
+    },
     getShipmentNrHandler: function() {
         var scope = this;
 
@@ -35,7 +35,7 @@ dojo.declare("MainTablet", wm.Page, {
         app.addSetShipmentNrHandler(this.setShipmentNrByResponseHandler());
         app.addGetShipmentNrHandler(this.getShipmentNrHandler());
     },
-	lstNavigationSelect: function(inSender, inItem) {
+    lstNavigationSelect: function(inSender, inItem) {
         var mod = this.varResultByNavItems.getValue("dataValue");
 
         switch (mod) {
@@ -48,14 +48,17 @@ dojo.declare("MainTablet", wm.Page, {
 
             break;
         case "DeleteShipmentDD":
-           this.navCallDeleteShipmentDD.update();
+            this.navCallDeleteShipmentDD.update();
 
             break;
         default:
             app.toastError("Kein gültiges Modul gewählt: " + mod);
 
             break;
-        }		
-	},
-	_end: 0
+        }
+    },
+    btnInfoClick1: function(inSender) {
+        this.lstNavigation.deselectAll();
+    },
+    _end: 0
 });
