@@ -10,7 +10,7 @@ dojo.declare("Intraship", wm.Application, {
 	"name": "", 
 	"phoneGapLoginPage": "Login", 
 	"phoneMain": "MainPhone", 
-	"phoneTheme": "wm.base.widget.themes.wm_coolblue", 
+	"phoneTheme": "wm.base.widget.themes.wm_wireframe", 
 	"projectSubVersion": "Alpha6", 
 	"projectVersion": 1, 
 	"sessionExpirationHandler": "navigateToLogin", 
