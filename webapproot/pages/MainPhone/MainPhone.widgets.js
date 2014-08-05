@@ -6,18 +6,38 @@ MainPhone.widgets = {
 			}]
 		}]
 	}],
-	navCallGet: ["wm.NavigationCall", {}, {}, {
-		input: ["wm.ServiceInput", {"type":"gotoLayerInputs"}, {}, {
-			binding: ["wm.Binding", {}, {}, {
-				wire: ["wm.Wire", {"expression":undefined,"source":"layGet","targetProperty":"layer"}, {}]
-			}]
-		}]
-	}],
 	navCallDelete: ["wm.NavigationCall", {}, {}, {
 		input: ["wm.ServiceInput", {"type":"gotoLayerInputs"}, {}, {
 			binding: ["wm.Binding", {}, {}, {
 				wire: ["wm.Wire", {"expression":undefined,"source":"layDelete","targetProperty":"layer"}, {}]
 			}]
+		}]
+	}],
+	srvGetShipmentDDRequest: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"getShipmentDDRequest","service":"RequestBuilder"}, {"onSuccess":"srvCreateShipmentDD"}, {
+		input: ["wm.ServiceInput", {"type":"getShipmentDDRequestInputs"}, {}],
+		binding: ["wm.Binding", {}, {}, {
+			wire: ["wm.Wire", {"expression":undefined,"source":"pnlDetail","targetProperty":"loadingDialog"}, {}]
+		}]
+	}],
+	srvCreateShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"createShipmentDD","service":"ISService_1_0_de"}, {"onError":"srvCreateShipmentDDError","onResult":"srvCreateShipmentDDResult"}, {
+		input: ["wm.ServiceInput", {"type":"createShipmentDDInputs"}, {}, {
+			binding: ["wm.Binding", {}, {}, {
+				wire: ["wm.Wire", {"expression":undefined,"source":"varResultByGetShipmentDDRequest","targetProperty":"part1"}, {}],
+				wire1: ["wm.Wire", {"expression":undefined,"source":"app.varResultByGetAuthentication","targetProperty":"header"}, {}]
+			}]
+		}],
+		binding: ["wm.Binding", {}, {}, {
+			wire: ["wm.Wire", {"expression":undefined,"source":"pnlDetail","targetProperty":"loadingDialog"}, {}]
+		}]
+	}],
+	varResultByCreateShipmentDD: ["wm.Variable", {"type":"intraship.ws.de.CreateShipmentResponse"}, {}, {
+		binding: ["wm.Binding", {}, {}, {
+			wire: ["wm.Wire", {"expression":undefined,"source":"srvCreateShipmentDD","targetProperty":"dataSet"}, {}]
+		}]
+	}],
+	varResultByGetShipmentDDRequest: ["wm.Variable", {"type":"intraship.ws.de.CreateShipmentDDRequest"}, {}, {
+		binding: ["wm.Binding", {}, {}, {
+			wire: ["wm.Wire", {"expression":undefined,"source":"srvGetShipmentDDRequest","targetProperty":"dataSet"}, {}]
 		}]
 	}],
 	lbxMain: ["wm.Layout", {"deviceSizes":["450","300","200"],"enableTouchHeight":true,"horizontalAlign":"left","verticalAlign":"top"}, {}, {
@@ -27,20 +47,14 @@ MainPhone.widgets = {
 					wire: ["wm.Wire", {"expression":undefined,"source":"btnCreate","targetProperty":"currentButton"}, {}]
 				}],
 				btnCreate: ["wm.Button", {"border":"0,1,0,0","caption":"Create","deviceSizes":null,"deviceType":["phone"],"height":"100%","margin":"0","width":"100%"}, {"onclick":"navCallCreate"}],
-				btnGet: ["wm.Button", {"border":"0,1,0,0","caption":"Get","deviceSizes":null,"deviceType":["phone"],"height":"100%","margin":"0","width":"100%"}, {"onclick":"navCallGet"}],
 				btnDelete: ["wm.Button", {"border":"0","caption":"Delete","deviceSizes":null,"deviceType":["phone"],"height":"100%","margin":"0","width":"100%"}, {"onclick":"navCallDelete"}]
 			}]
 		}],
 		pnlDetail: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-			layRequestPanel: ["wm.Panel", {"desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"100px","horizontalAlign":"left","mobileHeight":"100px","verticalAlign":"top","width":"100%"}, {}, {
-				layRequest: ["wm.Layers", {"defaultLayer":0,"deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true}, {}, {
+			layRequestPanel: ["wm.Panel", {"desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"57px","horizontalAlign":"left","mobileHeight":"57px","styles":{},"verticalAlign":"top","width":"100%"}, {}, {
+				layRequest: ["wm.Layers", {"defaultLayer":0,"desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"55px","mobileHeight":"55px"}, {}, {
 					layCreate: ["wm.Layer", {"borderColor":"","caption":"layer1","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"horizontalAlign":"left","themeStyleType":"","verticalAlign":"top"}, {}, {
-						btnCreateDD: ["wm.Button", {"caption":"Execute","desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"height":"48px","margin":"4","mobileHeight":"48px","width":"100%"}, {}],
-						btnShowLabelByCreate: ["wm.Button", {"caption":"Label","deviceType":["phone"],"height":"48px","margin":"4","mobileHeight":"48px","width":"100%"}, {}]
-					}],
-					layGet: ["wm.Layer", {"borderColor":"","caption":"layer2","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"horizontalAlign":"left","themeStyleType":"","verticalAlign":"top"}, {}, {
-						btnGetDD: ["wm.Button", {"caption":"Execute","desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"height":"48px","margin":"4","mobileHeight":"48px","width":"100%"}, {}],
-						btnShowLabelByGet: ["wm.Button", {"caption":"Label","deviceType":["phone"],"height":"48px","margin":"4","mobileHeight":"48px","width":"100%"}, {}]
+						btnCreateDD: ["wm.Button", {"caption":"Execute","desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"height":"48px","margin":"4","mobileHeight":"48px","styles":{},"width":"100%"}, {"onclick":"btnCreateDDClick"}]
 					}],
 					layDelete: ["wm.Layer", {"borderColor":"","caption":"layer3","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"horizontalAlign":"left","themeStyleType":"","verticalAlign":"top"}, {}, {
 						btnDeleteDD: ["wm.Button", {"caption":"Execute","desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"height":"48px","margin":"4","mobileHeight":"48px","width":"100%"}, {}]
@@ -50,7 +64,11 @@ MainPhone.widgets = {
 			pnlResponse: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}]
 		}],
 		pnlButtom: ["wm.Panel", {"desktopHeight":"48px","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"50px","horizontalAlign":"left","layoutKind":"left-to-right","mobileHeight":"50px","verticalAlign":"top","width":"100%"}, {}, {
-			edtShipmentNr: ["wm.Text", {"caption":"Nr.","captionSize":"30px","dataValue":undefined,"deviceSizes":null,"deviceType":["phone"],"displayValue":"","height":"100%","width":"100%"}, {}]
+			edtShipmentNr: ["wm.Text", {"caption":"Nr.","captionSize":"30px","deviceSizes":null,"deviceType":["phone"],"displayValue":"","height":"100%","width":"100%"}, {}, {
+				binding: ["wm.Binding", {}, {}, {
+					wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.creationStates.shipmentNumber.shipmentNumber","targetProperty":"dataValue"}, {}]
+				}]
+			}]
 		}]
 	}]
 }
