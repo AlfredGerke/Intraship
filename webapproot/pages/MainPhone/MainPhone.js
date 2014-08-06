@@ -11,6 +11,8 @@ dojo.declare("MainPhone", wm.Page, {
             try {
                 console.debug('Start srvGetShipmentDDRequest');
 
+                scope.srvGetShipmentDDRequest.input.setValue('isXMLLabel', false);
+
                 if (scope.srvGetShipmentDDRequest.canUpdate()) {
                     scope.srvGetShipmentDDRequest.update();
                 } else {

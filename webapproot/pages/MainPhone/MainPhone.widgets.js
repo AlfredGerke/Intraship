@@ -40,7 +40,7 @@ MainPhone.widgets = {
 			wire: ["wm.Wire", {"expression":undefined,"source":"srvGetShipmentDDRequest","targetProperty":"dataSet"}, {}]
 		}]
 	}],
-	lbxMain: ["wm.Layout", {"deviceSizes":["450","300","200"],"enableTouchHeight":true,"horizontalAlign":"left","verticalAlign":"top"}, {}, {
+	lbxMain: ["wm.Layout", {"deviceSizes":["450","300","200"],"horizontalAlign":"left","verticalAlign":"top"}, {}, {
 		pnlTop: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"height":"50px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 			pnlToggleButtons: ["wm.ToggleButtonPanel", {"deviceSizes":null,"deviceType":["phone"],"height":"100%","horizontalAlign":"left","verticalAlign":"top"}, {}, {
 				binding: ["wm.Binding", {}, {}, {
@@ -51,17 +51,17 @@ MainPhone.widgets = {
 			}]
 		}],
 		pnlDetail: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
-			layRequestPanel: ["wm.Panel", {"desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"57px","horizontalAlign":"left","mobileHeight":"57px","styles":{},"verticalAlign":"top","width":"100%"}, {}, {
-				layRequest: ["wm.Layers", {"defaultLayer":0,"desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"55px","mobileHeight":"55px"}, {}, {
-					layCreate: ["wm.Layer", {"borderColor":"","caption":"layer1","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"horizontalAlign":"left","themeStyleType":"","verticalAlign":"top"}, {}, {
-						btnCreateDD: ["wm.Button", {"caption":"Execute","desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"height":"48px","margin":"4","mobileHeight":"48px","styles":{},"width":"100%"}, {"onclick":"btnCreateDDClick"}]
+			layRequestPanel: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"height":"60px","horizontalAlign":"left","styles":{},"verticalAlign":"top","width":"100%"}, {}, {
+				layRequest: ["wm.Layers", {"defaultLayer":0,"deviceSizes":null,"deviceType":["phone"],"height":"55px"}, {}, {
+					layCreate: ["wm.Layer", {"borderColor":"","caption":"layer1","deviceSizes":null,"deviceType":["phone"],"horizontalAlign":"left","themeStyleType":"","verticalAlign":"top"}, {}, {
+						btnCreateDD: ["wm.Button", {"caption":"Execute","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":false,"height":"100%","margin":"4","styles":{},"width":"100%"}, {"onclick":"btnCreateDDClick"}]
 					}],
-					layDelete: ["wm.Layer", {"borderColor":"","caption":"layer3","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"horizontalAlign":"left","themeStyleType":"","verticalAlign":"top"}, {}, {
-						btnDeleteDD: ["wm.Button", {"caption":"Execute","desktopHeight":"100px","deviceSizes":null,"deviceType":["phone"],"height":"48px","margin":"4","mobileHeight":"48px","width":"100%"}, {}]
+					layDelete: ["wm.Layer", {"borderColor":"","caption":"layer3","deviceSizes":null,"deviceType":["phone"],"horizontalAlign":"left","themeStyleType":"","verticalAlign":"top"}, {}, {
+						btnDeleteDD: ["wm.Button", {"caption":"Execute","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":false,"margin":"4","width":"100%"}, {}]
 					}]
 				}]
 			}],
-			pnlResponse: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}]
+			pnlResponse: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}]
 		}],
 		pnlButtom: ["wm.Panel", {"desktopHeight":"48px","deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"50px","horizontalAlign":"left","layoutKind":"left-to-right","mobileHeight":"50px","verticalAlign":"top","width":"100%"}, {}, {
 			edtShipmentNr: ["wm.Text", {"caption":"Nr.","captionSize":"30px","deviceSizes":null,"deviceType":["phone"],"displayValue":"","height":"100%","width":"100%"}, {}, {

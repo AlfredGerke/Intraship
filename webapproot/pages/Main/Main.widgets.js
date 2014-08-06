@@ -62,14 +62,14 @@ Main.widgets = {
 			pnlLeft: ["wm.Panel", {"height":"100%","horizontalAlign":"left","margin":"5,5,5,5","styles":{},"verticalAlign":"top","width":"297px"}, {}, {
 				alyLeft: ["wm.AccordionLayers", {"styles":{}}, {}, {
 					layBusinessApi: ["wm.Layer", {"border":"1","borderColor":"","caption":"Geschäftskundenversand API","horizontalAlign":"left","styles":{},"themeStyleType":"ContentPanel","verticalAlign":"top"}, {}, {
-						btnCreateShipmentDD: ["wm.Button", {"caption":"CreateShipmentDD","desktopHeight":"50px","height":"50px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallCreateShipmentDD"}],
-						btnCreateShipmentTD: ["wm.Button", {"caption":"CreateShipmentTD","desktopHeight":"50px","height":"50px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallCreateShipmentTD"}],
-						btnGetLabelDD: ["wm.Button", {"caption":"GetLabelDD","desktopHeight":"50px","height":"50px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallGetLabelDD"}],
-						btnDeleteShipmentDD: ["wm.Button", {"caption":"DeleteShipmentDD","desktopHeight":"50px","height":"50px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallDeleteShipmentDD"}],
-						btnDeleteShipmentTD: ["wm.Button", {"caption":"DeleteShipmentTD","desktopHeight":"50px","height":"50px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallDeleteShipmentTD"}]
+						btnCreateShipmentDD: ["wm.Button", {"caption":"CreateShipmentDD","desktopHeight":"55px","height":"55px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallCreateShipmentDD"}],
+						btnCreateShipmentTD: ["wm.Button", {"caption":"CreateShipmentTD","desktopHeight":"55px","height":"55px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallCreateShipmentTD"}],
+						btnGetLabelDD: ["wm.Button", {"caption":"GetLabelDD","desktopHeight":"55px","height":"55px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallGetLabelDD"}],
+						btnDeleteShipmentDD: ["wm.Button", {"caption":"DeleteShipmentDD","desktopHeight":"55px","height":"55px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallDeleteShipmentDD"}],
+						btnDeleteShipmentTD: ["wm.Button", {"caption":"DeleteShipmentTD","desktopHeight":"55px","height":"55px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallDeleteShipmentTD"}]
 					}],
 					layMisc: ["wm.Layer", {"border":"1","borderColor":"","caption":"Miscellaneous","horizontalAlign":"left","styles":{},"themeStyleType":"ContentPanel","verticalAlign":"top"}, {}, {
-						btnInfo: ["wm.Button", {"caption":"About the Program","desktopHeight":"50px","height":"50px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallInformationen"}]
+						btnInfo: ["wm.Button", {"caption":"About the Program","desktopHeight":"55px","height":"55px","margin":"10,10,10,10","styles":{},"width":"100%"}, {"onclick":"navCallInformationen"}]
 					}]
 				}]
 			}],
