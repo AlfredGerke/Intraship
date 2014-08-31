@@ -37,6 +37,9 @@ dojo.declare("MainPhone", wm.Page, {
     },
     srvCreateShipmentDDResult: function(inSender, inDeprecated) {
         var ds = app.utils.getMessagesByCreationState(inDeprecated.creationStates);
+        var s_nr = app.utils.getShipmentNrByCreationState(inDeprecated.creationStates, 0);
+
+        varShipmentNrByResponse.setValue("dataValue", s_nr);
 
         app.varResultByStatusMessages.clearData();
         app.varResultByStatusMessages.setData(ds);

@@ -50,5 +50,19 @@ dojo.declare("DemoUtils", null, {
     }
     
     return messages;    
+  },
+  getShipmentNrByCreationState: function(creStates, stateIdx) {
+    var anz_states = creStates.length;
+    var shipmentnr = '';
+  
+    if (stateIdx) {
+      if ((stateIdx > -1) && (stateIdx <= anz_states)) {
+        var creState = creStates[stateIdx].data;  
+        
+        shipmentnr = creState.shipmentNumber.shipmentNumber;
+      }
+    }    
+  
+    return shipmentnr; 
   }
 });

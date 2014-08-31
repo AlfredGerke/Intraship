@@ -24,18 +24,22 @@ IntrashipDemo
 1=note.txt
 2=webapproot\pages\CreateShipmentDD\CreateShipmentDD.js
 3=webapproot\pages\Main\Main.js
+4=webapproot\types.js
 [Selected Project Files]
 Main=
 Selected=webapproot\resources\javascript\DemoUtils.js
 [webapproot\resources\javascript\DemoUtils.js]
-TopLine=1
-Caret=1,1
+TopLine=16
+Caret=31,54
 [note.txt]
 TopLine=1
 Caret=80,4
 [webapproot\pages\CreateShipmentDD\CreateShipmentDD.js]
-TopLine=1
-Caret=24,52
+TopLine=23
+Caret=82,50
 [webapproot\pages\Main\Main.js]
 TopLine=18
 Caret=71,52
+[webapproot\types.js]
+TopLine=5761
+Caret=20,5798
