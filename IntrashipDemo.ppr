@@ -15,6 +15,7 @@ IntrashipDemo
 	+page
 		webapproot\pages\CreateShipmentDD\CreateShipmentDD.js
 		webapproot\pages\Main\Main.js
+		webapproot\pages\DeleteShipmentDD\DeleteShipmentDD.js
 	+note
 		note.txt
 	+Module
@@ -23,23 +24,19 @@ IntrashipDemo
 0=webapproot\resources\javascript\DemoUtils.js
 1=note.txt
 2=webapproot\pages\CreateShipmentDD\CreateShipmentDD.js
-3=webapproot\pages\Main\Main.js
-4=webapproot\types.js
+3=webapproot\pages\DeleteShipmentDD\DeleteShipmentDD.js
 [Selected Project Files]
 Main=
-Selected=webapproot\resources\javascript\DemoUtils.js
+Selected=webapproot\pages\CreateShipmentDD\CreateShipmentDD.js
 [webapproot\resources\javascript\DemoUtils.js]
-TopLine=16
-Caret=31,54
+TopLine=30
+Caret=49,61
 [note.txt]
 TopLine=1
 Caret=80,4
 [webapproot\pages\CreateShipmentDD\CreateShipmentDD.js]
 TopLine=23
-Caret=82,50
-[webapproot\pages\Main\Main.js]
-TopLine=18
-Caret=71,52
-[webapproot\types.js]
-TopLine=5761
-Caret=20,5798
+Caret=95,47
+[webapproot\pages\DeleteShipmentDD\DeleteShipmentDD.js]
+TopLine=1
+Caret=51,6
