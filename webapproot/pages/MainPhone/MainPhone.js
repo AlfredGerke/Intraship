@@ -4,6 +4,10 @@ dojo.declare("MainPhone", wm.Page, {
 
     },
     "preferredDevice": "phone",
+    clearStatusInfo: function() {
+        this.varStatusMessageByResponse.setValue("dataValue", "");
+        this.varStatusCodeByResponse.setValue("dataValue", "");
+    },
     getShipmentDDRequestHandler: function() {
         var scope = this;
 
@@ -33,7 +37,7 @@ dojo.declare("MainPhone", wm.Page, {
 
             return snr;
         };
-    },        
+    },
     btnCreateDDClick: function(inSender) {
         app.getAuthentificationHeader("CreateShipmentDD");
     },
@@ -49,7 +53,11 @@ dojo.declare("MainPhone", wm.Page, {
     srvCreateShipmentDDResult: function(inSender, inDeprecated) {
         var ds = app.utils.getMessagesByCreationState(inDeprecated.creationStates);
         var s_nr = app.utils.getShipmentNrByCreationState(inDeprecated.creationStates, 0);
+        var s_code = inDeprecated.status.statusCode;
+        var s_message = inDeprecated.status.statusMessage;
 
+        this.varStatusCodeByResponse.setValue("dataValue", s_code);
+        this.varStatusMessageByResponse.setValue("dataValue", s_message);
         this.varShipmentNrByResponse.setValue("dataValue", s_nr);
 
         app.varResultByStatusMessages.clearData();
@@ -101,6 +109,19 @@ dojo.declare("MainPhone", wm.Page, {
     },
     srvGetShipmentDDRequestError: function(inSender, inError) {
         app.toastError(this.name + ".srvGetShipmentDDRequest failed: " + inError);
+    },
+    srvDeleteShipmentDDResult: function(inSender, inDeprecated) {
+        var s_code = inDeprecated.status.statusCode;
+        var s_message = inDeprecated.status.statusMessage;
+
+        this.varStatusCodeByResponse.setValue("dataValue", s_code);
+        this.varStatusMessageByResponse.setValue("dataValue", s_message);
+    },
+    btnCreateClick1: function(inSender) {
+        this.clearStatusInfo();
+    },
+    btnDeleteClick1: function(inSender) {
+        this.clearStatusInfo();
     },
     _end: 0
 });

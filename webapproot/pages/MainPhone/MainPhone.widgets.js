@@ -41,7 +41,7 @@ MainPhone.widgets = {
 		}]
 	}],
 	varShipmentNrByResponse: ["wm.Variable", {"type":"StringData"}, {}],
-	srvDeleteShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"deleteShipmentDD","service":"ISService_1_0_de"}, {"onError":"srvDeleteShipmentDDError"}, {
+	srvDeleteShipmentDD: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"deleteShipmentDD","service":"ISService_1_0_de"}, {"onError":"srvDeleteShipmentDDError","onResult":"srvDeleteShipmentDDResult"}, {
 		binding: ["wm.Binding", {}, {}, {
 			wire: ["wm.Wire", {"expression":undefined,"source":"pnlDetail","targetProperty":"loadingDialog"}, {}]
 		}],
@@ -62,14 +62,16 @@ MainPhone.widgets = {
 			}]
 		}]
 	}],
+	varStatusCodeByResponse: ["wm.Variable", {"type":"StringData"}, {}],
+	varStatusMessageByResponse: ["wm.Variable", {"type":"StringData"}, {}],
 	lbxMain: ["wm.Layout", {"deviceSizes":["450","300","200"],"horizontalAlign":"left","verticalAlign":"top"}, {}, {
 		pnlTop: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"height":"50px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 			pnlToggleButtons: ["wm.ToggleButtonPanel", {"deviceSizes":null,"deviceType":["phone"],"height":"100%","horizontalAlign":"left","verticalAlign":"top"}, {}, {
 				binding: ["wm.Binding", {}, {}, {
 					wire: ["wm.Wire", {"expression":undefined,"source":"btnCreate","targetProperty":"currentButton"}, {}]
 				}],
-				btnCreate: ["wm.Button", {"border":"0,1,0,0","caption":"Create","deviceSizes":null,"deviceType":["phone"],"height":"100%","margin":"0","width":"100%"}, {"onclick":"navCallCreate"}],
-				btnDelete: ["wm.Button", {"border":"0","caption":"Delete","deviceSizes":null,"deviceType":["phone"],"height":"100%","margin":"0","width":"100%"}, {"onclick":"navCallDelete"}]
+				btnCreate: ["wm.Button", {"border":"0,1,0,0","caption":"Create","deviceSizes":null,"deviceType":["phone"],"height":"100%","margin":"0","width":"100%"}, {"onclick":"navCallCreate","onclick1":"btnCreateClick1"}],
+				btnDelete: ["wm.Button", {"border":"0","caption":"Delete","deviceSizes":null,"deviceType":["phone"],"height":"100%","margin":"0","width":"100%"}, {"onclick":"navCallDelete","onclick1":"btnDeleteClick1"}]
 			}]
 		}],
 		pnlDetail: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"enableTouchHeight":true,"height":"100%","horizontalAlign":"left","verticalAlign":"top","width":"100%"}, {}, {
@@ -84,14 +86,14 @@ MainPhone.widgets = {
 				}]
 			}],
 			pnlResponse: ["wm.Panel", {"deviceSizes":null,"deviceType":["phone"],"height":"100%","horizontalAlign":"left","styles":{},"verticalAlign":"top","width":"100%"}, {}, {
-				edtStatusCode: ["wm.Text", {"caption":"Code","captionSize":"70px","desktopHeight":"50px","displayValue":"","height":"50px","mobileHeight":"50px","width":"125px"}, {}, {
+				edtStatusCode: ["wm.Text", {"caption":"Code","captionSize":"70px","desktopHeight":"50px","displayValue":"","emptyValue":"emptyString","height":"50px","mobileHeight":"50px","width":"125px"}, {}, {
 					binding: ["wm.Binding", {}, {}, {
-						wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.status.statusCode","targetProperty":"dataValue"}, {}]
+						wire: ["wm.Wire", {"expression":undefined,"source":"varStatusCodeByResponse.dataValue","targetProperty":"dataValue"}, {}]
 					}]
 				}],
-				edtStatusMessage: ["wm.Text", {"caption":"Message","captionSize":"70px","desktopHeight":"50px","displayValue":"","height":"50px","mobileHeight":"50px","styles":{"fontSize":"8px"},"width":"100%"}, {}, {
+				edtStatusMessage: ["wm.Text", {"caption":"Message","captionSize":"70px","desktopHeight":"50px","displayValue":"","emptyValue":"emptyString","height":"50px","mobileHeight":"50px","styles":{"fontSize":"8px"},"width":"100%"}, {}, {
 					binding: ["wm.Binding", {}, {}, {
-						wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentDD.status.statusMessage","targetProperty":"dataValue"}, {}]
+						wire: ["wm.Wire", {"expression":undefined,"source":"varStatusMessageByResponse.dataValue","targetProperty":"dataValue"}, {}]
 					}]
 				}]
 			}]

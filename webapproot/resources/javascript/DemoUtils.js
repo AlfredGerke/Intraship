@@ -62,5 +62,5 @@ dojo.declare("DemoUtils", null, {
     }   
   
     return shipmentnr; 
-  }
+  }    
 });
