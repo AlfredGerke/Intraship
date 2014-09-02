@@ -78,10 +78,15 @@ Intraship.extend({
 
             this.currentMod = flag;
 
-            if (this.srvGetAuthentication.canUpdate()) {
-                this.srvGetAuthentication.update();
+            // Wenn der Header vorhanden nur noch Credentials eintragen
+            if (this.varResultByGetAuthentication.getCount() > 0) {
+                this.setCredentialsStartRequest();
             } else {
-                this.toastError("Keine Athentification-Object erstellt!");
+                if (this.srvGetAuthentication.canUpdate()) {
+                    this.srvGetAuthentication.update();
+                } else {
+                    this.toastError("Keine Athentification-Object erstellt!");
+                }
             }
 
             console.debug('End srvGetAuthentication');
@@ -89,7 +94,7 @@ Intraship.extend({
             this.toastError(this.name + ".srvGetAuthentication failed: " + e.toString());
         }
     },
-    srvGetAuthenticationSuccess: function(inSender, inDeprecated) {
+    setCredentialsStartRequest: function() {
         var mod = this.currentMod;
         var shipnr = "";
 
@@ -126,12 +131,16 @@ Intraship.extend({
             this.varResultByGetShipmentNr.setValue("dataValue", airwaybill);
 
             this.onGetDeleteShipmentTDRequest();
+
             break;
         default:
             this.toastError("Kein gültiges Modul gewählt: " + mod);
 
             break;
         }
+    },
+    srvGetAuthenticationSuccess: function(inSender, inDeprecated) {
+        this.setCredentialsStartRequest();
     },
     setShipmentNrByResponse: function(nr) {
         this.onSetShipmentNrByResponse(nr);

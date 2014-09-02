@@ -6,6 +6,17 @@ dojo.declare("CreateShipmentDD", wm.Page, {
     btnCreateShipmentDDClick: function(inSender) {
         app.getAuthentificationHeader("CreateShipmentDD");
     },
+    getShipmentDD: function(scope) {
+        try {
+            if (scope.srvCreateShipmentDD.canUpdate()) {
+                scope.srvCreateShipmentDD.update();
+            } else {
+                app.toastError("Keine Sendung erstellt!");
+            }
+        } catch (e) {
+            app.toastError(this.name + ".getShipmentDD failed: " + e.toString());
+        }
+    },
     getShipmentDDRequestHandler: function() {
         var scope = this;
 
@@ -13,10 +24,15 @@ dojo.declare("CreateShipmentDD", wm.Page, {
             try {
                 console.debug('Start srvGetShipmentDDRequest');
 
-                if (scope.srvGetShipmentDDRequest.canUpdate()) {
-                    scope.srvGetShipmentDDRequest.update();
+                // Wenn der Request schon vorhanden direkt die Intraship-Methode aufrufen
+                if (scope.varResultByGetShipmentDDRequest.getCount() > 0) {
+                    scope.getShipmentDD(scope);
                 } else {
-                    app.toastError("Keine Request-Object erstellt!");
+                    if (scope.srvGetShipmentDDRequest.canUpdate()) {
+                        scope.srvGetShipmentDDRequest.update();
+                    } else {
+                        app.toastError("Keine Request-Object erstellt!");
+                    }
                 }
 
                 console.debug('End srvGetShipmentDDRequest');

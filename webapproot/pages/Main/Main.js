@@ -41,7 +41,7 @@ dojo.declare("Main", wm.Page, {
         return function() {
             var dev_id = scope.edtDevID.dataValue;
             var pass = scope.edtPass.dataValue;
-
+            
             app.varResultByGetAuthentication.setValue("user", dev_id);
             app.varResultByGetAuthentication.setValue("signature", pass);
             app.varResultByGetAuthentication.setValue("type", 0);
