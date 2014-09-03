@@ -10,7 +10,7 @@ CreateShipmentDD.widgets = {
 			wire: ["wm.Wire", {"expression":undefined,"source":"pnlLabelResponse","targetProperty":"loadingDialog"}, {}]
 		}]
 	}],
-	srvGetShipmentDDRequest: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"getShipmentDDRequest","service":"RequestBuilder"}, {"onSuccess":"srvCreateShipmentDD"}, {
+	srvGetShipmentDDRequest: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"getShipmentDDRequest","service":"RequestBuilder"}, {"onSuccess":"srvCreateShipmentDD","onSuccess1":"srvGetShipmentDDRequestSuccess1"}, {
 		input: ["wm.ServiceInput", {"type":"getShipmentDDRequestInputs"}, {}, {
 			binding: ["wm.Binding", {}, {}, {
 				wire: ["wm.Wire", {"expression":undefined,"source":"cbxDoXMLLabel.dataValue","targetProperty":"isXMLLabel"}, {}]
@@ -39,7 +39,7 @@ CreateShipmentDD.widgets = {
 		pnlCreateShipmentDD: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"CreateShipmentDD"}, {}, {
 			pnlTop: ["wm.Panel", {"desktopHeight":"40px","enableTouchHeight":true,"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","mobileHeight":"40px","verticalAlign":"top","width":"100%"}, {}, {
 				btnCreateShipmentDD: ["wm.Button", {"caption":"Execute","margin":"4","width":"154px"}, {"onclick":"btnCreateShipmentDDClick"}],
-				cbxDoXMLLabel: ["wm.Checkbox", {"caption":"Create XML-Label","captionSize":"300px","dataValue":true,"desktopHeight":"35px","displayValue":true,"height":"35px","startChecked":true,"width":"155px"}, {}]
+				cbxDoXMLLabel: ["wm.Checkbox", {"caption":"Create XML-Label","captionSize":"300px","dataValue":true,"desktopHeight":"35px","displayValue":true,"height":"35px","startChecked":true,"width":"155px"}, {"onchange":"cbxDoXMLLabelChange"}]
 			}],
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by CreateShipmentDD"}, {}, {

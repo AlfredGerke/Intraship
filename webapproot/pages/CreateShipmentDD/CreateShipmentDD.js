@@ -25,7 +25,7 @@ dojo.declare("CreateShipmentDD", wm.Page, {
                 console.debug('Start srvGetShipmentDDRequest');
 
                 // Wenn der Request schon vorhanden direkt die Intraship-Methode aufrufen
-                if (scope.varResultByGetShipmentDDRequest.getCount() > 0) {
+                if (scope.reuseRequest) {
                     scope.getShipmentDD(scope);
                 } else {
                     if (scope.srvGetShipmentDDRequest.canUpdate()) {
@@ -42,6 +42,7 @@ dojo.declare("CreateShipmentDD", wm.Page, {
         };
     },
     onStart: function(inPage) {
+        this.reuseRequest = false;
         app.addGetShipmentDDRequestHandler(this.getShipmentDDRequestHandler());
     },
     srvCreateShipmentDDError: function(inSender, inError) {
@@ -80,5 +81,11 @@ dojo.declare("CreateShipmentDD", wm.Page, {
             app.toastWarning("Keine Sendungsinformationen vorhanden...");
         }
     },
-    _end: 0
+    cbxDoXMLLabelChange: function(inSender, inDisplayValue, inDataValue, inSetByCode) {
+		this.reuseRequest = false;
+	},
+	srvGetShipmentDDRequestSuccess1: function(inSender, inDeprecated) {
+		this.reuseRequest = true;
+	},
+	_end: 0
 });
