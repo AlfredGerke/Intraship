@@ -96,7 +96,9 @@ Intraship.extend({
     },
     setCredentialsStartRequest: function() {
         var mod = this.currentMod;
-        var shipnr = "";
+        var old_snr = "";
+        var new_snr = "";
+        var reuse = false;
 
         this.onSetCredentials();
 
@@ -110,11 +112,16 @@ Intraship.extend({
 
             break;
         case "GetLabelDD":
-            shipnr = this.getShipmentNr();
+            old_snr = this.varResultByGetShipmentNr.getValue("dataValue");
+            new_snr = this.getShipmentNr();
 
-            this.varResultByGetShipmentNr.setValue("dataValue", shipnr);
+            this.varResultByGetShipmentNr.setValue("dataValue", new_snr);
 
-            this.onGetLabelDDRequest();
+            if (old_snr === new_snr) {
+                reuse = true;
+            }
+
+            this.onGetLabelDDRequest(reuse);
 
             break;
         case "DeleteShipmentDD":

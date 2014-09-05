@@ -16,6 +16,7 @@ IntrashipDemo
 		webapproot\pages\CreateShipmentDD\CreateShipmentDD.js
 		webapproot\pages\Main\Main.js
 		webapproot\pages\DeleteShipmentDD\DeleteShipmentDD.js
+		webapproot\pages\MainPhone\MainPhone.js
 	+note
 		note.txt
 	+Module
@@ -23,12 +24,20 @@ IntrashipDemo
 [Open project files]
 0=webapproot\resources\javascript\DemoUtils.js
 1=note.txt
+2=webapproot\pages\CreateShipmentDD\CreateShipmentDD.js
+3=webapproot\pages\MainPhone\MainPhone.js
 [Selected Project Files]
 Main=
-Selected=webapproot\resources\javascript\DemoUtils.js
+Selected=webapproot\pages\CreateShipmentDD\CreateShipmentDD.js
 [webapproot\resources\javascript\DemoUtils.js]
 TopLine=28
-Caret=4,65
+Caret=59,37
 [note.txt]
 TopLine=1
 Caret=80,4
+[webapproot\pages\CreateShipmentDD\CreateShipmentDD.js]
+TopLine=51
+Caret=90,27
+[webapproot\pages\MainPhone\MainPhone.js]
+TopLine=10
+Caret=91,55

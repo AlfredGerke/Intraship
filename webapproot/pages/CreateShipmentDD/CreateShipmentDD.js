@@ -24,8 +24,9 @@ dojo.declare("CreateShipmentDD", wm.Page, {
             try {
                 console.debug('Start srvGetShipmentDDRequest');
 
-                // Wenn der Request schon vorhanden direkt die Intraship-Methode aufrufen
-                if (scope.reuseRequest) {
+                // Wenn der Request schon vorhanden direkt die Intraship-Methode aufrufen           
+                // Die Funktion lässt sich verbessern wenn man das Request-Object in den globalen Teil verschiebt
+                if ((scope.varResultByGetShipmentDDRequest.getCount() > 0) && (scope.reuseRequest)) {
                     scope.getShipmentDD(scope);
                 } else {
                     if (scope.srvGetShipmentDDRequest.canUpdate()) {
@@ -66,6 +67,11 @@ dojo.declare("CreateShipmentDD", wm.Page, {
     srvCreateShipmentDDResult: function(inSender, inDeprecated) {
         var ds = app.utils.getMessagesByCreationState(inDeprecated.creationStates);
 
+        if (this.cbxDoXMLLabel.getChecked() === false) {
+            var s_nr = app.utils.getShipmentNrByCreationState(inDeprecated.creationStates, 0);
+            app.setShipmentNrByResponse(s_nr);
+        }
+
         app.varResultByStatusMessages.clearData();
         app.varResultByStatusMessages.setData(ds);
     },
@@ -82,10 +88,10 @@ dojo.declare("CreateShipmentDD", wm.Page, {
         }
     },
     cbxDoXMLLabelChange: function(inSender, inDisplayValue, inDataValue, inSetByCode) {
-		this.reuseRequest = false;
-	},
-	srvGetShipmentDDRequestSuccess1: function(inSender, inDeprecated) {
-		this.reuseRequest = true;
-	},
-	_end: 0
+        this.reuseRequest = false;
+    },
+    srvGetShipmentDDRequestSuccess1: function(inSender, inDeprecated) {
+        this.reuseRequest = true;
+    },
+    _end: 0
 });

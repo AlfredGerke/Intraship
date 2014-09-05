@@ -10,7 +10,7 @@ CreateShipmentTD.widgets = {
 			}]
 		}]
 	}],
-	srvGetShipmentTDRequest: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"getShipmentTDRequest","service":"RequestBuilder"}, {"onSuccess":"srvCreateShipmentTD"}, {
+	srvGetShipmentTDRequest: ["wm.ServiceVariable", {"inFlightBehavior":"executeLast","operation":"getShipmentTDRequest","service":"RequestBuilder"}, {"onSuccess":"srvCreateShipmentTD","onSuccess1":"srvGetShipmentTDRequestSuccess1"}, {
 		binding: ["wm.Binding", {}, {}, {
 			wire: ["wm.Wire", {"expression":undefined,"source":"pnlLabelResponse","targetProperty":"loadingDialog"}, {}]
 		}],
@@ -34,7 +34,7 @@ CreateShipmentTD.widgets = {
 		pnlCreateShipmentTD: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"CreateShipmentTD"}, {}, {
 			pnlTop: ["wm.Panel", {"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				btnCreateShipmentTD: ["wm.Button", {"caption":"Execute","margin":"4","width":"154px"}, {"onclick":"btnCreateShipmentTDClick"}],
-				cbxDoXMLLabel: ["wm.Checkbox", {"caption":"Create XML-Label","captionSize":"300px","dataValue":true,"displayValue":true,"startChecked":true,"width":"155px"}, {}]
+				cbxDoXMLLabel: ["wm.Checkbox", {"caption":"Create XML-Label","captionSize":"300px","dataValue":true,"displayValue":true,"startChecked":true,"width":"155px"}, {"onchange":"cbxDoXMLLabelChange"}]
 			}],
 			pnlClient: ["wm.Panel", {"height":"100%","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
 				pnlResponse: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"Response by CreateShipmentTD"}, {}, {
