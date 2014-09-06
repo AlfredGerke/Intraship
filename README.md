@@ -135,7 +135,7 @@ verändern zu können.
 
 Die Intraship-Zugangsdaten können zur Laufzeit im Client beliebig angepasst werden.
 
-*WICHTIG*:      
+**WICHTIG**:      
 Wenn die HTTP Basis Authentication nicht in den Eigenschaften des Webservice eingetragen wurden 
 und/oder wenn keine Anmeldedaten im Client zur Laufzeit hinterlegt werden, muss die Datei `settings.ini` 
 unbedingt vorhanden sein.
@@ -153,7 +153,8 @@ Die nachfolgenden Punkte erläutern worauf besonders geachtet werden muss:
 * Änderungen an der Schnittstelle
 * Fehler nach Aufbau der Schnittstelle
  
-*WICHTIG:* Ohne diese Datei kann die Anwendung keine Verbindung zur Intraship-API aufnehmen.
+**WICHTIG:**      
+Ohne diese Datei kann die Anwendung keine Verbindung zur Intraship-API aufnehmen.
 
 
 wsdl4j.jar
