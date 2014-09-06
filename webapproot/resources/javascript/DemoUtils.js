@@ -15,9 +15,10 @@ dojo.declare("DemoUtils", null, {
     this.setShipmentNr(nodeValue);  
   },
   getAirwayBillByXML: function() {
-    var nodeValue = this.getValueByTagName("AIRWAYBILL");
+    // In TD wird wie in DD die AIRWAYBILL als SHIPMENTNR geführt
+    var nodeValue = this.getValueByTagName("SHIPMENTNR");
 
-    this.setShipmentNr(nodeValue);  
+    this.setAirwayBill(nodeValue);  
   },  
   getShipmentNrByLabel: function(gxmlh, sshipnr) {
      this.getXMLLabel = gxmlh;
@@ -62,5 +63,17 @@ dojo.declare("DemoUtils", null, {
     }   
   
     return shipmentnr; 
-  }    
+  },
+  getAirwayBillByCreationState: function(creStates, stateIdx) {
+    var anz_states = creStates.length;
+    var airwaybill = '';
+  
+    if ((stateIdx > -1) && (stateIdx <= anz_states)) {
+      var creState = creStates[stateIdx].data;  
+      
+      airwaybill = creState.shipmentNumber.data.airwayBill;
+    }   
+  
+    return airwaybill; 
+  }      
 });

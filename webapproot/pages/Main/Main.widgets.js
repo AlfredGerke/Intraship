@@ -47,7 +47,7 @@ Main.widgets = {
 			}]
 		}]
 	}],
-	lbxMain: ["wm.Layout", {"horizontalAlign":"left","styles":{},"verticalAlign":"top"}, {}, {
+	lbxMain: ["wm.Layout", {"horizontalAlign":"left","styles":{},"verticalAlign":"top","width":"1462px"}, {}, {
 		pnlCredentialsPanel: ["wm.Panel", {"deviceSizes":null,"deviceType":null,"height":"104px","horizontalAlign":"left","layoutKind":"left-to-right","styles":{},"verticalAlign":"top","width":"100%"}, {}, {
 			pnlCredentials: ["wm.FancyPanel", {"margin":"5,5,5,5","styles":{},"title":"Credentials","width":"50%"}, {}, {
 				edtDevID: ["wm.Text", {"caption":"Developer ID","captionSize":"110px","dataValue":"","displayValue":"","emptyValue":"emptyString","enableTouchHeight":false,"helpText":"Wenn kein Eintrag vorhanden, dann wird aus settings.ini ein Eintrag entnommen","placeHolder":"Developer ID","styles":{},"width":"350px"}, {}],

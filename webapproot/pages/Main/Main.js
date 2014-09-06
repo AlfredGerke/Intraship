@@ -29,7 +29,7 @@ dojo.declare("Main", wm.Page, {
         };
     },
     setAirwayBillByResponseHandler: function() {
-        var scop = this;
+        var scope = this;
 
         return function(air) {
             scope.edtAirwayBill.setValue("dataValue", air);

@@ -30,6 +30,11 @@ CreateShipmentTD.widgets = {
 			wire: ["wm.Wire", {"expression":undefined,"source":"srvGetShipmentTDRequest","targetProperty":"dataSet"}, {}]
 		}]
 	}],
+	varSelectedItemAirwayBill: ["wm.Variable", {"type":"StringData"}, {}, {
+		binding: ["wm.Binding", {}, {}, {
+			wire: ["wm.Wire", {"expression":undefined,"source":"gridDetails.selectedItem.shipmentNumber.airwayBill","targetProperty":"dataSet.dataValue"}, {}]
+		}]
+	}],
 	lbxMain: ["wm.Layout", {"horizontalAlign":"left","verticalAlign":"top"}, {}, {
 		pnlCreateShipmentTD: ["wm.FancyPanel", {"margin":"0,0,0,0","styles":{},"title":"CreateShipmentTD"}, {}, {
 			pnlTop: ["wm.Panel", {"height":"40px","horizontalAlign":"left","layoutKind":"left-to-right","verticalAlign":"top","width":"100%"}, {}, {
@@ -72,7 +77,7 @@ CreateShipmentTD.widgets = {
 {"show":false,"field":"XMLLabel","title":"XMLLabel","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"sequenceNumber","title":"SequenceNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false},
 {"show":false,"field":"pickupConfirmationNumber","title":"PickupConfirmationNumber","width":"100%","align":"left","formatFunc":"","mobileColumn":false}
-],"height":"100px","localizationStructure":{},"margin":"4","minDesktopHeight":60,"minWidth":875,"singleClickEdit":true}, {"onCellDblClick":"gridDetailsCellDblClick"}, {
+],"height":"100px","localizationStructure":{},"margin":"4","minDesktopHeight":60,"minWidth":875,"singleClickEdit":true}, {"onSelect":"gridDetailsSelect"}, {
 							binding: ["wm.Binding", {}, {}, {
 								wire: ["wm.Wire", {"expression":undefined,"source":"varResultByCreateShipmentTD.creationStates","targetProperty":"dataSet"}, {}]
 							}]

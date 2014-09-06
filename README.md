@@ -129,6 +129,12 @@ aus dem Java-Testprogramm, welches auf dem Entwicklerportal der DHL bezogen werd
 Wenn keine HTTP Basis Authentication und/oder Credentials vorhanden sind, werden 
 diese mit den Zugangsdaten aus der Datei *settings.ini* ergänzt.
 
+Die `settings.ini` wird einmalig ausgelesen. Die HTTP Basis Authentication ist eng mit
+der Anwendung verbunden. Es macht keinen Sinn diese Zugangsdaten zur Laufzeit beliebig
+verändern zu können.
+
+Die Intraship-Zugangsdaten können zur Laufzeit im Client beliebig angepasst werden.
+
 
 WSDL: `ISService_1_0_de.wsdl`
 -----------------------------
@@ -224,7 +230,6 @@ Nachher:
         }
 
 
-
 `servicedef.xml` automatisch anpassen
 -------------------------------------
 
@@ -306,7 +311,7 @@ Stattdessen wurde ein anderer LoggingHandler zum Einsatz gebracht:
           MySOAPLoggingHandler.addToPort(((BindingProvider) iswsServicePortTypeService).getBinding()); 
         }         
 
-Der LoggingHandler stammt von der Seite: [http://jgeeks.blogspot.de/2013/03/jaxws-handler-example-for-logging.html](http://jgeeks.blogspot.de/2013/03/jaxws-handler-example-for-logging.html, "http://jgeeks.blogspot.de/2013/03/jaxws-handler-example-for-logging.html")
+Der LoggingHandler stammt von der Seite: [http://jgeeks.blogspot.de/2013/03/jaxws-handler-example-for-logging.html](http://jgeeks.blogspot.de/2013/03/jaxws-handler-example-for-logging.html "http://jgeeks.blogspot.de/2013/03/jaxws-handler-example-for-logging.html")
 von Navnit Singh Biring.
  
 Der Request und der Response werden im Wavemaker-Log abgelegt. 

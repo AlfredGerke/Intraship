@@ -69,8 +69,8 @@ dojo.declare("CreateShipmentTD", wm.Page, {
         var ds = app.utils.getMessagesByCreationState(inDeprecated.creationStates);
 
         if (this.cbxDoXMLLabel.getChecked() === false) {
-            var s_nr = app.utils.getShipmentNrByCreationState(inDeprecated.creationStates, 0);
-            app.setShipmentNrByResponse(s_nr);
+            var air = app.utils.getAirwayBillByCreationState(inDeprecated.creationStates, 0);
+            app.setAirwayBillByResponse(air);
         }
 
         app.varResultByStatusMessages.clearData();
@@ -79,18 +79,20 @@ dojo.declare("CreateShipmentTD", wm.Page, {
     onShow: function() {
         app.varResultByStatusMessages.clearData();
     },
-    gridDetailsCellDblClick: function(inSender, evt, selectedItem, rowId, fieldId, rowNode, cellNode) {
-        if (selectedItem.data.shipmentNumber) {
-            app.setAirwayBillByResponse(selectedItem.data.shipmentNumber.data.airwayBill);
-        } else {
-            app.toastWarning("Keine Sendungsinformationen vorhanden...");
-        }
-    },
     cbxDoXMLLabelChange: function(inSender, inDisplayValue, inDataValue, inSetByCode) {
         this.reuseRequest = false;
     },
     srvGetShipmentTDRequestSuccess1: function(inSender, inDeprecated) {
         this.reuseRequest = true;
+    },
+    gridDetailsSelect: function(inSender) {
+        var airwayBill = this.varSelectedItemAirwayBill.getValue("dataValue");
+
+        if (airwayBill) {
+            app.setAirwayBillByResponse(airwayBill);
+        } else {
+            app.toastWarning("Keine Sendungsinformationen vorhanden...");
+        }
     },
     _end: 0
 });

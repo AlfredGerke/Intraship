@@ -54,21 +54,17 @@ public class MySOAPLoggingHandler implements SOAPHandler<SOAPMessageContext> {
 
     if (outboundProperty.booleanValue()) {
       logger.info("\nOutbound message:");
-      // System.out.println("\nOutbound message:");
     } else {
       logger.info("\nInbound message:");
-      // System.out.println("\nInbound message:");
     }
 
     SOAPMessage message = smc.getMessage();
     try {
       ByteArrayOutputStream baos = new ByteArrayOutputStream();
       message.writeTo(baos);
-      // System.out.println(baos.toString());
       logger.info(baos.toString());
     } catch (Exception e) {
       logger.warn("Exception in handler: " + e.getMessage());
-      // System.out.println("Exception in handler: " + e);
     }
   }
 

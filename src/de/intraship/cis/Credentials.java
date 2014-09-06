@@ -21,8 +21,6 @@ public class Credentials {
       instance = new Credentials();
     }
     
-    instance.GetDataByOutputHandler();
-
     return instance;
   }
 
@@ -49,7 +47,7 @@ public class Credentials {
       outputHandler = new CredentialsBySettings();
     }
 
-    //GetDataByOutputHandler();
+    GetDataByOutputHandler();
   }
 
   public void addCredentialOutputHandler(CredentialOutputHandler outHandler) {
@@ -78,7 +76,7 @@ public class Credentials {
   }
 
   /**
-   * Über Bindingproperties können HTTPAuth und Entpoint geändert werden
+   * Über Bindingproperties können HTTPAuth und Endpoint geändert werden
    * 
    * bindingProperties = new BindingProperties();
    * 
