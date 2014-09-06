@@ -90,7 +90,7 @@ public class ISService10De {
         /**
          * Credentials-Verarbeitung von Hand eingef�gt, wurde nicht vom Importer angelegt 
          */
-        bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
+        bindingProperties = Credentials.getInstance().setBindingProperities(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
         
         SOAPBindingResolver.setBindingProperties(((BindingProvider) iswsServicePortTypeService), bindingProperties);
@@ -104,7 +104,7 @@ public class ISService10De {
         /**
          * Credentials-Verarbeitung von Hand eingef�gt, wurde nicht vom Importer angelegt 
          */
-        bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
+        bindingProperties = Credentials.getInstance().setBindingProperities(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
         
         SOAPBindingResolver.setBindingProperties(((BindingProvider) iswsServicePortTypeService), bindingProperties);
@@ -118,7 +118,7 @@ public class ISService10De {
         /**
          * Credentials-Verarbeitung von Hand eingef�gt, wurde nicht vom Importer angelegt 
          */
-        bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
+        bindingProperties = Credentials.getInstance().setBindingProperities(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
         
         SOAPBindingResolver.setBindingProperties(((BindingProvider) iswsServicePortTypeService), bindingProperties);
@@ -132,7 +132,7 @@ public class ISService10De {
         /**
          * Credentials-Verarbeitung von Hand eingef�gt, wurde nicht vom Importer angelegt 
          */
-        bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
+        bindingProperties = Credentials.getInstance().setBindingProperities(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
         
         SOAPBindingResolver.setBindingProperties(((BindingProvider) iswsServicePortTypeService), bindingProperties);
@@ -178,7 +178,7 @@ public class ISService10De {
         /**
          * Credentials-Verarbeitung von Hand eingef�gt, wurde nicht vom Importer angelegt 
          */
-        bindingProperties = Credentials.getInstance().setBindingProperitiesIfNeeded(bindingProperties);
+        bindingProperties = Credentials.getInstance().setBindingProperities(bindingProperties);
         header = Credentials.getInstance().setAuthentificationIfNeeded(header);
         
         SOAPBindingResolver.setBindingProperties(((BindingProvider) iswsServicePortTypeService), bindingProperties);

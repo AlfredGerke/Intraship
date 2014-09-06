@@ -7,9 +7,9 @@ import com.wavemaker.runtime.ws.BindingProperties;
 public class Credentials {
 
   private static Credentials instance = null;
-  
+
   private CredentialOutputHandler outputHandler = null;
-  
+
   private String username = "";
   private String pass = "";
   private String cig_username = "";
@@ -20,27 +20,43 @@ public class Credentials {
     if (instance == null) {
       instance = new Credentials();
     }
+    
+    instance.GetDataByOutputHandler();
 
     return instance;
   }
 
+  private void GetDataByOutputHandler() {
+
+    if (outputHandler != null) {
+      outputHandler.getCredentialByStorage();
+
+      username = outputHandler.getUsername();
+      pass = outputHandler.getPass();
+      cig_username = outputHandler.getCig_username();
+      cig_pass = outputHandler.getCig_pass();
+    } else {
+      username = "";
+      pass = "";
+      cig_username = "";
+      cig_pass = "";
+    }
+  }
+
   public Credentials() {
+
     if (outputHandler == null) {
       outputHandler = new CredentialsBySettings();
     }
-    
-    outputHandler.getCredentialByStorage();
-    
-    username = outputHandler.getUsername();
-    pass = outputHandler.getPass();
-    cig_username = outputHandler.getCig_username();
-    cig_pass = outputHandler.getCig_pass();    
+
+    //GetDataByOutputHandler();
   }
 
   public void addCredentialOutputHandler(CredentialOutputHandler outHandler) {
-    outputHandler = outHandler; 
+
+    outputHandler = outHandler;
   }
-  
+
   public String getUsername() {
 
     return username;
@@ -62,7 +78,7 @@ public class Credentials {
   }
 
   /**
-   * ï¿½ber Bindingproperties kï¿½nnen HTTPAuth und Entpoint geï¿½ndert werden
+   * Über Bindingproperties können HTTPAuth und Entpoint geändert werden
    * 
    * bindingProperties = new BindingProperties();
    * 
@@ -87,12 +103,22 @@ public class Credentials {
 
     return bp;
   }
+  
+  public BindingProperties setBindingProperities(BindingProperties bindingProperties) {
 
-  public Authentification setAuthentificationIfNeeded(Authentification authemtication) {
+    BindingProperties bp = bindingProperties;
 
-    Authentification auth = authemtication;
+    bp.setHttpBasicAuthUsername(this.getCig_username());
+    bp.setHttpBasicAuthPassword(this.getCig_pass());
 
-    if (auth != null) {
+    return bp;
+  } 
+
+  public Authentification setAuthentificationIfNeeded(Authentification authentication) {
+
+    Authentification auth = authentication;
+
+    if (auth != null) {      
 
       String devId = auth.getUser();
       if (devId.isEmpty()) {
