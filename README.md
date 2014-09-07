@@ -1,5 +1,3 @@
-***(in Progress...)***
-
 Intraship trifft WaveMaker
 ==========================
 
