@@ -55,6 +55,7 @@ Versionen
 
 * WaveMaker 6.7.0
 * Eclpise (Juno)
+* Lazarus 1.2.0
 
 
 Zielvorgabe und Realisierung
