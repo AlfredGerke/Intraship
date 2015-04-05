@@ -184,7 +184,7 @@ ausgehend von dieser Bibliothek vorgenommen.
 Fehler nach Aufbau der Schnittstelle
 ------------------------------------
 
-### DHL-Websercie: `ISService_1_0_de`
+### DHL-Webservice: `ISService_1_0_de`
 Der gleichnamige Webservice wurde durch den WSDL-Import angelegt und stellt alle 
 notwendigen Methoden für die Arbeit mit der Geschäftskundenversand API zur Verfügung.
  
